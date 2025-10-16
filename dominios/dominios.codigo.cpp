@@ -2,15 +2,15 @@
 #include <stdexcept>
 #include <cctype>
 
-Codigo::Codigo(string v){
+Codigo::Codigo(string valor){
     setValor(v);
 }
-void Codigo::setValor(string v){
-    if (v.size() != 10){
+void Codigo::setValor(string valor){
+    if (valor.size() != 10){
         throw::invalid_argument("Codigo invalido (deve ter exatamente 10 caracteres).");
     }
-    for (char c : v){
-        if (!islower(c) && !isdigit(c)){
+    for (char codigo : valor){
+        if (!islower(codigo) && !isdigit(codigo)){
             throw::invalid_argument("Codigo invalido (apenas letras minusculas e digitos permitidos).");
             }
     }
@@ -19,3 +19,4 @@ void Codigo::setValor(string v){
 string Codigo::getValor() const{
     return valor;
 }
+
