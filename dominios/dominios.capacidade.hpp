@@ -9,9 +9,10 @@ class Capacidade {
 private:
     int valor;
 public:
-    Capacidade (int v);
-    void setValor (int v);
+    Capacidade (int valor);
+    void setValor (int valor);
     int getValor () const;
+
 
 };
 
