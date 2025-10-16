@@ -2,7 +2,7 @@
 #include <stdexcept>
 
 Capacidade::Capacidade(int valor) {
-    setValor(v);
+    setValor(valor);
 }
 void Capacidade::setValor(int valor){
     if (valor < 1 || valor > 4 ) {
@@ -13,4 +13,5 @@ void Capacidade::setValor(int valor){
 int Capacidade::getValor() const{
     return valor;
 }
+
 
