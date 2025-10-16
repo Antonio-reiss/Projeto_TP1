@@ -10,9 +10,10 @@ private:
     string valor;
     bool validarLuhn (const string &num) const;
 public:
-    Cartao(string v);
-    void setValor(string v);
+    Cartao(string valor);
+    void setValor(string valor);
     string getValor() const;
+
 };
 
 #endif // DOMINIOS_CARTAO_H_INCLUDED
