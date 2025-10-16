@@ -9,10 +9,10 @@ private:
     int dia;
     string mes;
     int ano;
-    bool validar (int d, string m, int a) const;
+    bool validar (int dia, string mes, int ano) const;
 public:
-    Data(int d, string m, int a);
-    void setValor (int d, string m, int a);
+    Data(int dia, string mes, int ano);
+    void setValor (int dia, string mes, int ano);
     int getDia() const;
     string getMes() const;
     int getAno() const;
