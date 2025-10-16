@@ -4,8 +4,8 @@
 
 using namespace std;
 
-Cartao::Cartao(string v){
-    setValor(v);
+Cartao::Cartao(string valor){
+    setValor(valor);
 }
 bool Cartao::validarLuhn(const string &num) const{
     int soma = 0;
@@ -22,20 +22,21 @@ bool Cartao::validarLuhn(const string &num) const{
     }
     return (soma % 10 == 0);
 }
-void Cartao::setValor(string v){
-    if (v.size() != 16){
-        throw::invalid_argument("Cart„o inv·lido(deve ter 16 dÌgitos).");
+void Cartao::setValor(string valor){
+    if (valor.size() != 16){
+        throw::invalid_argument("Cart√£o inv√°lido(deve ter 16 d√≠gitos).");
     }
-    for (char c : v){
-        if (!isdigit(c)){
-            throw::invalid_argument("Cart„o inv·lido (apenas dÌgitos permitidos).");
+    for (char cartao : valor){
+        if (!isdigit(cartao)){
+            throw::invalid_argument("Cart√£o inv√°lido (apenas d√≠gitos permitidos).");
         }
     }
-    if (!validarLuhn(v)){
-        throw::invalid_argument("Cart„o inv·lido (falha no algoritmo de Luhn).");
+    if (!validarLuhn(valor)){
+        throw::invalid_argument("Cart√£o inv√°lido (falha no algoritmo de Luhn).");
     }
     valor = v;
 }
 string Cartao::getValor() const{
     return valor;
 }
+
