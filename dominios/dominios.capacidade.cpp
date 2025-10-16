@@ -1,15 +1,16 @@
 #include "dominios.capacidade.hpp"
 #include <stdexcept>
 
-Capacidade::Capacidade(int v) {
+Capacidade::Capacidade(int valor) {
     setValor(v);
 }
-void Capacidade::setValor(int v){
-    if (v < 1 || v > 4 ) {
-        throw std::invalid_argument("Capacidade inv·lida(deve ser 1 a 4)");
+void Capacidade::setValor(int valor){
+    if (valor < 1 || valor > 4 ) {
+        throw std::invalid_argument("Capacidade inv√°lida(deve ser 1 a 4)");
     }
         valor = v;
     }
 int Capacidade::getValor() const{
     return valor;
 }
+
