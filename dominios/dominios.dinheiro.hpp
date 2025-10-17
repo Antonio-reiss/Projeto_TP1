@@ -3,14 +3,16 @@
 #define DOMINIOS_DINHEIRO_HPP_INCLUDED
 #include <string>
 
+using namespace std;
+
 class Dinheiro{
 private:
     int valorEmCentavos;
-    int validarConverter(std::string valor);
+    int validarConverter(string valor);
     void validar(int valor);
 public:
     Dinheiro(double valor);
-    Dinheiro(std::string valor);
+    Dinheiro(string valor);
     double getValor() const;
     void setValor(double valor);
     int getValorEmCentavos() const;

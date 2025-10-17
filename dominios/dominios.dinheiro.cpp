@@ -5,43 +5,45 @@
 #include <sstream>
 #include <cmath>
 
-int Dinheiro::validarConverter(std::string valor){
+using namespace std;
+
+int Dinheiro::validarConverter(string valor){
     for(char c : valor){
-        if(!std::isdigit(c) && c != '.' && c !=','){
-            throw std::invalid_argument("Formato invalido! Digite apenas numeros.");
+        if(!isdigit(c) && c != '.' && c !=','){
+            throw invalid_argument("Formato invalido! Digite apenas numeros.");
         }
     }
 
-    std::string temp = valor;
+    string temp = valor;
 
-    temp.erase(std::remove(temp.begin(), temp.end(), '.'), temp.end());
+    temp.erase(remove(temp.begin(), temp.end(), '.'), temp.end());
 
-    std::replace(temp.begin(), temp.end(), ',', '.');
+    replace(temp.begin(), temp.end(), ',', '.');
 
     double valor_decimal;
 
     try{
-        valor_decimal = std::stod(temp);
-    }catch(const std::invalid_argument&){
-        throw std::invalid_argument("Fomato invalido!");
-    }catch(const std::out_of_range&){
-        throw std::invalid_argument("Valor invalido!");
+        valor_decimal = stod(temp);
+    }catch(const invalid_argument&){
+        throw invalid_argument("Fomato invalido!");
+    }catch(const out_of_range&){
+        throw invalid_argument("Valor invalido!");
     }
 
     if(valor_decimal < 0.01 || valor_decimal > 1000000.00){
-        throw std::invalid_argument("O valor deve ser entre 0,01 e 1.000.000,00");
+        throw invalid_argument("O valor deve ser entre 0,01 e 1.000.000,00");
     }
 
-    return static_cast<int>(std::round(valor_decimal * 100.0));
+    return static_cast<int>(round(valor_decimal * 100.0));
 }
 
 void Dinheiro::validar(int valor){
     if(valor < 1 || valor > 100000000){
-        throw std::invalid_argument("O valor deve estar no intervalo 0,01 e 1.000.000,00");
+        throw invalid_argument("O valor deve estar no intervalo 0,01 e 1.000.000,00");
     }
 }
 
-Dinheiro::Dinheiro(std::string valor){
+Dinheiro::Dinheiro(string valor){
     this->valorEmCentavos = validarConverter(valor);
 }
 
@@ -56,7 +58,7 @@ double Dinheiro::getValor() const{
 }
 
 void Dinheiro::setValor(double valor){
-    int valorEmCentavosConvetido = static_cast<int>(std::round(valor * 100.0));
+    int valorEmCentavosConvetido = static_cast<int>(round(valor * 100.0));
     validar(valorEmCentavosConvetido);
     this->valorEmCentavos = valorEmCentavosConvetido;
 }

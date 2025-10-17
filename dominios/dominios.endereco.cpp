@@ -1,59 +1,58 @@
 #include "dominios.endereco.hpp"
 #include <string>
 #include <stdexcept>
-#include <algorithm> //para usar all_of
-#include <cctype> //para usar isalpha, isdigit, isspace
+#include <algorithm>
+#include <cctype>
 
-void Endereco::validar(std::string endereco){
+using namespace std;
+
+void Endereco::validar(string endereco){
     if(endereco.length() < 5 || endereco.length() > 30){
-        throw std::invalid_argument("O endereco deve ter entre 5 e 30 caracteres.");
+        throw invalid_argument("O endereco deve ter entre 5 e 30 caracteres.");
     }
 
-    //percorre a string do primeiro indice ate o ultimo
-    for(size_t i = 0; i < endereco.length(); ++i){ //o ++i incrementa na váriavel antes de usa-la
-        char c = endereco[i]; //armazena o caracter atual
+    for(size_t i = 0; i < endereco.length(); ++i){
+        char c = endereco[i];
 
-        //regra de caracteres permitidos
-        bool isPermitido = std::isalpha(c) || std::isdigit(c) || std::isspace(c) || c == ',' || c == '.';
+        bool isPermitido = isalpha(c) || isdigit(c) || isspace(c) || c == ',' || c == '.';
         if(!isPermitido){
-            throw std::invalid_argument("O endereco contem caracteres invalidos!");
+            throw invalid_argument("O endereco contem caracteres invalidos!");
         }
 
-        //verificação do penultimo e ultimo caracter
         if(i + 1 < endereco.length()){
             char proximo = endereco[i+1];
 
-            if(std::isspace(c) && !(std::isalpha(proximo)|| std::isdigit(proximo))){
-                throw std::invalid_argument("O endereco contem caracteres invalidos!");
+            if(isspace(c) && !(isalpha(proximo)|| isdigit(proximo))){
+                throw invalid_argument("O endereco contem caracteres invalidos!");
             }
             if((c == ',' || c == '.') && (proximo == ',' || proximo == '.')){
-                throw std::invalid_argument("O endereco contem caracteres invalidos!");
+                throw invalid_argument("O endereco contem caracteres invalidos!");
             }
         }
     }
 
-    char primeiro = endereco.front(); //primeiro caracter
-    char ultimo = endereco.back();  //ultimo caracter
+    char primeiro = endereco.front();
+    char ultimo = endereco.back();
 
-    if(primeiro == ',' || primeiro == '.' || std::isspace(primeiro)){
-        throw std::invalid_argument("O primeiro caracter precisa ser valido!");
+    if(primeiro == ',' || primeiro == '.' || isspace(primeiro)){
+        throw invalid_argument("O primeiro caracter precisa ser valido!");
     }
-    if(ultimo == ',' || ultimo == '.' || std::isspace(ultimo)){
-        throw std::invalid_argument("O ultimo caracter precisa ser valido!");
+    if(ultimo == ',' || ultimo == '.' || isspace(ultimo)){
+        throw invalid_argument("O ultimo caracter precisa ser valido!");
     }
 
 }
 
-Endereco::Endereco(std::string endereco){
+Endereco::Endereco(string endereco){
     validar(endereco);
     this->endereco = endereco;
 }
 
-std::string Endereco::getEndereco() const{
+string Endereco::getEndereco() const{
     return this->endereco;
 }
 
-void Endereco::setEndereco(std::string endereco){
+void Endereco::setEndereco(string endereco){
     validar(endereco);
     this->endereco = endereco;
 }
