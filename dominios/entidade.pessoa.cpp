@@ -1,21 +1,22 @@
 #include "entidade.pessoa.hpp"
+using namespace std;
 
-Pessoa::Pessoa(const std::string& nome, const std::string& email):
+Pessoa::Pessoa(const string& nome, const string& email):
     nome(nome),
     email(email)
 {}
 
-void Pessoa::setNome(const std::string& nome){
+void Pessoa::setNome(const string& nome){
     this->nome.setNome(nome);
 }
-std::string Pessoa::getNome() const{
+string Pessoa::getNome() const{
     return this->nome.getNome();
 }
 
-void Pessoa::setEmail(const std::string& email){
+void Pessoa::setEmail(const string& email){
     this->email.setEndereco(email);
 }
 
-std::string Pessoa::getEmail() const{
+string Pessoa::getEmail() const{
     return this->email.getEndereco();
 }

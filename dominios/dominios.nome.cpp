@@ -3,25 +3,27 @@
 #include "dominios.nome.hpp"
 #include <stdexcept>
 
-void Nome::validar(std::string nome){
+using namespace std;
+
+void Nome::validar(string nome){
     if(nome.length() < 5 || nome.length() > 20){
-        throw std::invalid_argument("O nome deve ter entre 5 e 20 caracteres");
+        throw invalid_argument("O nome deve ter entre 5 e 20 caracteres");
     }
     if(nome.back() == ' '){
-        throw std::invalid_argument("O nome digitado eh invalido.");
+        throw invalid_argument("O nome digitado eh invalido.");
     }
 
     for (size_t i = 0; i < nome.length(); ++i){
         char c = nome[i];
 
-        if(!std::isalpha(c) && !std::isspace(c)){
-                throw std::invalid_argument("O nome digitado eh invalido.");
-            if(std::isspace(c)){
+        if(!isalpha(c) && !isspace(c)){
+                throw invalid_argument("O nome digitado eh invalido.");
+            if(isspace(c)){
                     if(i + 1 < nome.length()){
                         char proximo_c = nome[i+1];
 
-                        if(std::isspace(proximo_c)){
-                            throw std::invalid_argument("O nome digitado eh invalido.");
+                        if(isspace(proximo_c)){
+                            throw invalid_argument("O nome digitado eh invalido.");
                         }
                     }
             }
@@ -29,17 +31,17 @@ void Nome::validar(std::string nome){
     }
 }
 
-Nome::Nome(std::string nome){
+Nome::Nome(string nome){
     validar(nome);
     this->nome = nome;
 
 }
 
-std::string Nome::getNome() const{
+string Nome::getNome() const{
     return this->nome;
 }
 
-void Nome::setNome(std::string nome){
+void Nome::setNome(string nome){
     validar(nome);
     this->nome = nome;
 }
