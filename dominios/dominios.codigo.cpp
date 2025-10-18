@@ -3,7 +3,7 @@
 #include <cctype>
 
 Codigo::Codigo(string valor){
-    setValor(v);
+    setValor(valor);
 }
 void Codigo::setValor(string valor){
     if (valor.size() != 10){
@@ -14,7 +14,7 @@ void Codigo::setValor(string valor){
             throw::invalid_argument("Codigo invalido (apenas letras minusculas e digitos permitidos).");
             }
     }
-         valor = v;
+         this->valor = valor;
     }
 string Codigo::getValor() const{
     return valor;

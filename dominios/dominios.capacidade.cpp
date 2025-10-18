@@ -8,7 +8,7 @@ void Capacidade::setValor(int valor){
     if (valor < 1 || valor > 4 ) {
         throw std::invalid_argument("Capacidade inválida(deve ser 1 a 4)");
     }
-        valor = v;
+        this->valor = valor;
     }
 int Capacidade::getValor() const{
     return valor;

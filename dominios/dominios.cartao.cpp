@@ -34,7 +34,7 @@ void Cartao::setValor(string valor){
     if (!validarLuhn(valor)){
         throw::invalid_argument("Cartão inválido (falha no algoritmo de Luhn).");
     }
-    valor = v;
+    this->valor = valor;
 }
 string Cartao::getValor() const{
     return valor;

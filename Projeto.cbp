@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Projeto" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Projeto" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Projeto" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="dominios/dominios.capacidade.cpp" />
+		<Unit filename="dominios/dominios.capacidade.hpp" />
+		<Unit filename="dominios/dominios.cartao.cpp" />
+		<Unit filename="dominios/dominios.cartao.h" />
+		<Unit filename="dominios/dominios.codigo.cpp" />
+		<Unit filename="dominios/dominios.codigo.hpp" />
+		<Unit filename="dominios/dominios.data.cpp" />
+		<Unit filename="dominios/dominios.data.hpp" />
+		<Unit filename="dominios/dominios.dinheiro.cpp" />
+		<Unit filename="dominios/dominios.dinheiro.hpp" />
+		<Unit filename="dominios/dominios.email.cpp" />
+		<Unit filename="dominios/dominios.email.hpp" />
+		<Unit filename="dominios/dominios.endereco.cpp" />
+		<Unit filename="dominios/dominios.endereco.hpp" />
+		<Unit filename="dominios/dominios.entidades.hotel.cpp" />
+		<Unit filename="dominios/dominios.entidades.hotel.h" />
+		<Unit filename="dominios/dominios.nome.cpp" />
+		<Unit filename="dominios/dominios.nome.hpp" />
+		<Unit filename="dominios/dominios.numero.cpp" />
+		<Unit filename="dominios/dominios.numero.hpp" />
+		<Unit filename="dominios/dominios.ramal.cpp" />
+		<Unit filename="dominios/dominios.ramal.hpp" />
+		<Unit filename="dominios/dominios.senha.cpp" />
+		<Unit filename="dominios/dominios.senha.hpp" />
+		<Unit filename="dominios/dominios.telefone.cpp" />
+		<Unit filename="dominios/dominios.telefone.hpp" />
+		<Unit filename="dominios/main.cpp" />
+		<Unit filename="entidades/entidade.hospede.cpp" />
+		<Unit filename="entidades/entidade.hospede.h" />
+		<Unit filename="entidades/entidade.pessoa.cpp" />
+		<Unit filename="entidades/entidade.pessoa.hpp" />
+		<Unit filename="entidades/entidade.reserva.cpp" />
+		<Unit filename="entidades/entidade.reserva.hpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
