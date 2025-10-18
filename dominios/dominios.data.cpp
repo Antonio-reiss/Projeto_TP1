@@ -1,6 +1,5 @@
-#include "dominio.data.hpp"
+#include "dominios.data.hpp"
 #include <stdexcept>
-#include <vector>
 #include <sstream>
 
 using namespace std;
@@ -13,12 +12,12 @@ bool Data::validar(int dia, string mes, int ano) const {
     if (dia < 1 || dia > 31) return false;
     if (ano < 2000 || ano > 2999) return false;
 
-    vector<string> meses = {"JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"};
+    string meses[] = {"JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"};
     int diasNoMes[] = {31,28,31,30,31,30,31,31,30,31,30,31};
 
     int mesIndex = -1;
     for (int i = 0; i < 12; i++) {
-        if (m == meses[i]) {
+        if (mes == meses[i]) {
             mesIndex = i;
             break;
         }
@@ -40,9 +39,9 @@ void Data::setValor(int dia, string mes, int ano) {
     if (!validar(dia, mes, ano)) {
         throw invalid_argument("Data invalida.");
     }
-    dia = d;
-    mes = m;
-    ano = a;
+    this->dia = dia;
+    this->mes = mes;
+    this->ano = ano;
 }
 
 int Data::getDia() const { return dia; }
