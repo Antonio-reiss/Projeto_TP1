@@ -19,8 +19,8 @@ public:
     void setEmail(string&);
 
     int getRamal() const;
-    string getNome() const;
-    string getEmail() const ;
+    //string getNome() const;
+    //string getEmail() const ;
     string getSenha() const;
 };
 
