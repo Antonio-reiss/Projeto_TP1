@@ -50,10 +50,9 @@ bool Senha::validar_senha(string& senha){
     return true;
 }
 
-bool Senha::setSenha(string& senha){
+void Senha::setSenha(string& senha){
     validar_senha(senha);
     this->senha = senha;
-    return true;
 }
 
 Senha::Senha(string senha){

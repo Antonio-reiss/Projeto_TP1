@@ -19,10 +19,9 @@ bool Telefone::validar_telefone(string &telefone){
     return true;
 }
 
-bool Telefone::setTelefone(string &telefone){
+void Telefone::setTelefone(string &telefone){
     validar_telefone(telefone);
     this->telefone = '+' + telefone;
-    return true;
 }
 
 Telefone::Telefone(string telefone){

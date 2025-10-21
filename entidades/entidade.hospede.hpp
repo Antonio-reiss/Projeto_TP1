@@ -1,9 +1,9 @@
-#ifndef ENTIDADE_HOSPEDE_H_INCLUDED
-#define ENTIDADE_HOSPEDE_H_INCLUDED
+#ifndef ENTIDADE_HOSPEDE_HPP_INCLUDED
+#define ENTIDADE_HOSPEDE_HPP_INCLUDED
 
 #include "entidade.pessoa.hpp"
 #include "../dominios/dominios.endereco.hpp"
-#include "../dominios/dominios.cartao.h"
+#include "../dominios/dominios.cartao.hpp"
 
 class Hospede : public Pessoa{
 private:

@@ -11,7 +11,7 @@ private:
     bool validar_senha(string&);
 public:
     Senha(string);
-    bool setSenha(string&);
+    void setSenha(string&);
     string getSenha() const;
 };
 

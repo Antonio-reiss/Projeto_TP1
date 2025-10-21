@@ -9,7 +9,7 @@ private:
     bool validar_ramal(int);
 public:
     Ramal(int);
-    bool setRamal(int);
+    void setRamal(int);
     int getRamal() const;
 
 };

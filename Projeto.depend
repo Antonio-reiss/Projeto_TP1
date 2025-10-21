@@ -72,39 +72,39 @@
 1760713801 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.hpp
 	<string>
 
-1759446033 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.hpp
+1760919701 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
 1760713801 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.cpp
 	"dominios.nome.hpp"
 	<stdexcept>
 
-1759442205 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.cpp
+1760919731 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.cpp
 	"dominios.numero.hpp"
 	<stdexcept>
 
-1759440539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.hpp
+1760919701 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.hpp
 
-1759444935 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
+1760919731 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
 	"dominios.ramal.hpp"
 	<stdexcept>
 
-1759444911 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.hpp
+1760919701 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.hpp
 
-1759451869 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.cpp
+1760919731 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.cpp
 	"dominios.senha.hpp"
 	<string>
 	<stdexcept>
 
-1759451173 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.hpp
+1760919701 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.hpp
 	<string>
 
-1759446817 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.cpp
+1760919731 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.cpp
 	"dominios.telefone.hpp"
 	<stdexcept>
 	<string>
 
-1760703917 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.cpp
+1760917212 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.cpp
 	"entidade.hospede.h"
 
 1760702430 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.h
@@ -120,11 +120,10 @@
 1760624374 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1760702641 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1760810570 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../entidades/entidade.reserva.hpp"
 	<iostream>
-	<cstdlib>
-	<stdexcept>
+	<string>
 
 1760704353 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.data.hpp"
