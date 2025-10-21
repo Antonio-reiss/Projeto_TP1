@@ -9,13 +9,29 @@ void Gerente::setRamal(int& ramal){
 }
 
 void Gerente::setSenha(string& senhaNova){
-    this->senha.setSenha(&senhaNova);
+    this->senha.setSenha(senhaNova);
 }
 
 void Gerente::setNome(string& nomeNovo){
-    Pessoa::setNome(const &nomeNovo);
+    Pessoa::setNome(nomeNovo);
 }
 
 void Gerente::setEmail(string& emailNovo){
-    Pessoa::setEmail(const &emailNovo);
+    Pessoa::setEmail(emailNovo);
+}
+
+int Gerente::getRamal() const {
+    return this->ramal.getRamal();
+}
+
+//string Gerente::getNome() const{
+//    return this->nome.getNome();
+//}
+
+//string Gerente::getEmail() const{
+//    return this->email.getEmail();
+//}
+
+string Gerente::getSenha() const{
+    return this->senha.getSenha();
 }

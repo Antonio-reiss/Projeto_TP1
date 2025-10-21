@@ -8,9 +8,9 @@ using namespace std;
 string tipoCaractere(char caractere){
     string tipocaractere;
     if(caractere >= 'a' && caractere <= 'z') tipocaractere = "letra";
-    if(caractere >= 'A' && caractere <= 'Z') tipocaractere = "letra";
-    if(caractere >= '0' && caractere <= '9') tipocaractere = "digito";
-    if(caractere >= '!' && caractere <= '&' || caractere == '?') tipocaractere = "caractere_especial";
+    else if(caractere >= 'A' && caractere <= 'Z') tipocaractere = "letra";
+    else if(caractere >= '0' && caractere <= '9') tipocaractere = "digito";
+    else if(caractere >= '!' && caractere <= '&' || caractere == '?') tipocaractere = "caractere_especial";
 
     return tipocaractere;
 }

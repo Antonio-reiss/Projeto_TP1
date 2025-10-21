@@ -7,7 +7,7 @@ Quarto::Quarto(const int& numero, const int& capacidade, const string& diaria, c
     capacidade(capacidade),
     diaria(diaria),
     ramal(ramal)
-{}
+{};
 
 void Quarto::setNumero(int numero){
     this->numero.setNumero(numero);

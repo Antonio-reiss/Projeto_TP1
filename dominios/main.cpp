@@ -1,34 +1,39 @@
-#include "../entidades/entidade.reserva.hpp"
+#include "../entidades/entidade.gerente.hpp"
+#include "dominios.ramal.hpp"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 int main(){
-    int diaChegada, anoChegada, diaPartida, anoPartida;
-    string mesChegada, mesPartida;
-    double valor;
+    int ramal;
+    string nome, email, senha;
 
-    cout << "Digite a data de chegada, no formato dd, \"mes\", aa" << endl;
-    cin >> diaChegada >> mesChegada >> anoChegada;
+    cout << "Digite seu nome" << endl;
+    cin >> nome;
 
-    cout << "Digite a data de partida, no formato dd, \"mes\", aa" << endl;
-    cin >> diaPartida >> mesPartida >> anoPartida;
+    cout << "Digite seu email" << endl;
+    cin >> email;
 
-    cout << "Digite o valor da reserva" << endl;
-    cin >> valor;
+    cout << "Digite o ramal" << endl;
+    cin >> ramal;
 
-    Reserva reserva(diaChegada, mesChegada, anoChegada, diaPartida, mesPartida, anoPartida, valor);
+    cout << "Digite uma senha" << endl;
+    cin >> senha;
 
-    cout << "Reserva:" << endl;
-    cout << "Data chegada:" << endl;
-    cout << reserva.getChegada() << endl;
+    Gerente gerente(nome, email, ramal, senha);
+
+    cout << "Gerente:" << endl;
+    cout << "Nome:" << endl;
+    cout << gerente.getNome() << endl;
     cout << endl;
-    cout << "Data partida:" << endl;
-    cout << reserva.getPartida() << endl;
+    cout << "Email:" << endl;
+    cout << gerente.getEmail() << endl;
+    cout << "Ramal:" << endl;
+    cout << gerente.getRamal() << endl;
+    cout << "Senha:" << endl;
+    cout << gerente.getSenha() << endl;
     cout << endl;
-    cout << "Valor: ";
-    cout << reserva.getValor() << endl;
 
     return 0;
 }

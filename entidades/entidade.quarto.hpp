@@ -2,7 +2,7 @@
 #define ENTIDADE_QUARTO_HPP_INCLUDED
 
 #include "../dominios/dominios.numero.hpp"
-#include "../dominios/dominios.capacidade.hpp"
+#include "../dominios/dominios.ramal.hpp"
 #include "../dominios/dominios.dinheiro.hpp"
 #include "../dominios/dominios.capacidade.hpp"
 
