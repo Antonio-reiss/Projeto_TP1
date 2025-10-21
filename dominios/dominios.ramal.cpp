@@ -10,10 +10,9 @@ bool Ramal::validar_ramal(int ramal){
     return true;
 }
 
-bool Ramal::setRamal(int ramal){
+void Ramal::setRamal(int ramal){
     validar_ramal(ramal);
     this->ramal = ramal;
-    return true;
 }
 
 Ramal::Ramal(int ramal){

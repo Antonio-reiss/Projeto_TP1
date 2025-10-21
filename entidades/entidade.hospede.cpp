@@ -1,4 +1,4 @@
-#include "entidade.hospede.h"
+#include "entidade.hospede.hpp"
 
 Hospede::Hospede(const std::string& nome, const std::string& email, const std::string& endereco, const std::string& cartao) : Pessoa(nome,email), endereco(endereco),cartao(cartao){}
 

@@ -9,7 +9,7 @@ private:
     bool validar_telefone(string&);
 public:
     Telefone(string);
-    bool setTelefone(string&);
+    void setTelefone(string&);
     string getTelefone() const;
 
 };

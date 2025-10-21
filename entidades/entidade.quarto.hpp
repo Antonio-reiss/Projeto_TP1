@@ -1,9 +1,10 @@
 #ifndef ENTIDADE_QUARTO_HPP_INCLUDED
 #define ENTIDADE_QUARTO_HPP_INCLUDED
-#include "dominios.numero.hpp"
-#include "dominios.capacidade.hpp"
-#include "dominios.dinheiro.hpp"
-#include "dominios.ramal.hpp"
+
+#include "../dominios/dominios.numero.hpp"
+#include "../dominios/dominios.capacidade.hpp"
+#include "../dominios/dominios.dinheiro.hpp"
+#include "../dominios/dominios.capacidade.hpp"
 
 using namespace std;
 

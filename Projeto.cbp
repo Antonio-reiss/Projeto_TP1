@@ -59,6 +59,8 @@
 		<Unit filename="dominios/dominios.telefone.cpp" />
 		<Unit filename="dominios/dominios.telefone.hpp" />
 		<Unit filename="dominios/main.cpp" />
+		<Unit filename="entidades/entidade.gerente.cpp" />
+		<Unit filename="entidades/entidade.gerente.hpp" />
 		<Unit filename="entidades/entidade.hospede.cpp" />
 		<Unit filename="entidades/entidade.hospede.h" />
 		<Unit filename="entidades/entidade.pessoa.cpp" />

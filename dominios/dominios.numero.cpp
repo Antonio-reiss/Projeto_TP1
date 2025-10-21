@@ -10,10 +10,9 @@ bool Numero::validar_numero(int numero){
     return true;
 }
 
-bool Numero::setNumero(int numero){
+void Numero::setNumero(int numero){
     validar_numero(numero);
     this->numero = numero;
-    return true;
 }
 
 Numero::Numero(int numero){

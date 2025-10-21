@@ -9,7 +9,7 @@ private:
     bool validar_numero(int);
 public:
     Numero(int);
-    bool setNumero(int);
+    void setNumero(int);
     int getNumero() const;
 };
 
