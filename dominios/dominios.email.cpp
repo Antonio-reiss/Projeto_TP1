@@ -1,27 +1,25 @@
-//Dominio Email - 23/09/2025
 #include "dominios.email.hpp"
 #include <regex>
 #include <string>
+#include <stdexcept>
 
 using namespace std;
 
-Email::Email(const string& endereco){
-    if(!setEndereco(endereco)){
-        throw invalid_argument("Endereco de email invalido");
-    }
-    this->endereco = endereco;
+Email::Email(const string& email){
+    setEmail(email);
 };
 
-string Email::getEndereco() const{
-    return this->endereco;
+string Email::getEmail() const{
+    return this->email;
 };
 
-bool Email::setEndereco(const string& endereco){
-    if(validarFormato(endereco)){
-        this->endereco = endereco;
-        return true;
+void Email::setEmail(const string& email){
+    if(validarFormato(email)){
+        this->email = email;
     }
-    return false;
+    else{
+        throw invalid_argument("Esse e-mail eh invalido.");
+    }
 }
 
 bool Email::validarFormato(const string& email){

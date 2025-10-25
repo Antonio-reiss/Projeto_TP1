@@ -13,9 +13,9 @@ std::string Pessoa::getNome() const{
 }
 
 void Pessoa::setEmail(const std::string& email){
-    this->email.setEndereco(email);
+    this->email.setEmail(email);
 }
 
 std::string Pessoa::getEmail() const{
-    return this->email.getEndereco();
+    return this->email.getEmail();
 }

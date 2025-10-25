@@ -1,18 +1,17 @@
 #ifndef DOMINIOS_EMAIL_HPP_INCLUDED
 #define DOMINIOS_EMAIL_HPP_INCLUDED
 #include <string>
-#include <stdexcept>
 
 using namespace std;
 
 class Email{
 private:
-    string endereco;
+    string email;
     bool validarFormato(const string& email);
 public:
-    Email(const string& endereco);
-    string getEndereco()const;
-    bool setEndereco(const string& endereco);
+    Email(const string& email);
+    string getEmail()const;
+    void setEmail(const string& email);
 };
 
 #endif // DOMINIO_EMAIL_HPP_INCLUDED

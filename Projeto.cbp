@@ -35,7 +35,7 @@
 		<Unit filename="dominios/dominios.capacidade.cpp" />
 		<Unit filename="dominios/dominios.capacidade.hpp" />
 		<Unit filename="dominios/dominios.cartao.cpp" />
-		<Unit filename="dominios/dominios.cartao.h" />
+		<Unit filename="dominios/dominios.cartao.hpp" />
 		<Unit filename="dominios/dominios.codigo.cpp" />
 		<Unit filename="dominios/dominios.codigo.hpp" />
 		<Unit filename="dominios/dominios.data.cpp" />
@@ -46,8 +46,6 @@
 		<Unit filename="dominios/dominios.email.hpp" />
 		<Unit filename="dominios/dominios.endereco.cpp" />
 		<Unit filename="dominios/dominios.endereco.hpp" />
-		<Unit filename="dominios/dominios.entidades.hotel.cpp" />
-		<Unit filename="dominios/dominios.entidades.hotel.h" />
 		<Unit filename="dominios/dominios.nome.cpp" />
 		<Unit filename="dominios/dominios.nome.hpp" />
 		<Unit filename="dominios/dominios.numero.cpp" />
@@ -62,9 +60,13 @@
 		<Unit filename="entidades/entidade.gerente.cpp" />
 		<Unit filename="entidades/entidade.gerente.hpp" />
 		<Unit filename="entidades/entidade.hospede.cpp" />
-		<Unit filename="entidades/entidade.hospede.h" />
+		<Unit filename="entidades/entidade.hospede.hpp" />
+		<Unit filename="entidades/entidade.hotel.cpp" />
+		<Unit filename="entidades/entidade.hotel.hpp" />
 		<Unit filename="entidades/entidade.pessoa.cpp" />
 		<Unit filename="entidades/entidade.pessoa.hpp" />
+		<Unit filename="entidades/entidade.quarto.cpp" />
+		<Unit filename="entidades/entidade.quarto.hpp" />
 		<Unit filename="entidades/entidade.reserva.cpp" />
 		<Unit filename="entidades/entidade.reserva.hpp" />
 		<Extensions>
