@@ -46,9 +46,8 @@
 	<regex>
 	<string>
 
-1760713801 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.email.hpp
+1761350690 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.email.hpp
 	<string>
-	<stdexcept>
 
 1760713801 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.endereco.cpp
 	"dominios.endereco.hpp"
@@ -113,17 +112,16 @@
 	"../dominios/dominios.endereco.hpp"
 	"../dominios/dominios.cartao.h"
 
-1760702685 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.hpp
+1761351577 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.hpp
 	<string>
 	"../dominios/dominios.nome.hpp"
 	"../dominios/dominios.email.hpp"
 
-1760624374 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
+1761350998 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1761071071 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
-	"../entidades/entidade.gerente.hpp"
-	"dominios.ramal.hpp"
+1761350552 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+	"../entidades/entidade.pessoa.hpp"
 	<iostream>
 	<string>
 
@@ -172,4 +170,18 @@
 	"../dominios/dominios.ramal.hpp"
 	"../dominios/dominios.dinheiro.hpp"
 	"../dominios/dominios.capacidade.hpp"
+
+1761350690 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios.email.cpp
+	"dominios.email.hpp"
+	<regex>
+	<string>
+	<stdexcept>
+
+1761350690 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios.email.hpp
+	<string>
+
+1761350690 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\main.cpp
+	"dominios.email.hpp"
+	<iostream>
+	<string>
 
