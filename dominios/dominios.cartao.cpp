@@ -1,4 +1,4 @@
-#include "dominios.cartao.h"
+#include "dominios.cartao.hpp"
 #include <stdexcept>
 #include <cctype>
 
@@ -39,4 +39,5 @@ void Cartao::setValor(string valor){
 string Cartao::getValor() const{
     return valor;
 }
+
 
