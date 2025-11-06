@@ -9,7 +9,7 @@ class Dinheiro{
 private:
     int valorEmCentavos;
     int validarConverter(string valor);
-    void validar(int valor);
+    bool validar(int valor);
 public:
     Dinheiro(double valor);
     Dinheiro(string valor);
