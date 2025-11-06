@@ -1,18 +1,23 @@
-#include "../entidades/entidade.pessoa.hpp"
+#include "../Subsistemas/Autenticacao/ma.autenticacao.hpp"
 #include <iostream>
 #include <string>
 
+bool validarDados(string&, string&);
 using namespace std;
 
 int main(){
-    string email, nome;
+    string email, senha;
 
-    cin >> nome;
-    cin >> email;
+inicio:
+    cin >> email >> senha;
 
-    Pessoa alguem(nome, email);
+    aAutenticacao auth;
+    bool validados = auth.validarDados(email, senha);
 
-    cout << alguem.getEmail() << endl << alguem.getNome();
+    if (!validados){
+        goto inicio;
+    }
+    cout << "Deu certo" << endl;
 
     return 0;
-}
+ }
