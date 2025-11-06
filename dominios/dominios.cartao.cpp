@@ -1,4 +1,4 @@
-#include "dominios.cartao.h"
+#include "dominios.cartao.hpp"
 #include <stdexcept>
 #include <cctype>
 

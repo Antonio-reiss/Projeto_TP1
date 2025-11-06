@@ -6,9 +6,9 @@
 
 using namespace std;
 
-void Endereco::validar(string endereco){
+bool Endereco::validar(string endereco){
     if(endereco.length() < 5 || endereco.length() > 30){
-        throw invalid_argument("O endereco deve ter entre 5 e 30 caracteres.");
+        return false;
     }
 
     for(size_t i = 0; i < endereco.length(); ++i){
@@ -16,17 +16,17 @@ void Endereco::validar(string endereco){
 
         bool isPermitido = isalpha(c) || isdigit(c) || isspace(c) || c == ',' || c == '.';
         if(!isPermitido){
-            throw invalid_argument("O endereco contem caracteres invalidos!");
+            return false;
         }
 
         if(i + 1 < endereco.length()){
             char proximo = endereco[i+1];
 
             if(isspace(c) && !(isalpha(proximo)|| isdigit(proximo))){
-                throw invalid_argument("O endereco contem caracteres invalidos!");
+                return false;
             }
             if((c == ',' || c == '.') && (proximo == ',' || proximo == '.')){
-                throw invalid_argument("O endereco contem caracteres invalidos!");
+                return false;
             }
         }
     }
@@ -35,16 +35,20 @@ void Endereco::validar(string endereco){
     char ultimo = endereco.back();
 
     if(primeiro == ',' || primeiro == '.' || isspace(primeiro)){
-        throw invalid_argument("O primeiro caracter precisa ser valido!");
+        return false;
     }
     if(ultimo == ',' || ultimo == '.' || isspace(ultimo)){
-        throw invalid_argument("O ultimo caracter precisa ser valido!");
+        return false;
     }
+
+    return true;
 
 }
 
 Endereco::Endereco(string endereco){
-    validar(endereco);
+    if(!validar(endereco)){
+        throw invalid_argument("O endereco inserido eh invalido");
+    }
     this->endereco = endereco;
 }
 
@@ -53,7 +57,9 @@ string Endereco::getEndereco() const{
 }
 
 void Endereco::setEndereco(string endereco){
-    validar(endereco);
+    if(!validar(endereco)){
+        throw invalid_argument("O endereco inserido eh invalido");
+    }
     this->endereco = endereco;
 }
 

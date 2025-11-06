@@ -6,7 +6,7 @@ using namespace std;
 class Endereco{
 private:
     string endereco;
-    void validar(string endereco);
+    bool validar(string endereco);
 public:
     Endereco(string endereco);
     string getEndereco() const;
