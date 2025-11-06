@@ -24,9 +24,7 @@ int Dinheiro::validarConverter(string valor){
 
     try{
         valor_decimal = stod(temp);
-    }catch(const invalid_argument&){
-        throw invalid_argument("Fomato invalido!");
-    }catch(const out_of_range&){
+    }catch(const std::exception&){
         throw invalid_argument("Valor invalido!");
     }
 
@@ -37,10 +35,11 @@ int Dinheiro::validarConverter(string valor){
     return static_cast<int>(round(valor_decimal * 100.0));
 }
 
-void Dinheiro::validar(int valor){
+bool Dinheiro::validar(int valor){
     if(valor < 1 || valor > 100000000){
-        throw invalid_argument("O valor deve estar no intervalo 0,01 e 1.000.000,00");
+        return false;
     }
+    return true;
 }
 
 Dinheiro::Dinheiro(string valor){
@@ -59,7 +58,10 @@ double Dinheiro::getValor() const{
 
 void Dinheiro::setValor(double valor){
     int valorEmCentavosConvetido = static_cast<int>(round(valor * 100.0));
-    validar(valorEmCentavosConvetido);
+
+    if(!validar(valorEmCentavosConvetido)){
+        throw invalid_argument("O valor digitado eh invalido!");
+    }
     this->valorEmCentavos = valorEmCentavosConvetido;
 }
 

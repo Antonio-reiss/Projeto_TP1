@@ -1,18 +1,31 @@
-#include "../entidades/entidade.pessoa.hpp"
+#include "../Subsistemas/Gerente/ma.gerente.hpp"
 #include <iostream>
 #include <string>
+#include <stdexcept>
 
 using namespace std;
 
 int main(){
-    string email, nome;
+    string nomeValido, emailValido, senhaValida;
+    float ramalValido = 02;
 
-    cin >> nome;
-    cin >> email;
+    cout << "-------- Criar conta - GERENTE --------" << endl;
+    cout << "Nome: ";
+    getline(cin, nomeValido);
+    cout << "E-mail: ";
+    getline(cin, emailValido);
+    cout << "Senha: ";
+    getline(cin, senhaValida);
+    cout << "Ramal: ";
+    cin >> ramalValido;
 
-    Pessoa alguem(nome, email);
+    maGerente servico;
 
-    cout << alguem.getEmail() << endl << alguem.getNome();
+    try{
+        servico.validarConta(nomeValido, emailValido, ramalValido, senhaValida);
+    }catch(const exception& e){
+        cout << "Erro: " << e.what() << endl;
+    }
 
     return 0;
 }

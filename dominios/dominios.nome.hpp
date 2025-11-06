@@ -7,7 +7,7 @@ using namespace std;
 class Nome{
     private:
         string nome;
-        void validar(string nome);
+        bool validar(string nome);
     public:
         Nome(string nome);
         string getNome() const;
