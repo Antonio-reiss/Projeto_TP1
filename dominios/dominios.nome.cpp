@@ -5,34 +5,31 @@
 
 using namespace std;
 
-bool Nome::validar(string nome){
+void Nome::validar(string nome){
     if(nome.length() < 5 || nome.length() > 20){
-        return false;
+        throw invalid_argument("O nome deve ter entre 5 e 20 caracteres");
     }
     if(nome.back() == ' '){
-        return false;
+        throw invalid_argument("O nome nao pode terminar com espaco");
     }
 
     for (size_t i = 0; i < nome.length(); ++i){
         char c = nome[i];
 
         if(!isalpha(c) && !isspace(c)){
-            return false;
+            throw invalid_argument("O nome possui caracters invalidos");
         }
         if(isspace(c)&& i + 1 < nome.length()){
             char proximo_c = nome[i+1];
             if(isspace(proximo_c)){
-                return false;
+                throw invalid_argument("O nome nao pode ter espacos consecutivos");
             }
         }
     }
-    return true;
 }
 
 Nome::Nome(string nome){
-    if(!validar(nome)){
-        throw invalid_argument("O nome inserido eh invalido!");
-    }
+    validar(nome);
     this->nome = nome;
 
 }
@@ -42,9 +39,7 @@ string Nome::getNome() const{
 }
 
 void Nome::setNome(string nome){
-    if(validar(nome)){
-        throw invalid_argument("O nome inserido eh invalido!");
-    }
+    validar(nome);
     this->nome = nome;
 }
 

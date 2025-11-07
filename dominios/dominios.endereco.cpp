@@ -6,9 +6,9 @@
 
 using namespace std;
 
-bool Endereco::validar(string endereco){
+void Endereco::validar(string endereco){
     if(endereco.length() < 5 || endereco.length() > 30){
-        return false;
+        throw invalid_argument("O endereco deve ter entre 5 e 30 caracteres.");
     }
 
     for(size_t i = 0; i < endereco.length(); ++i){
@@ -16,17 +16,17 @@ bool Endereco::validar(string endereco){
 
         bool isPermitido = isalpha(c) || isdigit(c) || isspace(c) || c == ',' || c == '.';
         if(!isPermitido){
-            return false;
+            throw invalid_argument("O endereco possui caracteres invalidos");
         }
 
         if(i + 1 < endereco.length()){
             char proximo = endereco[i+1];
 
             if(isspace(c) && !(isalpha(proximo)|| isdigit(proximo))){
-                return false;
+                throw invalid_argument("O endereco nao pode conter espacos seguidos");
             }
             if((c == ',' || c == '.') && (proximo == ',' || proximo == '.')){
-                return false;
+                throw invalid_argument("O endereco nao pode ter espacos seguidos.");
             }
         }
     }
@@ -35,20 +35,16 @@ bool Endereco::validar(string endereco){
     char ultimo = endereco.back();
 
     if(primeiro == ',' || primeiro == '.' || isspace(primeiro)){
-        return false;
+        throw invalid_argument("O endereco nao pode comecar com ponto, virgula ou espaco.");
     }
     if(ultimo == ',' || ultimo == '.' || isspace(ultimo)){
-        return false;
+        throw invalid_argument("O endereco nao pode terminar com ponto, virgula ou espaco.");
     }
-
-    return true;
 
 }
 
 Endereco::Endereco(string endereco){
-    if(!validar(endereco)){
-        throw invalid_argument("O endereco inserido eh invalido");
-    }
+    validar(endereco);
     this->endereco = endereco;
 }
 
@@ -57,10 +53,13 @@ string Endereco::getEndereco() const{
 }
 
 void Endereco::setEndereco(string endereco){
-    if(!validar(endereco)){
-        throw invalid_argument("O endereco inserido eh invalido");
+    try{
+        validar(endereco);
+        this->endereco = endereco;
+    }catch (const invalid_argument& e) {
+        throw;
     }
-    this->endereco = endereco;
+
 }
 
 

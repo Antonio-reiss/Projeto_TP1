@@ -14,12 +14,9 @@ string Email::getEmail() const{
 };
 
 void Email::setEmail(const string& email){
-    if(validarFormato(email)){
-        this->email = email;
-    }
-    else{
-        throw invalid_argument("Esse e-mail eh invalido.");
-    }
+    validarFormato(email);
+    this->email = email;
+
 }
 
 bool Email::validarFormato(const string& email){
@@ -29,10 +26,12 @@ bool Email::validarFormato(const string& email){
 
     size_t posicaoArroba = email.find('@');
     if(posicaoArroba == string::npos){
+        throw invalid_argument("O e-mail precisa  conter o caracter '@'");
         return false;
     }
 
     if(posicaoArroba > 64 || (email.length() - posicaoArroba - 1) > 255){
+        throw invalid_argument("O e-mail inserido eh invalido");
         return false;
     }
 
