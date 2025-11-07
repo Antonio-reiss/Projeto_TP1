@@ -15,7 +15,7 @@ bool maGerente::validarConta(const string& nome, const string& email, const floa
         cout << "Dados cadastrados com sucesso!" << endl;
         return true;
     }catch(const exception& e){
-        cerr << "Dados invalidos!\nOcorreu um erro: " << e.what() << endl;
+        cerr << "Dados invalidos!\nErro: " << e.what() << endl;
         return false;
     }
 
