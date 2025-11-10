@@ -12,15 +12,15 @@ private:
     Ramal ramal;
     Senha senha;
 public:
-    Gerente(const string& nome, const string& email, const int& ramal, const string& senha);
+    Gerente(string& nome, string& email, int& ramal, string& senha);
     void setRamal(int&);
     void setSenha(string&);
     void setNome(string&);
     void setEmail(string&);
 
     int getRamal() const;
-    //string getNome() const;
-    //string getEmail() const ;
+    string getGerenteNome() const;
+    string getGerenteEmail() const ;
     string getSenha() const;
 };
 

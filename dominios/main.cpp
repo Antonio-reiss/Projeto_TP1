@@ -1,23 +1,19 @@
-#include "../Subsistemas/Autenticacao/ma.autenticacao.hpp"
+#include "../entidades/entidade.gerente.hpp"
 #include <iostream>
 #include <string>
 
-bool validarDados(string&, string&);
 using namespace std;
 
 int main(){
-    string email, senha;
+    string senha, nome, email;
+    int ramal;
 
-inicio:
-    cin >> email >> senha;
+    cin >> nome >> email >> senha;
+    cin >> ramal;
 
-    aAutenticacao auth;
-    bool validados = auth.validarDados(email, senha);
+    Gerente gerente(nome, email, ramal, senha);
+    cout << gerente.getGerenteEmail() << endl << gerente.getGerenteNome();
 
-    if (!validados){
-        goto inicio;
-    }
-    cout << "Deu certo" << endl;
 
     return 0;
- }
+}

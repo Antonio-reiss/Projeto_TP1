@@ -32,6 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Subsistemas/Autenticacao/autenticar.cpp" />
+		<Unit filename="Subsistemas/Autenticacao/ia.autenticacao.hpp" />
+		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.cpp" />
+		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.hpp" />
+		<Unit filename="Subsistemas/QuartoHotel/ia.acrud.hpp" />
 		<Unit filename="dominios/dominios.capacidade.cpp" />
 		<Unit filename="dominios/dominios.capacidade.hpp" />
 		<Unit filename="dominios/dominios.cartao.cpp" />

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Gerente::Gerente(const string& nome, const string& email, const int& ramal, const string& senha) : Pessoa(nome, email), ramal(ramal), senha(senha){};
+Gerente::Gerente(string& nome, string& email, int& ramal, string& senha) : Pessoa(nome, email), ramal(ramal), senha(senha){};
 
 void Gerente::setRamal(int& ramal){
     this->ramal.setRamal(ramal);
@@ -24,13 +24,13 @@ int Gerente::getRamal() const {
     return this->ramal.getRamal();
 }
 
-//string Gerente::getNome() const{
-//    return this->nome.getNome();
-//}
+string Gerente::getGerenteNome() const{
+    return this->getNome();
+}
 
-//string Gerente::getEmail() const{
-//    return this->email.getEmail();
-//}
+string Gerente::getGerenteEmail() const{
+    return this->getEmail();
+    }
 
 string Gerente::getSenha() const{
     return this->senha.getSenha();
