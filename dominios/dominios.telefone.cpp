@@ -1,12 +1,13 @@
 #include "dominios.telefone.hpp"
 #include <stdexcept>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 bool Telefone::validar_telefone(string &telefone){
-    for (char digito : telefone){
-        if (digito < '0' || digito > '9'){
+    for (char digito = 0; digito < telefone.size(); digito++){
+        if (telefone[digito] < '0' || digito > '9'){
             throw invalid_argument("O telefone deve ser composto apenas por digitos de 0-9");
         }
     }
@@ -19,7 +20,7 @@ bool Telefone::validar_telefone(string &telefone){
     return true;
 }
 
-void Telefone::setTelefone(string &telefone){
+void Telefone::setTelefone(string& telefone){
     validar_telefone(telefone);
     this->telefone = '+' + telefone;
 }

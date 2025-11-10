@@ -1,19 +1,28 @@
-#include "../entidades/entidade.gerente.hpp"
+#include "../Subsistemas/QuartoHotel/ma.hotel.hpp"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 int main(){
-    string senha, nome, email;
-    int ramal;
+    string nome, endereco, codigo, telefone;
+    aHotel auth;
 
-    cin >> nome >> email >> senha;
-    cin >> ramal;
+    getline(cin, nome);
+    getline(cin, endereco);
+    getline(cin, telefone);
+    getline(cin, codigo);
 
-    Gerente gerente(nome, email, ramal, senha);
-    cout << gerente.getGerenteEmail() << endl << gerente.getGerenteNome();
+    bool valido = auth.validarCriar(nome, endereco, telefone, codigo);
+
+    if (valido) {
+        cout << "Deu certo" << endl;
+    }
+    else{
+        cout << "Deu errado" << endl;
+    }
 
 
     return 0;
 }
+
