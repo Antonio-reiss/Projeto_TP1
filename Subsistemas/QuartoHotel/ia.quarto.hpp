@@ -6,10 +6,10 @@
 using namespace std;
 
 template <typename T>
-class IQuarto : aCrud<T> {
+class IQuarto{
 public:
     virtual bool validarCriar(int&, int&, string&, int&) = 0;
-    virtual bool validarEditar(T&, string&);
+    virtual bool validarEditar(T&, string&) = 0;
 };
 
 #endif // IA_QUARTO_HPP_INCLUDED
