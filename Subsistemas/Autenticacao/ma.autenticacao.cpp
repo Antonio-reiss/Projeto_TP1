@@ -9,7 +9,7 @@ bool aAutenticacao::validarDados(string& email, string& senha){
     try {
         Email emailValido(email);
     }
-    catch(exception){
+    catch(const exception& error){
         cout << "Email nao segue o requisitado pelo sistema" << endl;
         return false;
     }

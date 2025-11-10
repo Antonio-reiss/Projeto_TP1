@@ -5,7 +5,7 @@ using namespace std;
 
 bool Numero::validar_numero(int numero){
     if (numero < MIN_VALOR || numero > MAX_VALOR){
-        throw invalid_argument("O valor deve ser de 001 a 999");
+        throw invalid_argument("O valor deve um número de 001 a 999");
     }
     return true;
 }

@@ -38,7 +38,7 @@
 	<sstream>
 	<cmath>
 
-1762390342 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.dinheiro.hpp
+1762538352 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.dinheiro.hpp
 	<string>
 
 1761350690 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.email.cpp
@@ -79,18 +79,18 @@
 	"dominios.nome.hpp"
 	<stdexcept>
 
-1760919731 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.cpp
+1762490908 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.cpp
 	"dominios.numero.hpp"
 	<stdexcept>
 
 1760919701 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.hpp
 
-1761070963 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
+1762780841 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
 	"dominios.ramal.hpp"
 	<stdexcept>
 	<math.h>
 
-1761070963 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.hpp
+1762780839 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.hpp
 
 1761069964 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.cpp
 	"dominios.senha.hpp"
@@ -141,7 +141,7 @@
 	"../dominios/dominios.endereco.hpp"
 	"../dominios/dominios.cartao.hpp"
 
-1761054700 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.cartao.hpp
+1762490907 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.cartao.hpp
 	<string>
 
 1761054580 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.cpp
@@ -153,10 +153,10 @@
 	"../dominios/dominios.telefone.hpp"
 	"../dominios/dominios.endereco.hpp"
 
-1761069485 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.cpp
+1762781747 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.cpp
 	"entidade.gerente.hpp"
 
-1761069485 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.hpp
+1762781747 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.hpp
 	"entidade.pessoa.hpp"
 	"../dominios/dominios.ramal.hpp"
 	"../dominios/dominios.senha.hpp"
@@ -184,12 +184,9 @@
 	<iostream>
 	<string>
 
-1762391434 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
-	"ma.autenticacao.hpp"
-	<iostream>
-	<string>
+1762391529 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
 
-1762390209 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.cpp
+1762469388 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.cpp
 	"ma.autenticacao.hpp"
 	<stdexcept>
 	<iostream>
