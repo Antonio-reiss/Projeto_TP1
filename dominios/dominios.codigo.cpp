@@ -17,6 +17,6 @@ void Codigo::setValor(string valor){
          this->valor = valor;
     }
 string Codigo::getValor() const{
-    return valor;
+    return this->valor;
 }
 

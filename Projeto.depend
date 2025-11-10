@@ -14,15 +14,15 @@
 1760713794 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.data.hpp
 	<string>
 
-1760809841 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.cartao.cpp
-	"dominios.cartao.h"
+1762783603 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.cartao.cpp
+	"dominios.cartao.hpp"
 	<stdexcept>
 	<cctype>
 
 1760624374 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.cartao.h
 	<string>
 
-1760809896 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.codigo.cpp
+1762795127 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.codigo.cpp
 	"dominios.codigo.hpp"
 	<stdexcept>
 	<cctype>
@@ -38,7 +38,7 @@
 	<sstream>
 	<cmath>
 
-1762538352 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.dinheiro.hpp
+1762783424 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.dinheiro.hpp
 	<string>
 
 1761350690 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.email.cpp
@@ -79,18 +79,18 @@
 	"dominios.nome.hpp"
 	<stdexcept>
 
-1762490908 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.cpp
+1762783424 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.cpp
 	"dominios.numero.hpp"
 	<stdexcept>
 
 1760919701 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.hpp
 
-1762780841 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
+1762783424 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
 	"dominios.ramal.hpp"
 	<stdexcept>
 	<math.h>
 
-1762780839 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.hpp
+1762783424 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.hpp
 
 1761069964 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.cpp
 	"dominios.senha.hpp"
@@ -100,10 +100,11 @@
 1760919701 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.hpp
 	<string>
 
-1760919731 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.cpp
+1762797043 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.cpp
 	"dominios.telefone.hpp"
 	<stdexcept>
 	<string>
+	<iostream>
 
 1761054547 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.cpp
 	"entidade.hospede.hpp"
@@ -121,8 +122,10 @@
 1761350998 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1762391209 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
-	<cstdlib>
+1762796844 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+	"../Subsistemas/QuartoHotel/ma.hotel.hpp"
+	<iostream>
+	<string>
 
 1760704353 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.data.hpp"
@@ -153,10 +156,10 @@
 	"../dominios/dominios.telefone.hpp"
 	"../dominios/dominios.endereco.hpp"
 
-1762781747 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.cpp
+1762783424 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.cpp
 	"entidade.gerente.hpp"
 
-1762781747 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.hpp
+1762783424 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.hpp
 	"entidade.pessoa.hpp"
 	"../dominios/dominios.ramal.hpp"
 	"../dominios/dominios.senha.hpp"
@@ -184,21 +187,40 @@
 	<iostream>
 	<string>
 
-1762391529 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
+1762783424 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
 
-1762469388 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.cpp
+1762783424 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.cpp
 	"ma.autenticacao.hpp"
 	<stdexcept>
 	<iostream>
 	<string>
 
-1762390715 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.hpp
+1762783424 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.hpp
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.senha.hpp"
 	"ia.autenticacao.hpp"
 	<string>
 
-1762389666 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ia.autenticacao.hpp
-	"../../dominios/dominios.email.hpp"
-	"../../dominios/dominios.senha.hpp"
+1762793860 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ia.autenticacao.hpp
+
+1762795467 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ma.hotel.hpp
+	"../../dominios/dominios.nome.hpp"
+	"../../dominios/dominios.endereco.hpp"
+	"../../dominios/dominios.telefone.hpp"
+	"../../dominios/dominios.codigo.hpp"
+	"ia.hotel.hpp"
+	<string>
+
+1762795232 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ia.hotel.hpp
+	"ia.acrud.hpp"
+	<string>
+
+1762795275 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ia.acrud.hpp
+	<string>
+
+1762795512 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ma.hotel.cpp
+	"ma.hotel.hpp"
+	<stdexcept>
+	<iostream>
+	<string>
 

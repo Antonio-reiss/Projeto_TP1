@@ -6,11 +6,11 @@
 using namespace std;
 
 //Create, Read, Update, Delete
+    template <typename T>
 class aCrud {
 public:
-    template <typename T>
-    virtual validarCriar(T&, T&, T&, T&) = 0;
-    virtual validarEditar(T&) = 0;
+    virtual bool validarCriar(T&, T&, T&, T&) = 0;
+    virtual bool validarEditar(T&, string&) = 0;
 };
 
 

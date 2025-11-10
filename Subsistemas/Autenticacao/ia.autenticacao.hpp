@@ -1,7 +1,5 @@
 #ifndef IA_AUTENTICACAO_HPP_INCLUDED
 #define IA_AUTENTICACAO_HPP_INCLUDED
-#include "../../dominios/dominios.email.hpp"
-#include "../../dominios/dominios.senha.hpp"
 
 using namespace std;
 
@@ -9,6 +7,5 @@ class IAutenticacao {
 public:
     virtual bool validarDados(string&, string&) = 0;
 };
-
 
 #endif // IA_AUTENTICACAO_HPP_INCLUDED
