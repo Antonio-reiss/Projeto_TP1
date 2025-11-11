@@ -1,6 +1,5 @@
 #ifndef IA_HOTEL_HPP_INCLUDED
 #define IA_HOTEL_HPP_INCLUDED
-#include "ia.acrud.hpp"
 #include <string>
 
 using namespace std;
