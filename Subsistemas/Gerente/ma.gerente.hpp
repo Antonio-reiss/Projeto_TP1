@@ -4,14 +4,14 @@
 #include "../../dominios/dominios.email.hpp"
 #include "../../dominios/dominios.ramal.hpp"
 #include "../../dominios/dominios.senha.hpp"
-#include "i.gerente.hpp"
+#include "ia.gerente.hpp"
 #include <string>
 
 using namespace std;
 
- class maGerente : public IGerente{
+ class maGerente : public IAGerente{
  public:
-    bool validarConta(const string& nome, const string& email, const float& ramal, const string& senha) override;
+    bool validarConta(const string& nome, const string& email, const int& ramal, const string& senha) override;
  };
 
 #endif // MA_GERENTE_HPP

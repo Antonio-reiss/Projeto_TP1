@@ -36,9 +36,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Subsistemas/Gerente/i.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/controladora.gerente.cpp" />
+		<Unit filename="Subsistemas/Gerente/controladora.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/ia.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/is.gerente.hpp" />
 		<Unit filename="Subsistemas/Gerente/ma.gerente.cpp" />
 		<Unit filename="Subsistemas/Gerente/ma.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/ms.gerente.cpp" />
+		<Unit filename="Subsistemas/Gerente/ms.gerente.hpp" />
+		<Unit filename="Subsistemas/IU/controladora.iu.cpp" />
+		<Unit filename="Subsistemas/IU/controladora.iu.hpp" />
+		<Unit filename="Subsistemas/IU/iu.cpp" />
+		<Unit filename="Subsistemas/IU/iu.hpp" />
 		<Unit filename="dominios/dominios.capacidade.cpp" />
 		<Unit filename="dominios/dominios.capacidade.hpp" />
 		<Unit filename="dominios/dominios.cartao.cpp" />

@@ -3,14 +3,14 @@
 
 class Ramal{
 private:
-    float ramal;
+    int ramal;
     static const int MAX_RAMAL = 50;
     static const int MIN_RAMAL = 0;
-    bool validar_ramal(float);
+    bool validar_ramal(int);
 public:
-    Ramal(float);
-    void setRamal(float);
-    float getRamal() const;
+    Ramal(int);
+    void setRamal(int);
+    int getRamal() const;
 
 };
 

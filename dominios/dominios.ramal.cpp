@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool Ramal::validar_ramal(float ramal){
+bool Ramal::validar_ramal(int ramal){
     if (ramal < MIN_RAMAL || ramal > MAX_RAMAL){
         throw invalid_argument("O valor do ramal deve ser de 00 a 50");
     }
@@ -14,15 +14,15 @@ bool Ramal::validar_ramal(float ramal){
     return true;
 }
 
-void Ramal::setRamal(float ramal){
+void Ramal::setRamal(int ramal){
     validar_ramal(ramal);
     this->ramal = ramal;
 }
 
-Ramal::Ramal(float ramal){
+Ramal::Ramal(int ramal){
     setRamal(ramal);
 }
 
-float Ramal::getRamal() const{
+int Ramal::getRamal() const{
     return this->ramal;
 }

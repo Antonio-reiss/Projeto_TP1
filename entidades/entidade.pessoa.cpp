@@ -1,3 +1,8 @@
+/**
+* @file entidade.pessoa.cpp
+* @brief Implementação dos métodos da classe entidade Pessoa.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #include "entidade.pessoa.hpp"
 
 Pessoa::Pessoa(const std::string& nome, const std::string& email):
