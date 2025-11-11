@@ -1,3 +1,8 @@
+/**
+* @file dominios.email.cpp
+* @brief Implementação dos métodos que validam objetos da classe Email.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #include "dominios.email.hpp"
 #include <regex>
 #include <string>
@@ -19,7 +24,7 @@ void Email::setEmail(const string& email){
 
 }
 
-bool Email::validarFormato(const string& email){
+void Email::validarFormato(const string& email){
     regex padrao("^[a-zA-Z0-9][a-zA-Z0-9.-]{0,62}[a-zA-Z0-9]@"
                       "[a-zA-Z0-9][a-zA-Z0-9-]{0,62}[a-zA-Z0-9](\\.[a-zA-Z0-9-]+)*$"
                      );
@@ -27,13 +32,13 @@ bool Email::validarFormato(const string& email){
     size_t posicaoArroba = email.find('@');
     if(posicaoArroba == string::npos){
         throw invalid_argument("O e-mail precisa  conter o caracter '@'");
-        return false;
     }
 
     if(posicaoArroba > 64 || (email.length() - posicaoArroba - 1) > 255){
         throw invalid_argument("O e-mail inserido eh invalido");
-        return false;
     }
 
-    return regex_match(email, padrao);
+    if(!regex_match(email, padrao)){
+        throw invalid_argument("O e-mail esta fora do padrao.");
+    }
 };

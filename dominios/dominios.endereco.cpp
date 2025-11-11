@@ -1,3 +1,8 @@
+/**
+* @file dominios.endereco.cpp
+* @brief Implementação dos métodos da classe Endereco.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #include "dominios.endereco.hpp"
 #include <string>
 #include <stdexcept>
@@ -53,13 +58,8 @@ string Endereco::getEndereco() const{
 }
 
 void Endereco::setEndereco(string endereco){
-    try{
-        validar(endereco);
-        this->endereco = endereco;
-    }catch (const invalid_argument& e) {
-        throw;
-    }
-
+    validar(endereco);
+    this->endereco = endereco;
 }
 
 

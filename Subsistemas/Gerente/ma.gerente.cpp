@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool maGerente::validarConta(const string& nome, const string& email, const float& ramal, const string& senha){
+bool maGerente::validarConta(const string& nome, const string& email, const int& ramal, const string& senha){
     try{
         Nome nomeValido(nome);
         Email emailValido(email);
