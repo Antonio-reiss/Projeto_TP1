@@ -1,6 +1,5 @@
 #ifndef IA_QUARTO_HPP_INCLUDED
 #define IA_QUARTO_HPP_INCLUDED
-#include "ia.acrud.hpp"
 #include <string>
 
 using namespace std;

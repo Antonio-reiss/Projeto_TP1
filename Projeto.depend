@@ -122,8 +122,8 @@
 1761350998 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1762797750 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
-	"../Subsistemas/QuartoHotel/ma.hotel.hpp"
+1762805714 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+	"../Subsistemas/QuartoHotel/aHotelQuarto.hpp"
 	<iostream>
 	<string>
 
@@ -187,7 +187,11 @@
 	<iostream>
 	<string>
 
-1762783424 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
+1762806277 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
+	"autenticar.hpp"
+	<iostream>
+	<string>
+	<cstdlib>
 
 1762783424 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.cpp
 	"ma.autenticacao.hpp"
@@ -211,8 +215,7 @@
 	"ia.hotel.hpp"
 	<string>
 
-1762798063 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ia.hotel.hpp
-	"ia.acrud.hpp"
+1762805674 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ia.hotel.hpp
 	<string>
 
 1762795275 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ia.acrud.hpp
@@ -222,5 +225,34 @@
 	"ma.hotel.hpp"
 	<stdexcept>
 	<iostream>
+	<string>
+
+1762804640 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ma.quarto.cpp
+	"ma.quarto.hpp"
+	<stdexcept>
+	<iostream>
+	<string>
+
+1762803541 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ma.quarto.hpp
+	"../../dominios/dominios.numero.hpp"
+	"../../dominios/dominios.capacidade.hpp"
+	"../../dominios/dominios.dinheiro.hpp"
+	"../../dominios/dominios.ramal.hpp"
+	"ia.quarto.hpp"
+	<string>
+
+1762802725 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ia.quarto.hpp
+	<string>
+
+1762805660 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ahotelquarto.hpp
+	"ma.quarto.hpp"
+	"ma.hotel.hpp"
+	<iostream>
+	<string>
+
+1762806210 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.hpp
+	"ma.autenticacao.hpp"
+	<iostream>
+	<cstdlib>
 	<string>
 
