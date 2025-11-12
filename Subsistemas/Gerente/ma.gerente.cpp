@@ -11,8 +11,6 @@ bool maGerente::validarConta(const string& nome, const string& email, const int&
         Email emailValido(email);
         Ramal ramalValido(ramal);
         Senha senhaValida(senha);
-
-        cout << "Dados cadastrados com sucesso!" << endl;
         return true;
     }catch(const exception& e){
         cerr << "Dados invalidos!\nErro: " << e.what() << endl;

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class IAutenticacao {
+class IAutenticacao{
 public:
     virtual bool validarDados(string&, string&) = 0;
 };

@@ -1,9 +1,11 @@
 /**
 * @file iu.cpp
-* @brief Implementação do módulo pricnipal de apresentação (IU).
+* @brief Implementação do módulo principal de apresentação (IU).
 */
 #include "iu.hpp"
 #include "../Autenticacao/autenticar.hpp"
+#include "../Gerente/controladora.gerente.hpp"
+#include "../Gerente/ma.gerente.hpp"
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -36,8 +38,7 @@ void iniciarSistema(){
                 validar();
                 break;
             case 2:
-                cout << "Cadastro realizado com sucesso!" << endl;
-                esperar(3000);
+                validarGerente();
                 break;
             case 3:
                 cout << "Saindo do sistema..." << endl;
