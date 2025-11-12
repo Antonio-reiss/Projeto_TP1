@@ -291,10 +291,10 @@
 	<iostream>
 	<string>
 
-1762949409 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.dinheiro.hpp
+1762954485 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.dinheiro.hpp
 	<string>
 
-1762948219 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.dinheiro.cpp
+1762954472 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.dinheiro.cpp
 	"dominios.dinheiro.hpp"
 	<stdexcept>
 	<string>
@@ -422,7 +422,7 @@
 	<stdexcept>
 	<vector>
 
-1762911616 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
+1762951039 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	"../Autenticacao/autenticar.hpp"
 	"../Gerente/controladora.gerente.hpp"
