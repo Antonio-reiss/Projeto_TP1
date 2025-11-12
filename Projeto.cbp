@@ -35,6 +35,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add option="-std=c++20" />
+			<Add option="-lm" />
+		</ResourceCompiler>
 		<Unit filename="Subsistemas/Autenticacao/autenticar.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/controladora.autenticacao.cpp" />
 		<Unit filename="Subsistemas/Autenticacao/ia.autenticacao.hpp" />
