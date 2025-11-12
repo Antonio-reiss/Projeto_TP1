@@ -1,18 +1,14 @@
-#include "../entidades/entidade.pessoa.hpp"
-#include <iostream>
-#include <string>
+#include "../Subsistemas/IU/iu.hpp"
+#include "../Subsistemas/Autenticacao/autenticar.hpp"
+#include "../Subsistemas/Gerente/controladora.gerente.hpp"
 
 using namespace std;
 
+void iniciarSistema();
+
 int main(){
-    string email, nome;
 
-    cin >> nome;
-    cin >> email;
-
-    Pessoa alguem(nome, email);
-
-    cout << alguem.getEmail() << endl << alguem.getNome();
+    iniciarSistema();
 
     return 0;
 }

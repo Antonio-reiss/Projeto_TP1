@@ -1,3 +1,10 @@
+/**
+* @file dominios.dinheiro.cpp
+* @brief Implementação dos métodos de validação e acesso da classe Dinheiro.
+*
+* Contém a lógica de conversão, validação de limites e manipulação interna do valor em centavos.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #include "dominios.dinheiro.hpp"
 #include <stdexcept>
 #include <string>
