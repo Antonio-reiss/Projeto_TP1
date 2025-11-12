@@ -1,3 +1,8 @@
+/**
+* @file dominios.endereco.cpp
+* @brief Implementação dos métodos da classe Endereco.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #include "dominios.endereco.hpp"
 #include <string>
 #include <stdexcept>
@@ -16,17 +21,17 @@ bool Endereco::validar(string endereco){
 
         bool isPermitido = isalpha(c) || isdigit(c) || isspace(c) || c == ',' || c == '.';
         if(!isPermitido){
-            return false;
+            throw invalid_argument("O endereco possui caracteres invalidos");
         }
 
         if(i + 1 < endereco.length()){
             char proximo = endereco[i+1];
 
             if(isspace(c) && !(isalpha(proximo)|| isdigit(proximo))){
-                return false;
+                throw invalid_argument("O endereco nao pode conter espacos seguidos");
             }
             if((c == ',' || c == '.') && (proximo == ',' || proximo == '.')){
-                return false;
+                throw invalid_argument("O endereco nao pode ter espacos seguidos.");
             }
         }
     }
@@ -35,10 +40,10 @@ bool Endereco::validar(string endereco){
     char ultimo = endereco.back();
 
     if(primeiro == ',' || primeiro == '.' || isspace(primeiro)){
-        return false;
+        throw invalid_argument("O endereco nao pode comecar com ponto, virgula ou espaco.");
     }
     if(ultimo == ',' || ultimo == '.' || isspace(ultimo)){
-        return false;
+        throw invalid_argument("O endereco nao pode terminar com ponto, virgula ou espaco.");
     }
 
     return true;

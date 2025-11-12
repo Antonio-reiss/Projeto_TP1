@@ -11,6 +11,7 @@ public:
     Ramal(int);
     void setRamal(int);
     int getRamal() const;
+
 };
 
 #endif // DOMINIOS_RAMAL_HPP_INCLUDED

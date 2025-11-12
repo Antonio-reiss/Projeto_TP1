@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "dominios.codigo.hpp"
 #include <stdexcept>
 #include <cctype>
@@ -19,4 +20,3 @@ void Codigo::setValor(string valor){
 string Codigo::getValor() const{
     return this->valor;
 }
-

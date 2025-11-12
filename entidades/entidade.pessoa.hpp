@@ -1,3 +1,8 @@
+/**
+* @file entidade.pessoa.hpp
+* @brief Definição da Entidade Pessoa.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #ifndef ENTIDADE_PESSOA_HPP_INCLUDED
 #define ENTIDADE_PESSOA_HPP_INCLUDED
 
@@ -5,16 +10,46 @@
 #include "../dominios/dominios.nome.hpp"
 #include "../dominios/dominios.email.hpp"
 
+using namespace std;
+
+/**
+* @class Pessoa
+* @brief Entidade base que representa uma pessoa no sistema.
+*
+* Contém objetos do tipo Nome e Email, valida e armazena os dados de uma pessoa.
+*/
 class Pessoa{
 private:
     Nome nome;
     Email email;
 public:
-    Pessoa(const std::string& nome, const std::string& email);
-    void setNome(const std::string& nome);
-    std::string getNome() const;
-    void setEmail(const std::string& email);
-    std::string getEmail() const;
+    /**
+     * @brief Construtor da classe Pessoa.
+     * @param nome String com o nome inicial a ser validado pelo Domínio Nome.
+     * @param email String com o email inicial a ser validado pelo Domínio Email (PK).
+     * @throws invalid_argument se a validação de Nome ou Email falhar.
+     */
+    Pessoa(const string& nome, const string& email);
+    /**
+     * @brief Define e valida um novo nome para o objeto, delegando a validação ao domínio Nome.
+     * @param nome A nova string do nome a ser validada.
+     */
+    void setNome(const string& nome);
+    /**
+     * @brief Retorna a string do nome.
+     * @return A string do nome validado.
+     */
+    string getNome() const;
+    /**
+    * @brief Define e valida um novo email para o objeto, delegando a validaçãao ao domínio Email.
+    * @param A string do email a ser validado.
+    */
+    void setEmail(const string& email);
+    /**
+    * @brief Retorna a string do email.
+    * @return A string do email valido.
+    */
+    string getEmail() const;
 };
 
 #endif // ENTIDADE_PESSOA_HPP_INCLUDED
