@@ -1,3 +1,8 @@
+/**
+* @file dominios.nome.cpp
+* @brief Implementação dos métodos de validação e acesso da classe Nome.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #ifndef DOMINIOS_NOME_CPP_INCLUDED
 #define DOMINIOS_NOME_CPP_INCLUDED
 #include "dominios.nome.hpp"
@@ -10,19 +15,19 @@ bool Nome::validar(string nome){
         return false;
     }
     if(nome.back() == ' '){
-        return false;
+        throw invalid_argument("O nome nao pode terminar com espaco");
     }
 
     for (size_t i = 0; i < nome.length(); ++i){
         char c = nome[i];
 
         if(!isalpha(c) && !isspace(c)){
-            return false;
+            throw invalid_argument("O nome possui caracters invalidos");
         }
         if(isspace(c)&& i + 1 < nome.length()){
             char proximo_c = nome[i+1];
             if(isspace(proximo_c)){
-                return false;
+                throw invalid_argument("O nome nao pode ter espacos consecutivos");
             }
         }
     }
