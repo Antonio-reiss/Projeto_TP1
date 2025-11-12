@@ -1,3 +1,7 @@
+/**
+* @file ia.gerente.hpp
+* @brief
+*/
 #ifndef IA_GERENTE_HPP
 #define IA_GERENTE_HPP
 #include "../../dominios/dominios.nome.hpp"

@@ -1,6 +1,7 @@
 /**
 * @file iu.cpp
 * @brief Implementação do módulo principal de apresentação (IU).
+* @author Maria Ellen Guedes Montalvão - 232011402
 */
 #include "iu.hpp"
 #include "../Autenticacao/autenticar.hpp"
