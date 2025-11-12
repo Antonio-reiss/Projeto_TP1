@@ -122,7 +122,7 @@
 1761350998 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1762805714 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1762806285 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/QuartoHotel/aHotelQuarto.hpp"
 	<iostream>
 	<string>
@@ -150,7 +150,9 @@
 1761054580 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.cpp
 	"entidade.hotel.hpp"
 
-1761054524 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.hpp
+1762832105 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.hpp
+	<vector>
+	"entidade.quarto.hpp"
 	"../dominios/dominios.codigo.hpp"
 	"../dominios/dominios.nome.hpp"
 	"../dominios/dominios.telefone.hpp"
@@ -187,7 +189,7 @@
 	<iostream>
 	<string>
 
-1762806277 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
+1762832106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
 	"autenticar.hpp"
 	<iostream>
 	<string>
@@ -221,7 +223,7 @@
 1762795275 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ia.acrud.hpp
 	<string>
 
-1762795512 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ma.hotel.cpp
+1762872171 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ma.hotel.cpp
 	"ma.hotel.hpp"
 	<stdexcept>
 	<iostream>

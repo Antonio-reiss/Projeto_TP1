@@ -21,7 +21,7 @@ bool aHotel::validarCriar(string& nome, string& endereco, string& telefone, stri
 
 bool aHotel::validarEditar(string& novoDado, string& tipoDado){
     try {
-        if (tipoDado == "Nome"){
+        if (tipoDado == "nome"){
             Nome nomeValido(novoDado);
         }
         else if (tipoDado == "endereco"){
