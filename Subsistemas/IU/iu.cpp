@@ -21,13 +21,13 @@ void esperar(int segundos){
 void iniciarSistema(){
     do{
         limparTela();
-        cout << "\n================================" << endl;
+        cout << "\n==================================" << endl;
         cout << "  SISTEMA DE GESTAO DE HOTELARIA  " << endl;
-        cout << "================================" << endl;
+        cout << "==================================" << endl;
         cout << "1. Login\n";
         cout << "2. Cadastrar nova conta\n";
         cout << "3. Sair\n";
-        cout << "================================" << endl;
+        cout << "==================================" << endl;
         cout << "Escolha uma opcao: ";
         int opcao;
 
@@ -42,7 +42,7 @@ void iniciarSistema(){
                 break;
             case 3:
                 cout << "Saindo do sistema..." << endl;
-                esperar(3000);
+                esperar(2000);
                 return;
             default:
                 cout << "Opcao invalida!" << endl;
