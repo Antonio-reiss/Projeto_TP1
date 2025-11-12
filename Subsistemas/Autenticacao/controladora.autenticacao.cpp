@@ -17,7 +17,8 @@ void limparTela(){
 
 bool validar(){
     string email, senha;
-    aAutenticacao autenticacao;
+    aAutenticacao ca_autenticacao;
+    msAutenticacao cs_autenticacao;
 
     limparTela();
 
@@ -30,7 +31,11 @@ bool validar(){
     getline(cin, senha);
     cout << endl << endl;
 
-    if (autenticacao.validarDados(email, senha)){
-        cout << "Autenticado com sucesso!" << endl << endl;
+    if (ca_autenticacao.validarDados(email, senha)){
+        if(cs_autenticacao.validarGerente(email, senha)){
+            cout << "Autenticado com sucesso!" << endl;
+            return true;
+        }
     }
+    return false;
 }
