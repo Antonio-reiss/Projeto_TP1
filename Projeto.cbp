@@ -14,6 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add option="-lstdc++" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Projeto" prefix_auto="1" extension_auto="1" />
@@ -32,6 +35,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Subsistemas/Autenticacao/autenticar.hpp" />
+		<Unit filename="Subsistemas/Autenticacao/controladora.autenticacao.cpp" />
+		<Unit filename="Subsistemas/Autenticacao/ia.autenticacao.hpp" />
+		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.cpp" />
+		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.hpp" />
+		<Unit filename="Subsistemas/Gerente/controladora.gerente.cpp" />
+		<Unit filename="Subsistemas/Gerente/controladora.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/ia.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/is.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/ma.gerente.cpp" />
+		<Unit filename="Subsistemas/Gerente/ma.gerente.hpp" />
+		<Unit filename="Subsistemas/Gerente/ms.gerente.cpp" />
+		<Unit filename="Subsistemas/Gerente/ms.gerente.hpp" />
+		<Unit filename="Subsistemas/IU/iu.cpp" />
+		<Unit filename="Subsistemas/IU/iu.hpp" />
 		<Unit filename="dominios/dominios.capacidade.cpp" />
 		<Unit filename="dominios/dominios.capacidade.hpp" />
 		<Unit filename="dominios/dominios.cartao.cpp" />
