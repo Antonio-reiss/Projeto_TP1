@@ -48,7 +48,7 @@ public:
     Dinheiro(string valor);
     /**
     * @brief Retorna o valor monetário armazenado no formato decimal (double) para exibição.
-    * @return \o valor monetário em reais.
+    * @return o valor monetário em reais.
     */
     double getValor() const;
     /**

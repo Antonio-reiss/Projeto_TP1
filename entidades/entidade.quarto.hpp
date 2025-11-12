@@ -1,5 +1,6 @@
 /**
 * @file entidade.quarto.hpp
+* @file entidade.quarto.hpp
 * @brief Definição da entidade Quarto.
 * @author Maria Ellen Guedes Montalvão - 232011402
 */
@@ -66,9 +67,13 @@ public:
     int getCapacidade() const;
     /**
     * @brief Retorna a string diária do quarto.
-    *
+    * @return O valor da diária.
     */
     double getDiaria() const;
+    /**
+    * @brief Retorna o ramal do quarto.
+    * @return O número do ramal.
+    */
     int getRamal() const;
 };
 

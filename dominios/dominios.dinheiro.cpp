@@ -38,7 +38,7 @@ int Dinheiro::validarConverter(string valor){
     }
 
     if(valor_decimal < 0.01 || valor_decimal > 1000000.00){
-        throw invalid_argument("O valor deve ser entre 0,01 e 1.000.000,00");
+        throw invalid_argument("O valor deve ser entre 0,01 e 1.000.000,00.");
     }
 
     return static_cast<int>(round(valor_decimal * 100.0));
@@ -46,7 +46,7 @@ int Dinheiro::validarConverter(string valor){
 
 void Dinheiro::validar(int valor){
     if(valor < 1 || valor > 100000000){
-        throw invalid_argument("O valor deve estar no intervalo 0,01 e 1.000.000,00");
+        throw invalid_argument("O valor deve estar no intervalo 0,01 e 1.000.000,00.");
     }
 }
 

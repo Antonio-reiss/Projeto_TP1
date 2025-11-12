@@ -1,6 +1,6 @@
 /**
 * @file entidade.quarto.hpp
-* @brief Implementação dos métodos da Entidade Quarto.
+* @brief Implementação dos métodos da entidade Quarto.
 * @author Maria Ellen Guedes Montalvão - 232011402
 */
 #include "entidade.quarto.hpp"

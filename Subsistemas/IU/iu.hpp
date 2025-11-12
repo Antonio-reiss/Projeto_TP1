@@ -6,6 +6,9 @@
 #ifndef IU_HPP_INCLUDED
 #define IU_HPP_INCLUDED
 
+/**
+* @brief Contém o menu que inicializa o sistema.
+*/
 void iniciarSitema();
 
 #endif // IU_HPP_INCLUDED
