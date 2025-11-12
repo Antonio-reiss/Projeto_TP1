@@ -1,3 +1,8 @@
+/**
+* @file controladora.gerente.cpp
+* @brief Impelementação das funções que administram a entrada e saída de dados do subsistema gerente.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #include "controladora.gerente.hpp"
 #include "../Autenticacao/autenticar.hpp"
 #include <iostream>

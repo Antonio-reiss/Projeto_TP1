@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> a55cbb4104751007fab958247925110f55a55da9
 #include "dominios.cartao.hpp"
 #include <stdexcept>
 #include <cctype>

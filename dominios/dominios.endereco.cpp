@@ -1,6 +1,6 @@
 /**
 * @file dominios.endereco.cpp
-* @brief Implementação dos métodos da classe Endereco.
+* @brief Implementação dos métodos de validação da classe Endereco.
 * @author Maria Ellen Guedes Montalvão - 232011402
 */
 #include "dominios.endereco.hpp"

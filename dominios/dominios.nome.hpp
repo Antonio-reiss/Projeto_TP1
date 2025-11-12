@@ -2,7 +2,6 @@
 * @file dominios.nome.hpp
 * @brief Definição da classe Nome, que representa e valida o nome de uma pessoa.
 *
-* O Nome é um domínio fundamental no sistema do hotel, com regras estritas sobre tamanho e formato.
 * @author Maria Ellen Guedes Montalvão - 232011402
 */
 #ifndef DOMINIOS_NOME_HPP_INCLUDED
@@ -22,13 +21,13 @@ class Nome{
         string nome;
         /**
         * @brief Verifica se a string do nome atende a todas as regras do domínio.
-        * @param nome A string contendo o nome a ser validado.
+        * @param nome Em string contendo o nome a ser validado.
         * @throws invalid_argument se o tamanho ou formato for inválido.
         */
         void validar(string nome);
     public:
         /**
-        * @brief Construtor da classe nome.
+        * @brief Construtor da classe Nome.
         * @param nome String com o nome inicial.
         * @throws invalid_argument se a validação falhar.
         */
