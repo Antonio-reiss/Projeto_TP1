@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "dominios.codigo.hpp"
 #include <stdexcept>
 #include <cctype>

@@ -36,7 +36,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-<<<<<<< HEAD
 		<Unit filename="Subsistemas/Autenticacao/autenticar.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/controladora.autenticacao.cpp" />
 		<Unit filename="Subsistemas/Autenticacao/ia.autenticacao.hpp" />
@@ -45,19 +44,6 @@
 		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/ms.autenticacao.cpp" />
 		<Unit filename="Subsistemas/Autenticacao/ms.autenticacao.hpp" />
-		<Unit filename="Subsistemas/QuartoHotel/aHotelQuarto.hpp" />
-		<Unit filename="Subsistemas/QuartoHotel/ia.hotel.hpp" />
-		<Unit filename="Subsistemas/QuartoHotel/ia.quarto.hpp" />
-		<Unit filename="Subsistemas/QuartoHotel/ma.hotel.cpp" />
-		<Unit filename="Subsistemas/QuartoHotel/ma.hotel.hpp" />
-		<Unit filename="Subsistemas/QuartoHotel/ma.quarto.cpp" />
-		<Unit filename="Subsistemas/QuartoHotel/ma.quarto.hpp" />
-=======
-		<Unit filename="Subsistemas/Autenticacao/autenticar.cpp" />
-		<Unit filename="Subsistemas/Autenticacao/autenticar.hpp" />
-		<Unit filename="Subsistemas/Autenticacao/ia.autenticacao.hpp" />
-		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.cpp" />
-		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.hpp" />
 		<Unit filename="Subsistemas/Gerente/controladora.gerente.cpp" />
 		<Unit filename="Subsistemas/Gerente/controladora.gerente.hpp" />
 		<Unit filename="Subsistemas/Gerente/ia.gerente.hpp" />
@@ -68,7 +54,13 @@
 		<Unit filename="Subsistemas/Gerente/ms.gerente.hpp" />
 		<Unit filename="Subsistemas/IU/iu.cpp" />
 		<Unit filename="Subsistemas/IU/iu.hpp" />
->>>>>>> ellen
+		<Unit filename="Subsistemas/QuartoHotel/aHotelQuarto.hpp" />
+		<Unit filename="Subsistemas/QuartoHotel/ia.hotel.hpp" />
+		<Unit filename="Subsistemas/QuartoHotel/ia.quarto.hpp" />
+		<Unit filename="Subsistemas/QuartoHotel/ma.hotel.cpp" />
+		<Unit filename="Subsistemas/QuartoHotel/ma.hotel.hpp" />
+		<Unit filename="Subsistemas/QuartoHotel/ma.quarto.cpp" />
+		<Unit filename="Subsistemas/QuartoHotel/ma.quarto.hpp" />
 		<Unit filename="dominios/dominios.capacidade.cpp" />
 		<Unit filename="dominios/dominios.capacidade.hpp" />
 		<Unit filename="dominios/dominios.cartao.cpp" />
