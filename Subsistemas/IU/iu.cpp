@@ -1,10 +1,7 @@
 /**
 * @file iu.cpp
 * @brief Implementação do módulo principal de apresentação (IU).
-<<<<<<< HEAD
-=======
 * @author Maria Ellen Guedes Montalvão - 232011402
->>>>>>> a55cbb4104751007fab958247925110f55a55da9
 */
 #include "iu.hpp"
 #include "../Autenticacao/autenticar.hpp"
@@ -19,7 +16,7 @@
 using namespace std;
 
 void esperar(int segundos){
-    std::this_thread::sleep_for(std::chrono::milliseconds(segundos));
+        this_thread::sleep_for(chrono::seconds(segundos));
 }
 
 void iniciarSistema(){

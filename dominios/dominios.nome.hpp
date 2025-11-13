@@ -24,7 +24,7 @@ class Nome{
         * @param nome Em string contendo o nome a ser validado.
         * @throws invalid_argument se o tamanho ou formato for inválido.
         */
-        void validar(string nome);
+        bool validar(string nome);
     public:
         /**
         * @brief Construtor da classe Nome.

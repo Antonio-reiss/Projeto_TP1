@@ -7,7 +7,7 @@
 #include "../../dominios/dominios.nome.hpp"
 #include "../../dominios/dominios.email.hpp"
 #include "../../dominios/dominios.ramal.hpp"
-#include "../../dominios/dominios.senha.hpp",
+#include "../../dominios/dominios.senha.hpp"
 #include <string>
 
 using namespace std;
