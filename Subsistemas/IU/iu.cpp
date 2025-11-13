@@ -3,6 +3,10 @@
 * @brief Implementação do módulo principal de apresentação (IU).
 * @author Maria Ellen Guedes Montalvão - 232011402
 */
+
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+
 #include "iu.hpp"
 #include "../Autenticacao/autenticar.hpp"
 #include "../Gerente/controladora.gerente.hpp"
@@ -11,12 +15,17 @@
 #include <string>
 #include <cstdlib>
 
+
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+
+#include <rpc.h>
+
 #ifdef _WIN32
     #include <windows.h>
 #else
     #include <unistd.h>
 #endif
-
 
 using namespace std;
 
@@ -53,17 +62,17 @@ void iniciarSistema(){
                 break;
             case 3:
                 cout << "Saindo do sistema..." << endl;
-                esperar(2);
+                esperar(8);
                 return;
             default:
                 cout << "Opcao invalida!" << endl;
-                esperar(3);
+                esperar(8);
             }
         }else{
             cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             cerr << "Opcao invalida! Digite um numero do menu." << endl;
-            esperar(3);
+            esperar(8);
         }
     }while(true);
 }

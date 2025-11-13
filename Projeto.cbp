@@ -98,6 +98,10 @@
 		<Unit filename="entidades/entidade.quarto.hpp" />
 		<Unit filename="entidades/entidade.reserva.cpp" />
 		<Unit filename="entidades/entidade.reserva.hpp" />
+		<Unit filename="zSQL/sqlite3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zSQL/sqlite3.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

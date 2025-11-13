@@ -34,5 +34,6 @@ bool validarGerente(){
     if(gerente.validarConta(nome, email, ramal, senha)){
         cout << "Conta gerente criada com sucesso!" << endl;
     }
+    return true;
 }
 
