@@ -1,13 +1,14 @@
 #include "../Subsistemas/Autenticacao/autenticar.hpp"
+#include "../Subsistemas/IU/iu.hpp"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-bool validar();
+void iniciarSistema();
 
 int main(){
-    bool auth = validar();
+    iniciarSistema();
 
     return 0;
 }

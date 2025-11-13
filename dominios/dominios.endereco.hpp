@@ -31,7 +31,7 @@ private:
     * @param endereco Em string contendo o endereço a ser validado.
     * @throws invalid_argument se o tamanho ou formato for inválido.
     */
-    void validar(string endereco);
+    bool validar(string endereco);
 public:
     /**
     * @brief construtor da classe Endereco.

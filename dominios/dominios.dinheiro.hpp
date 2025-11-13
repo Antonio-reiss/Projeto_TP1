@@ -44,7 +44,7 @@ private:
     * @param valor Valor em centavos.
     * @throws invalid_argument se o valor for inválido.
     */
-    void validar(int valor);
+    bool validar(int valor);
 public:
     /**
     * @brief Construtor que inicializa o objeto com um valor double (uso programático).
