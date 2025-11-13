@@ -30,6 +30,19 @@
 ** the version number) and changes its name to "sqlite3.h" as
 ** part of the build process.
 */
+
+
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+
+#include <rpc.h>
+
+#ifdef _WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+#endif
+
 #ifndef SQLITE3_H
 #define SQLITE3_H
 #include <stdarg.h>     /* Needed for the definition of va_list */

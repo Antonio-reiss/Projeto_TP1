@@ -12,8 +12,6 @@
 
 using namespace std;
 
-//criar, ler, editar, ler.
-
 class MSGerente : public ISGerente{
 
 };

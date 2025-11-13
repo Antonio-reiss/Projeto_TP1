@@ -10,7 +10,7 @@ string tipoCaractere(char caractere){
     if(caractere >= 'a' && caractere <= 'z') tipocaractere = "letra";
     else if(caractere >= 'A' && caractere <= 'Z') tipocaractere = "letra";
     else if(caractere >= '0' && caractere <= '9') tipocaractere = "digito";
-    else if(caractere >= '!' && caractere <= '&' || caractere == '?') tipocaractere = "caractere_especial";
+    else if((caractere >= '!' && caractere <= '&') || caractere == '?') tipocaractere = "caractere_especial";
 
     return tipocaractere;
 }
