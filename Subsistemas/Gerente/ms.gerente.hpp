@@ -12,7 +12,12 @@
 
 using namespace std;
 
-class MSGerente : public ISGerente{
+class msGerente : public isGerente{
+public:
+    bool criarGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
+    bool lerGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
+    bool editarGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
+    bool excluirGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
 
 };
 

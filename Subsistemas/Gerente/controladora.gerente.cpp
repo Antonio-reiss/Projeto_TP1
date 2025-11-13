@@ -5,6 +5,7 @@
 */
 #include "controladora.gerente.hpp"
 #include "../Autenticacao/autenticar.hpp"
+#include "../IU/iu.hpp"
 #include <iostream>
 #include <limits>
 
