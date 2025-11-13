@@ -62,17 +62,21 @@ void iniciarSistema(){
                 break;
             case 3:
                 cout << "Saindo do sistema..." << endl;
-                esperar(8);
+                esperar(2);
                 return;
             default:
-                cout << "Opcao invalida!" << endl;
-                esperar(8);
+                cout << "\n==================================" << endl;
+                cout << "Opcao invalida!\nDigite um numero do menu." << endl;
+                cout << "==================================" << endl;
+                esperar(2);
             }
         }else{
             cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cout << "========================================" << endl;
             cerr << "Opcao invalida! Digite um numero do menu." << endl;
-            esperar(8);
+            cout << "========================================" << endl;
+            esperar(2);
         }
     }while(true);
 }

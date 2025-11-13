@@ -23,7 +23,7 @@
 
 using namespace std;
 
-/*bool MSGerente::criarGerente(const string& nome, const string& email, const string& senha, float ramal){
+/*bool msGerente::criarGerente(const string& nome, const string& email, const string& senha, float ramal){
 
 }*/
 

@@ -12,10 +12,9 @@
 
 using namespace std;
 
-class IAGerente{
+class iaGerente{
 public:
     virtual bool validarConta(const string&, const string&, const int&, const string&) = 0;
-    //virtual bool validarEditar(const string& email);
 
 };
 

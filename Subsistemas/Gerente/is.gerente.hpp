@@ -13,8 +13,9 @@
 
 using namespace std;
 
-class ISGerente{
-    virtual bool criaGerente(const string&, const string&, const int&, const string&) = 0;
+class isGerente{
+public:
+    virtual bool criarGerente(const string&, const string&, const int&, const string&) = 0;
     virtual bool lerGerente(const string&, const string&, const int&, const string&) = 0;
     virtual bool editarGerente(const string&, const string&, const int&, const string&) = 0;
     virtual bool excluirGerente(const string&, const string&, const int&, const string&) = 0;

@@ -9,7 +9,7 @@
 
 using namespace std;
 
- class maGerente : public IAGerente{
+ class maGerente : public iaGerente{
  public:
     bool validarConta(const string& nome, const string& email, const int& ramal, const string& senha) override;
  };
