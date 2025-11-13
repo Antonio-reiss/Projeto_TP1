@@ -10,6 +10,6 @@
 /**
 * @brief Contém o menu que inicializa o sistema.
 */
-void iniciarSitema();
+void iniciarSistema();
 
 #endif // IU_HPP_INCLUDED
