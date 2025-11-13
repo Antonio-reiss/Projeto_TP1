@@ -10,14 +10,24 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include <chrono>
-#include <thread>
+
+#ifdef _WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+#endif
+
 
 using namespace std;
 
-void esperar(int segundos){
-        this_thread::sleep_for(chrono::seconds(segundos));
+void esperar(int segundos) {
+    #ifdef _WIN32
+        Sleep(segundos*1000);
+    #else
+        Sleep(segundos);
+    #endif
 }
+
 
 void iniciarSistema(){
     do{
@@ -43,17 +53,17 @@ void iniciarSistema(){
                 break;
             case 3:
                 cout << "Saindo do sistema..." << endl;
-                esperar(2000);
+                esperar(2);
                 return;
             default:
                 cout << "Opcao invalida!" << endl;
-                esperar(3000);
+                esperar(3);
             }
         }else{
             cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             cerr << "Opcao invalida! Digite um numero do menu." << endl;
-            esperar(3000);
+            esperar(3);
         }
     }while(true);
 }

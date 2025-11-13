@@ -1,7 +1,4 @@
-#include "../Subsistemas/Autenticacao/autenticar.hpp"
 #include "../Subsistemas/IU/iu.hpp"
-#include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -12,4 +9,3 @@ int main(){
 
     return 0;
 }
-

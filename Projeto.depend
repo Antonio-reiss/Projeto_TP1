@@ -122,11 +122,8 @@
 1762979327 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1762991968 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
-	"../Subsistemas/Autenticacao/autenticar.hpp"
+1762993126 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
-	<iostream>
-	<string>
 
 1760704353 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.data.hpp"
@@ -681,5 +678,16 @@
 	<iostream>
 	<limits>
 
-1762979914 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+1762993121 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+
+1762993841 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+	"iu.hpp"
+	"../Autenticacao/autenticar.hpp"
+	"../Gerente/controladora.gerente.hpp"
+	"../Gerente/ma.gerente.hpp"
+	<iostream>
+	<string>
+	<cstdlib>
+	<windows.h>
+	<unistd.h>
 
