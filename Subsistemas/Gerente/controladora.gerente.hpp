@@ -10,7 +10,8 @@
 #include <limits>
 
 /**
-* @brief valida se os dados inseridos pelo gernte estão no formato correto.
+* @brief Executa a coleta de dados e a validação para a criação da conta de gerente.
+* @return Retorna true se os dados forem validos, false caso não sejam validos.
 */
 bool validarGerente();
 
