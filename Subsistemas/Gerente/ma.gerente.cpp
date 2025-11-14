@@ -1,3 +1,8 @@
+/**
+* @file ma.gerente.cpp
+* @brief Implementação dos métodos da classe maGerente.
+* @author Maria Ellen Guedes Montalvão - 232011402
+*/
 #include "ma.gerente.hpp"
 #include <stdexcept>
 #include <iostream>

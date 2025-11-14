@@ -1,6 +1,8 @@
 /**
 * @file iu.cpp
 * @brief Implementação do módulo principal de apresentação (IU).
+*
+* Contém o loop de menu principal e a lógica de limpeza de tela.
 * @author Maria Ellen Guedes Montalvão - 232011402
 */
 
@@ -29,6 +31,10 @@
 
 using namespace std;
 
+/**
+* @brief Pausa a execução do programa pelo número de segundos especificado.
+* @param segundos O tempo de pausa em segundos.
+*/
 void esperar(int segundos) {
     #ifdef _WIN32
         Sleep(segundos*1000);
@@ -37,7 +43,9 @@ void esperar(int segundos) {
     #endif
 }
 
-
+/**
+* @brief Contém o menu principal que inicializa o sistema.
+*/
 void iniciarSistema(){
     do{
         limparTela();
@@ -55,10 +63,18 @@ void iniciarSistema(){
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             switch(opcao){
             case 1:
-                validar();
+                try{
+                    validar();
+                }catch(const invalid_argument& e){
+                    cerr << e.what() << endl;
+                }
                 break;
             case 2:
-                validarGerente();
+                try{
+                    validarGerente();
+                }catch(const invalid_argument& e){
+                    cerr << e.what() << endl;
+                }
                 break;
             case 3:
                 cout << "Saindo do sistema..." << endl;
