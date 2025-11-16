@@ -1,8 +1,8 @@
 /**
 * @file entidade.quarto.hpp
 * @file entidade.quarto.hpp
-* @brief Definição da entidade Quarto.
-* @author Maria Ellen Guedes Montalvão - 232011402
+* @brief Definicao da entidade Quarto.
+* @author Maria Ellen Guedes Montalvao - 232011402
 */
 #ifndef ENTIDADE_QUARTO_HPP_INCLUDED
 #define ENTIDADE_QUARTO_HPP_INCLUDED
@@ -29,29 +29,29 @@ private:
 public:
     /**
     * @brief Construtor da classe Quarto.
-    * @param numero Inteiro com o numero inicial a ser validado pelo domínio Numero.
-    * @param capacidade Inteiro com a capacidade inicial a ser validada pelo domínio Capacidade.
-    * @param diaria String com o diaria inicial a ser validada pelo domínio Dinheiro.
-    * @param ramal Inteiro com o ramal inicial a ser validado pelo domínio Ramal.
+    * @param numero Inteiro com o numero inicial a ser validado pelo dominio Numero.
+    * @param capacidade Inteiro com a capacidade inicial a ser validada pelo dominio Capacidade.
+    * @param diaria String com o diaria inicial a ser validada pelo dominio Dinheiro.
+    * @param ramal Inteiro com o ramal inicial a ser validado pelo dominio Ramal.
     */
     Quarto(const int& numero, const int& capacidade, const string& diaria, const int& ramal);
     /**
-    * @brief Define e valida um novo numero para o objeto, delegando a validação ao domínio Numero.
+    * @brief Define e valida um novo numero para o objeto, delegando a validacao ao dominio Numero.
     * @param numero o novo numero a ser validado.
     */
     void setNumero(int numero);
     /**
-    * @brief Define e valida uma nova capacidade para o objeto, delegando a validação ao domínio Capacidade.
+    * @brief Define e valida uma nova capacidade para o objeto, delegando a validacao ao dominio Capacidade.
     * @param capacidade uma capacidade a ser validada.
     */
     void setCapacidade(int capacidade);
     /**
-    * @brief Define e valida uma nova diaria para o objeto, delegando a validação ao domínio Dinheiro.
+    * @brief Define e valida uma nova diaria para o objeto, delegando a validacao ao dominio Dinheiro.
     * @param diaria String de diaria a ser validada.
     */
     void setDiaria(const string& diaria);
     /**
-    * @brief Define e valida um novo ramal para o objeto, delegando a validação ao domínio Ramal.
+    * @brief Define e valida um novo ramal para o objeto, delegando a validacao ao dominio Ramal.
     * @param Um ramal inteiro a ser validado.
     */
     void setRamal(int ramal);
@@ -66,8 +66,8 @@ public:
     */
     int getCapacidade() const;
     /**
-    * @brief Retorna a string diária do quarto.
-    * @return O valor da diária.
+    * @brief Retorna a string diaria do quarto.
+    * @return O valor da diaria.
     */
     double getDiaria() const;
     /**

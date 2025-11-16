@@ -1,7 +1,7 @@
 /**
 * @file dominios.nome.cpp
-* @brief Implementação dos métodos de validação e acesso da classe Nome.
-* @author Maria Ellen Guedes Montalvão - 232011402
+* @brief Implementacao dos metodos de validacao e acesso da classe Nome.
+* @author Maria Ellen Guedes Montalvao - 232011402
 */
 #ifndef DOMINIOS_NOME_CPP_INCLUDED
 #define DOMINIOS_NOME_CPP_INCLUDED

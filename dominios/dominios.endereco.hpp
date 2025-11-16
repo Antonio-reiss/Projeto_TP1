@@ -1,10 +1,10 @@
 /**
 * @file dominios.endereco.hpp
-* @brief Definição da classe Endereco, que representa e valida um endereço.
+* @brief Definicao da classe Endereco, que representa e valida um endereco.
 *
-* O domínio Endereço segue regras de limites de caracteres e restrições
-* no uso de pontuações e espaços.
-* @author Maria Ellen Guedes Montalvão - 232011402
+* O dominio Endereco segue regras de limites de caracteres e restricoes
+* no uso de pontuacoes e espacos.
+* @author Maria Ellen Guedes Montalvao - 232011402
 */
 #ifndef DOMINIOS_ENDERECO_HPP_INCLUDED
 #define DOMINIOS_ENDERECO_HPP_INCLUDED
@@ -13,30 +13,27 @@ using namespace std;
 
 /**
 * @class Endereco
-* @brief Representa e valida um endereço de rua.
+* @brief Representa e valida um endereco de rua.
 *
-<<<<<<< HEAD
-* Garaante que o endereço tenha entre 5 e 30 caracteres, use apenas
-=======
-* Garante que o endereço tenha entre 5 e 30 caracteres, use apenas
->>>>>>> a55cbb4104751007fab958247925110f55a55da9
-* alfanuméricos, espaços, vírgulas e pontos, e não contenha espaços ou
-* pontuações consecutivas ou nas extremidades.
+* Garaante que o endereco tenha entre 5 e 30 caracteres, use apenas
+* Garante que o endereco tenha entre 5 e 30 caracteres, use apenas
+* alfanuméricos, espacos, virgulas e pontos, e nao contenha espacos ou
+* pontuacoes consecutivas ou nas extremidades.
 */
 class Endereco{
 private:
     string endereco;
     /**
     * @brief Verifica se a string de endereco atende aos requisitos.
-    * @param endereco Em string contendo o endereço a ser validado.
-    * @throws invalid_argument se o tamanho ou formato for inválido.
+    * @param endereco Em string contendo o endereco a ser validado.
+    * @throws invalid_argument se o tamanho ou formato for invalido.
     */
     bool validar(string endereco);
 public:
     /**
     * @brief construtor da classe Endereco.
     * @param endreco string com o endereco inicial.
-    * @throws invalid_argument se a validação falhar.
+    * @throws invalid_argument se a validacao falhar.
     */
     Endereco(string endereco);
     /**
@@ -46,7 +43,7 @@ public:
     string getEndereco() const;
     /**
     * @brief Define e valida um novo endereco para o objeto.
-    * @param endereco Contendo a nova string  se o endereco for válido.
+    * @param endereco Contendo a nova string  se o endereco for valido.
     */
     void setEndereco(string endereco);
 };

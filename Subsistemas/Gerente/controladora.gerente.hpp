@@ -5,7 +5,6 @@
 */
 #ifndef CONTROLADORA_GERENTE_HPP_INCLUDED
 #define CONTROLADORA_GERENTE_HPP_INCLUDED
-#include "ma.gerente.hpp"
 #include <iostream>
 #include <limits>
 
@@ -14,5 +13,6 @@
 * @return Retorna true se os dados forem validos, false caso não sejam validos.
 */
 bool validarGerente();
+void telaGerente();
 
 #endif // CONTROLADORA_GERENTE_HPP_INCLUDED
