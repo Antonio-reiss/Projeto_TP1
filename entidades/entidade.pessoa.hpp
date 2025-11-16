@@ -1,7 +1,7 @@
 /**
 * @file entidade.pessoa.hpp
-* @brief Definição da Entidade Pessoa.
-* @author Maria Ellen Guedes Montalvão - 232011402
+* @brief Definicao da Entidade Pessoa.
+* @author Maria Ellen Guedes Montalvao - 232011402
 */
 #ifndef ENTIDADE_PESSOA_HPP_INCLUDED
 #define ENTIDADE_PESSOA_HPP_INCLUDED
@@ -25,13 +25,13 @@ private:
 public:
     /**
      * @brief Construtor da classe Pessoa.
-     * @param nome String com o nome inicial a ser validado pelo Domínio Nome.
-     * @param email String com o email inicial a ser validado pelo Domínio Email (PK).
-     * @throws invalid_argument se a validação de Nome ou Email falhar.
+     * @param nome String com o nome inicial a ser validado pelo Dominio Nome.
+     * @param email String com o email inicial a ser validado pelo Dominio Email (PK).
+     * @throws invalid_argument se a validacao de Nome ou Email falhar.
      */
     Pessoa(const string& nome, const string& email);
     /**
-     * @brief Define e valida um novo nome para o objeto, delegando a validação ao domínio Nome.
+     * @brief Define e valida um novo nome para o objeto, delegando a validacao ao dominio Nome.
      * @param nome A nova string do nome a ser validada.
      */
     void setNome(const string& nome);
@@ -41,7 +41,7 @@ public:
      */
     string getNome() const;
     /**
-    * @brief Define e valida um novo email para o objeto, delegando a validaçãao ao domínio Email.
+    * @brief Define e valida um novo email para o objeto, delegando a validacao ao dominio Email.
     * @param A string do email a ser validado.
     */
     void setEmail(const string& email);

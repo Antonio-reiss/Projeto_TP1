@@ -1,7 +1,7 @@
 /**
 * @file entidade.pessoa.cpp
-* @brief Implementação dos métodos da classe entidade Pessoa.
-* @author Maria Ellen Guedes Montalvão - 232011402
+* @brief Implementacao dos metodos da classe entidade Pessoa.
+* @author Maria Ellen Guedes Montalvao - 232011402
 */
 #include "entidade.pessoa.hpp"
 

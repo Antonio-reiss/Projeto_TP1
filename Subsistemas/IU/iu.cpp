@@ -1,9 +1,9 @@
 /**
 * @file iu.cpp
-* @brief Implementação do módulo principal de apresentação (IU).
+* @brief Implementacao do modulo principal de apresentacao (IU).
 *
-* Contém o loop de menu principal e a lógica de limpeza de tela.
-* @author Maria Ellen Guedes Montalvão - 232011402
+* Contem o loop de menu principal e a logica de limpeza de tela.
+* @author Maria Ellen Guedes Montalvao - 232011402
 */
 
 #define WIN32_LEAN_AND_MEAN
@@ -44,7 +44,7 @@ void esperar(int segundos) {
 }
 
 /**
-* @brief Contém o menu principal que inicializa o sistema.
+* @brief Contem o menu principal que inicializa o sistema.
 */
 void iniciarSistema(){
     do{
@@ -60,7 +60,7 @@ void iniciarSistema(){
         int opcao;
 
         if(cin >> opcao){
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             switch(opcao){
             case 1:
                 try{

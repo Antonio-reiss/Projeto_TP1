@@ -12,7 +12,7 @@ private:
     Ramal ramal;
     Senha senha;
 public:
-    Gerente(string& nome, string& email, int& ramal, string& senha);
+    Gerente(const string& nome, const string& email, const int& ramal, const string& senha);
     void setRamal(int&);
     void setSenha(string&);
     void setNome(string&);

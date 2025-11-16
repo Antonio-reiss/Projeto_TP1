@@ -1,8 +1,8 @@
 /**
 * @file iu.hpp
-* @brief Definição da interface do módulo principal de apresentação (IU).
+* @brief Definicao da interface do modulo principal de apresentacao (IU).
 *
-* Esse módulo lida com o menu principal e o controle de fluxo do sistema.
+* Esse modulo lida com o menu principal e o controle de fluxo do sistema.
 * @author Maria Ellen Guedes Montalvão - 232011402
 */
 #ifndef IU_HPP_INCLUDED
@@ -11,7 +11,7 @@
 
 /**
 * @brief Contém o menu que inicializa o sistema.
-* * Responsável por receber a opcao do usuário e delegar o fluxo.
+* * Responsavel por receber a opcao do usuario e delegar o fluxo.
 */
 void iniciarSistema();
 

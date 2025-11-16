@@ -1,7 +1,7 @@
 /**
 * @file dominios.email.cpp
-* @brief Implementação dos métodos que validam objetos da classe Email.
-* @author Maria Ellen Guedes Montalvão - 232011402
+* @brief Implementacao dos metodos que validam objetos da classe Email.
+* @author Maria Ellen Guedes Montalvao - 232011402
 */
 #include "dominios.email.hpp"
 #include <regex>
