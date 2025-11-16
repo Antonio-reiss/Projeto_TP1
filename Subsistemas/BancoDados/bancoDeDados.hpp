@@ -8,7 +8,7 @@
 #include "../../entidades/entidade.hotel.hpp"
 
 #include "../../zSQL/sqlite3.h"
-#include <sqlite3.h>
+//#include <sqlite3.h>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -39,7 +39,7 @@ public:
     void montarGerente(Gerente&);
     void montarHospede(Hospede&);
     void montarReserva(Reserva&);
-    void montarQuarto(Quarto&);
+    void montarQuarto(Quarto&, int);
     void montarHotel(Hotel&);
     void editarGerente(Gerente&);
     void editarHospede(Hospede&);
@@ -52,8 +52,9 @@ public:
     bool apagarTodos(const string&);
 
 
-    static int mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol);
     static int pegarValor(void* NaoUsado, int qtdCol, char** valor, char** nomeCol);
+    static int mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol);
+    static int pegarLinha(void* dado, int qtdCol, char** valor, char** nomeCol);
 
 };
 
