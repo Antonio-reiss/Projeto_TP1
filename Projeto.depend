@@ -92,7 +92,7 @@
 
 1762979327 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.hpp
 
-1761069964 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.cpp
+1763159586 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.senha.cpp
 	"dominios.senha.hpp"
 	<string>
 	<stdexcept>
@@ -122,16 +122,17 @@
 1762979327 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1762993126 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763159586 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 
-1760704353 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
-	"../dominios/dominios.data.hpp"
+1763176684 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.dinheiro.hpp"
+	"../dominios/dominios.codigo.hpp"
+	"../dominios/dominios.data.hpp"
 	<iostream>
 	<string>
 
-1760704353 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.cpp
+1763176646 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.cpp
 	"entidade.reserva.hpp"
 	<stdexcept>
 	<iostream>
@@ -148,8 +149,7 @@
 1761054580 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.cpp
 	"entidade.hotel.hpp"
 
-1762966188 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.hpp
-	<vector>
+1763262597 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.hpp
 	"entidade.quarto.hpp"
 	"../dominios/dominios.codigo.hpp"
 	"../dominios/dominios.nome.hpp"
@@ -607,20 +607,20 @@
 	<cstdlib>
 	<string>
 
-1762979564 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
+1763159405 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
 	"autenticar.hpp"
 	<iostream>
 	<string>
 	<cstdlib>
 
-1762966188 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
+1763159405 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
 	"ms.autenticacao.hpp"
 	<stdexcept>
 	<iostream>
 	<string>
 	<vector>
 
-1762966188 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.hpp
+1763159405 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.senha.hpp"
@@ -628,13 +628,13 @@
 
 1762966188 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
-1762979327 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+1763159585 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
 	"ma.gerente.hpp"
 	<stdexcept>
 	<iostream>
 	<string>
 
-1762979327 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
+1763159585 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.ramal.hpp"
@@ -642,14 +642,14 @@
 	"ia.gerente.hpp"
 	<string>
 
-1762992372 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ia.gerente.hpp
+1763159585 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ia.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.ramal.hpp"
 	"../../dominios/dominios.senha.hpp"
 	<string>
 
-1762979327 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+1763159585 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
 	"ms.gerente.hpp"
 	<iostream>
 	<stdexcept>
@@ -669,28 +669,29 @@
 	"../../dominios/dominios.codigo.hpp"
 	"../../dominios/dominios.telefone.hpp"
 
-1762979327 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
+1763159585 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
 	"is.gerente.hpp"
 
-1762979327 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+1763159585 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
 	<string>
 	<stdexcept>
 	<vector>
 
-1762979591 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763159585 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	"../Autenticacao/autenticar.hpp"
+	"../IU/iu.hpp"
 	<iostream>
 	<limits>
 
-1762979880 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+1763159585 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"ma.gerente.hpp"
 	<iostream>
 	<limits>
 
-1762993121 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+1763159585 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 
-1762993841 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+1763159585 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	"../Autenticacao/autenticar.hpp"
 	"../Gerente/controladora.gerente.hpp"
@@ -698,6 +699,7 @@
 	<iostream>
 	<string>
 	<cstdlib>
+	<rpc.h>
 	<windows.h>
 	<unistd.h>
 
@@ -817,4 +819,93 @@
 	<unicode/utf16.h>
 	<sys/uio.h>
 	<math.h>
+
+1763159586 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\zsql\sqlite3.c
+	<rpc.h>
+	<windows.h>
+	<unistd.h>
+	<vxWorks.h>
+	<pthread.h>
+	"mingw.h"
+	"_mingw.h"
+	<stdarg.h>
+	"sqlite_cfg.h"
+	<stdint.h>
+	<inttypes.h>
+	<intrin.h>
+	<cmnintrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<ctype.h>
+	<TargetConditionals.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	"windows.h"
+	<sys/cygwin.h>
+	<sys/stat.h>
+	<unistd.h>
+	<errno.h>
+	<process.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<sys/time.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/file.h>
+	<sys/param.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/mount.h>
+	<utime.h>
+	<sys/dcmd_blk.h>
+	<sys/statvfs.h>
+	<dlfcn.h>
+	<Windows.h>
+	"tclsqlite.h"
+	"sqlite3rtree.h"
+	<ctype.h>
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+	<sys/uio.h>
+	<math.h>
+
+1763271864 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+	"bancoDeDados.hpp"
+
+1763270222 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
+	"../../entidades/entidade.gerente.hpp"
+	"../../entidades/entidade.hospede.hpp"
+	"../../entidades/entidade.reserva.hpp"
+	"../../entidades/entidade.quarto.hpp"
+	"../../entidades/entidade.hotel.hpp"
+	"../../zSQL/sqlite3.h"
+	<sqlite3.h>
+	<iostream>
+	<string>
+	<vector>
+
+1763159586 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\zsql\sqlite3.h
+	<rpc.h>
+	<windows.h>
+	<unistd.h>
+	<stdarg.h>
 
