@@ -39,15 +39,6 @@ bool Reserva::validarDatas(Data &chegada, Data &partida)
     return true;
 }
 
-//Exige a anexação de dados para a criação dos atributos, sendo estes, classes instanciadas.
-//Reserva::Reserva(int& diaChegada, string& mesChegada, int& anoChegada, int& diaPartida, string& mesPartida, int& anoPartida, double& valorDinheiro):chegada(diaChegada, mesChegada, anoChegada), partida(diaPartida, mesPartida, anoPartida), valor(valorDinheiro){
-//       validarDatas(this->chegada, this->partida);
-//}
-
-//Reserva::Reserva(Data chegada, Data partida, Dinheiro valor){
-//    setReserva(chegada, partida, valor);
-//}
-
 void Reserva::setChegada(Data novaChegada)
 {
     if (validarDatas(novaChegada, this->partida))
@@ -77,7 +68,11 @@ void Reserva::setValorDinheiro(double preco)
     this->valor.setValor(preco);
 }
 
-void Reserva::setReserva(Data novaChegada, Data novaPartida, double novoValor)
+void Reserva::setCodigo(string novoCodigo){
+    this->codigo.setValor(novoCodigo);
+}
+
+void Reserva::setReserva(Data novaChegada, Data novaPartida, double novoValor, string novoCodigo)
 {
     if (validarDatas(novaChegada, novaPartida))
     {
@@ -90,6 +85,7 @@ void Reserva::setReserva(Data novaChegada, Data novaPartida, double novoValor)
     }
 
     setValorDinheiro(novoValor);
+    setCodigo(novoCodigo);
 }
 
 string Reserva::getChegada()
@@ -105,4 +101,8 @@ string Reserva::getPartida()
 double Reserva::getValor()
 {
     return this->valor.getValor();
+}
+
+string Reserva::getCodigo(){
+    return this->codigo.getValor();
 }
