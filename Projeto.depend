@@ -132,7 +132,7 @@
 	<iostream>
 	<string>
 
-1763176646 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.cpp
+1763272000 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.cpp
 	"entidade.reserva.hpp"
 	<stdexcept>
 	<iostream>
@@ -888,17 +888,16 @@
 	<sys/uio.h>
 	<math.h>
 
-1763271864 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+1763272110 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
-1763270222 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
+1763299802 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../entidades/entidade.hospede.hpp"
 	"../../entidades/entidade.reserva.hpp"
 	"../../entidades/entidade.quarto.hpp"
 	"../../entidades/entidade.hotel.hpp"
 	"../../zSQL/sqlite3.h"
-	<sqlite3.h>
 	<iostream>
 	<string>
 	<vector>

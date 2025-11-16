@@ -286,10 +286,78 @@ bool bancoDeDados::criarHotel(Hotel& hotel){
     return true;
 }
 
+void bancoDeDados::montarGerente(Gerente& gerente){
+    string email = gerente.getGerenteEmail();
+    vector<string> dados;
+
+    string sql = "SELECT * FROM gerente WHERE email = '"+ email +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
+
+}
+
+void bancoDeDados::montarHospede(Hospede& hospede){
+    string email = hospede.getEmail();
+    vector<string> dados;
+
+    string sql = "SELECT * FROM hospede WHERE email = '"+ email +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
+
+}
+
+void bancoDeDados::montarReserva(Reserva& reserva){
+    string codigo = reserva.getCodigo();
+    vector<string> dados;
+
+    string sql = "SELEC * FROM reserva WHERE codigo = '"+ codigo +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
+
+}
+
+void bancoDeDados::montarQuarto(Quarto& quarto, int ID){
+    int id = ID;
+    vector<string> dados;
+
+    string sql = "SELECT * FROM quarto WHERE id = "+ to_string(id) +";";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
+
+}
+
+void bancoDeDados::montarHotel(Hotel& hotel){
+    string codigo = hotel.getCodigo().getValor();
+    vector<string> dados;
+
+    string sql = "SELECT * FROM quarto WHERE codigo = '"+ codigo +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
+
+}
+
 /*
-bool criarGerente(Gerente&);
-bool criarHospede(Hospede&);
-bool criarReserva(Reserva&);
-bool criarQuarto(Quarto&);
-bool criarHotel(Hotel&);
+void montarGerente(Gerente&);
+void montarHospede(Hospede&);
+void montarReserva(Reserva&);
+void montarQuarto(Quarto&);
+void montarHotel(Hotel&);
+void editarGerente(Gerente&);
+void editarHospede(Hospede&);
+void editarReserva(Reserva&);
+void editarQuarto(Quarto&);
+void editarHotel(Hotel&);
 */
+
+int bancoDeDados::pegarLinha(void* dado, int argc, char** argv, char** colNames) {
+
+    auto* resultado = static_cast<vector<string>*>(dado);
+
+    resultado->clear();
+
+    for (int i = 0; i < argc; i++) {
+        resultado->push_back(argv[i]);
+    }
+
+    return 0;
+}
