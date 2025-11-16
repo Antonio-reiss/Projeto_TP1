@@ -25,9 +25,9 @@ using namespace std;
 class msGerente : public isGerente<string>, public isGerente<int>{
 public:
     bool criarGerente(const string&, const string&, const int&, const string&) override;
-    bool lerGerente(const string&, const string&, const int&, const string&) override;
-    bool editarGerente(const int&, const string&) override;
-    bool editarGerente(const string&, const string&) override;
+    bool listarGerentes() override;
+    bool editarGerente(const int&, const string&, const string&) override;
+    bool editarGerente(const string&, const string&, const string&) override;
     bool excluirGerente(const string&, const string&, const int&, const string&) override;
 
 };

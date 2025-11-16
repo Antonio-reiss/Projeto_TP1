@@ -20,9 +20,8 @@ bool msGerente::criarGerente(const string& nome, const string& email, const int&
     }
 }
 
-bool msGerente::lerGerente(const string& nome, const string& email, const int& ramal, const string& senha){
+bool msGerente::listarGerentes(){ //listar todos os gerentes
     try{
-        Gerente buscarGerente(nome, email, ramal, senha);
         cout << "\n================================" <<  endl;
         cout << " LISTA DE GERENTES " << endl;
         cout << "================================" <<  endl;
@@ -32,12 +31,21 @@ bool msGerente::lerGerente(const string& nome, const string& email, const int& r
     }
 }
 
-bool msGerente::editarGerente(const int& novoDado, const string& tipoDado){
+//l
 
+bool msGerente::editarGerente(const int& novoDado, const string& tipoDado, const string& email){
+    Gerente edicaoGerente("Ellen", email, 04, "E5&0l");
+    //Funcao(edicaoGerente) - passar p banco
+        //retorna dados validos do gerente passado
+    //cout informações a serem editadas
+        //uso dos gets
+    //do while com opcoes de editar dados e switch-case
+        //já alterar e exibir na próxima edição
+    //ao final salvar alterações -
 
 }
 
-bool msGerente::editarGerente(const string& novoDado, const string& tipoDado){
+bool msGerente::editarGerente(const string& novoDado, const string& tipoDado, const string& email){
 
 }
 

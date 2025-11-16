@@ -21,8 +21,8 @@ template <typename T>
 class isGerente{
 public:
     virtual bool criarGerente(const string&, const string&, const int&, const string&) = 0;
-    virtual bool lerGerente(const string&, const string&, const int&, const string&) = 0;
-    virtual bool editarGerente(const T&, const string&) = 0;
+    virtual bool listarGerentes() = 0;
+    virtual bool editarGerente(const T&, const string&, const string&) = 0;
     virtual bool excluirGerente(const string&, const string&, const int&, const string&) = 0;
 };
 

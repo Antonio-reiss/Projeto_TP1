@@ -10,9 +10,6 @@
 #define NOMINMAX
 
 #include "iu.hpp"
-#include "../Autenticacao/autenticar.hpp"
-#include "../Gerente/controladora.gerente.hpp"
-#include "../Gerente/ma.gerente.hpp"
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -23,25 +20,9 @@
 
 #include <rpc.h>
 
-#ifdef _WIN32
-    #include <windows.h>
-#else
-    #include <unistd.h>
-#endif
-
 using namespace std;
 
-/**
-* @brief Pausa a execução do programa pelo número de segundos especificado.
-* @param segundos O tempo de pausa em segundos.
-*/
-void esperar(int segundos) {
-    #ifdef _WIN32
-        Sleep(segundos*1000);
-    #else
-        Sleep(segundos);
-    #endif
-}
+void telaGerente();
 
 /**
 * @brief Contem o menu principal que inicializa o sistema.
@@ -64,14 +45,16 @@ void iniciarSistema(){
             switch(opcao){
             case 1:
                 try{
-                    validar();
+                    if(validar()){
+                        telaGerente();
+                    }
                 }catch(const invalid_argument& e){
                     cerr << e.what() << endl;
                 }
                 break;
             case 2:
                 try{
-                    validarGerente();
+                    validarCriarGerente();
                 }catch(const invalid_argument& e){
                     cerr << e.what() << endl;
                 }
@@ -95,4 +78,79 @@ void iniciarSistema(){
             esperar(2);
         }
     }while(true);
+}
+
+void telaGerente(){
+    msGerente novoGerente;
+    string novoDado, tipoDado;
+
+    do{
+        limparTela();
+
+        cout << "\n================================" << endl;
+        cout << " VOCE ESTA LOGADO COMO GERENTE " << endl;
+        cout << "================================" << endl;
+        cout << "1. Abrir opcoes de Gerente\n"; //abrir a controladora de cada um
+        cout << "2. Abrir opcoes de Hoteis\n";
+        cout << "3. Abrir opcoes de Quartos\n";
+        cout << "4. Abrir opcoes de Reservas\n";
+        cout << "5. Abrir opcoes de Hospedes\n";
+        cout << "6. Sair\n";
+        cout << "==================================" << endl;
+        cout << "Escolha uma opcao: ";
+        int opcao;
+        if(cin >> opcao){
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            switch(opcao){
+                case 1:
+                    cout << "\n================================" << endl;
+                    cout << " GERENTES CADASTRADOS NO SISTEMA " << endl;
+                    cout << "================================" << endl;
+                    break;
+                case 2:
+                    cout << "\n================================" << endl;
+                    cout << " HOTEIS CADASTRADOS NO SISTEMA " << endl;
+                    cout << "================================" << endl;
+                    break;
+                case 3:
+                    cout << "\n================================" << endl;
+                    cout << " QUARTOS CADASTRADOS NO SISTEMA " << endl;
+                    cout << "================================" << endl;
+                    break;
+                case 4:
+                    cout << "\n================================" << endl;
+                    cout << " RESERVAS CADASTRADAS NO SISTEMA " << endl;
+                    cout << "================================" << endl;
+                    break;
+                case 5:
+                    cout << "\n=====================" << endl;
+                    cout << " EXCLUIR CONTA GERENTE " << endl;
+                    cout << "=======================" << endl;
+                    break;
+                case 6:
+                    cout << "\n=====================" << endl;
+                    cout << " EDITAR CONTA GERENTE " << endl;
+                    cout << "=======================" << endl;
+                    cout << "Digite qual dado voce deseja alterar: ";
+                    cin >> tipoDado;
+                    cout << "Digite o novo " << tipoDado << ": ";
+                    cin >> novoDado;
+                    break;
+                case 7:
+                    cout << "Retornando ao menu inicial..." << endl;
+                    return;
+                default:
+                cout << "\n==================================" << endl;
+                cout << "Opcao invalida!\nDigite um numero do menu." << endl;
+                cout << "==================================" << endl;
+            }
+        }else{
+            cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cout << "========================================" << endl;
+            cerr << "Opcao invalida! Digite um numero do menu." << endl;
+            cout << "========================================" << endl;
+        }
+    }while(true);
+
 }

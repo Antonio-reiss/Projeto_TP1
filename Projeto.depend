@@ -414,11 +414,11 @@
 
 1762890632 e.hpp"
 
-1763117232 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
+1763307466 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
 	"autenticar.hpp"
+	"../funcoes.de.controles.hpp"
 	<iostream>
 	<string>
-	<cstdlib>
 
 1763117232 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\autenticar.hpp
 	"ma.autenticacao.hpp"
@@ -449,16 +449,17 @@
 	"ia.gerente.hpp"
 	<string>
 
-1763244611 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763307447 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
+	<iostream>
+	<limits>
+
+1763307275 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"../Autenticacao/autenticar.hpp"
 	"ma.gerente.hpp"
 	"ms.gerente.hpp"
 	"../IU/iu.hpp"
-	<iostream>
-	<limits>
-
-1763231589 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+	"../funcoes.de.controles.hpp"
 	<iostream>
 	<limits>
 
@@ -479,14 +480,14 @@
 
 1762456217 inios/dominios.senha.hpp"
 
-1763258720 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+1763308684 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
 	"ms.gerente.hpp"
 	<iostream>
 	<stdexcept>
 	<string>
 	<cmath>
 
-1763243976 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
+1763308629 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
 	"is.gerente.hpp"
 	"ma.gerente.hpp"
 	"../../entidades/entidade.gerente.hpp"
@@ -495,7 +496,7 @@
 	"../../dominios/dominios.ramal.hpp"
 	"../../dominios/dominios.senha.hpp"
 
-1763258691 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+1763308208 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\is.gerente.hpp
 	<string>
 	<stdexcept>
 	<vector>
@@ -514,7 +515,11 @@
 
 1762890253 e/controladora.gerente.hpp"
 
-1763258750 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
+1763307555 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
+	"../Autenticacao/autenticar.hpp"
+	"../Gerente/controladora.gerente.hpp"
+	"../Gerente/ma.gerente.hpp"
+	"../funcoes.de.controles.hpp"
 
 1762886274 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
 
@@ -893,14 +898,13 @@
 1763297914 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
-1763297914 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
+1763299692 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../entidades/entidade.hospede.hpp"
 	"../../entidades/entidade.reserva.hpp"
 	"../../entidades/entidade.quarto.hpp"
 	"../../entidades/entidade.hotel.hpp"
 	"../../zSQL/sqlite3.h"
-	<sqlite3.h>
 	<iostream>
 	<string>
 	<vector>
@@ -910,4 +914,6 @@
 	<windows.h>
 	<unistd.h>
 	<stdarg.h>
+
+1763309318 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\funcoes.de.controles.hpp
 
