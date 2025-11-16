@@ -44,6 +44,8 @@
 		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/ms.autenticacao.cpp" />
 		<Unit filename="Subsistemas/Autenticacao/ms.autenticacao.hpp" />
+		<Unit filename="Subsistemas/BancoDados/bancoDeDados.cpp" />
+		<Unit filename="Subsistemas/BancoDados/bancoDeDados.hpp" />
 		<Unit filename="Subsistemas/Gerente/controladora.gerente.cpp" />
 		<Unit filename="Subsistemas/Gerente/controladora.gerente.hpp" />
 		<Unit filename="Subsistemas/Gerente/ia.gerente.hpp" />

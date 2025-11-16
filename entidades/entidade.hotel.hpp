@@ -1,7 +1,6 @@
 #ifndef ENTIDADES_HOTEL_HPP_INCLUDED
 #define ENTIDADES_HOTEL_HPP_INCLUDED
 
-#include <vector>
 #include "entidade.quarto.hpp"
 #include "../dominios/dominios.codigo.hpp"
 #include "../dominios/dominios.nome.hpp"
@@ -14,7 +13,6 @@ private:
     Endereco endereco;
     Telefone telefone;
     Codigo codigo;
-    vector<Quarto> quartos;
 public:
     Hotel(Nome nome, Endereco endereco, Telefone telefone, Codigo codigo);
     void setNome(const Nome& nome);
