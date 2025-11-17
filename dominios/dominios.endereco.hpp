@@ -2,7 +2,7 @@
 * @file dominios.endereco.hpp
 * @brief Definicao da classe Endereco, que representa e valida um endereco.
 *
-* O dominio Endereco segue regras de limites de caracteres e restricoes
+* @details O dominio Endereco segue regras de limites de caracteres e restricoes
 * no uso de pontuacoes e espacos.
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
@@ -15,9 +15,8 @@ using namespace std;
 * @class Endereco
 * @brief Representa e valida um endereco de rua.
 *
-* Garaante que o endereco tenha entre 5 e 30 caracteres, use apenas
-* Garante que o endereco tenha entre 5 e 30 caracteres, use apenas
-* alfanuméricos, espacos, virgulas e pontos, e nao contenha espacos ou
+* @details Garaante que o endereco tenha entre 5 e 30 caracteres, use apenas
+* alfanumÃ©ricos, espacos, virgulas e pontos, e nao contenha espacos ou
 * pontuacoes consecutivas ou nas extremidades.
 */
 class Endereco{
@@ -25,7 +24,8 @@ private:
     string endereco;
     /**
     * @brief Verifica se a string de endereco atende aos requisitos.
-    * @param endereco Em string contendo o endereco a ser validado.
+    * @param endereco eh uma string contendo o endereco a ser validado.
+    * @return retorna true caso o endereco seja valido, caso contrario, lanca excesao.
     * @throws invalid_argument se o tamanho ou formato for invalido.
     */
     bool validar(string endereco);
