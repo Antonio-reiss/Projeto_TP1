@@ -63,6 +63,8 @@
 		<Unit filename="Subsistemas/QuartoHotel/ma.hotel.hpp" />
 		<Unit filename="Subsistemas/QuartoHotel/ma.quarto.cpp" />
 		<Unit filename="Subsistemas/QuartoHotel/ma.quarto.hpp" />
+		<Unit filename="Subsistemas/funcoes.de.controles.cpp" />
+		<Unit filename="Subsistemas/funcoes.de.controles.hpp" />
 		<Unit filename="dominios/dominios.capacidade.cpp" />
 		<Unit filename="dominios/dominios.capacidade.hpp" />
 		<Unit filename="dominios/dominios.cartao.cpp" />

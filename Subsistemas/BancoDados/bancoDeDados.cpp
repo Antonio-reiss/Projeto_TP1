@@ -154,28 +154,8 @@ bancoDeDados::~bancoDeDados(){
     }
 }
 
-/*
-bool bancoDeDados::executar(const string& sql){
-    char* error = nullptr;
-    int conexao = sqlite3_exec(bancoDados, sql.c_str(), mostrar, nullptr, &error);
-    if (conexao != SQLITE_OK){
-        cerr << "Erro ao executar SQL: " << error << endl;
-        sqlite3_free(error);
-        return false;
-    }
-    return true;
-}*/
 
-//---------------------------------------------------------------------------------------
-
-int bancoDeDados::mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol) {
-    for (int i = 0; i < qtdCol; i++) {
-        cout << nomeCol[i] << " = " << (valor[i] ? valor[i] : "NULL") << endl;
-    }
-    cout << endl;
-    return 0;
-}
-//---------------------------------------------------------------------------------------
+//CRIACAO -----------------------------------------------------------------
 
 bool bancoDeDados::criarGerente(Gerente& gerente){
     string nome, email, senha;
@@ -221,7 +201,7 @@ bool bancoDeDados::criarHospede(Hospede& hospede){
     return true;
 }
 
-bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto){
+bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto, string& emailHospede){
     string chegada, partida, codigo;
     int quarto_id = idQuarto;
     double valor;
@@ -244,7 +224,7 @@ bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto){
     codigo = reserva.getCodigo();
 
     string sql ="INSERT INTO reserva (chegada, partida, valor, codigo, quarto_id)"
-                "VALUES ('"+ chegada +"','"+ partida +"'," + to_string(valor) +",'"+ codigo +"',"+ to_string(quarto_id) +");";
+                "VALUES ('"+ chegada +"','"+ partida +"'," + to_string(valor) +",'"+ codigo +"',"+ to_string(quarto_id) +",'"+ emailHospede +"');";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
@@ -300,6 +280,42 @@ bool bancoDeDados::criarHotel(Hotel& hotel){
     }
     return true;
 }
+
+
+//LEITURA ---------------------------------------------------------------------------------------------
+
+void bancoDeDados::listarTodos(const string tabela){
+    string sql = "SELECT * FROM "+ tabela +";";
+    char* erro = nullptr;
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), mostrar, nullptr, &erro);
+
+    if (execucao != SQLITE_OK){
+        cerr << "Erro ao consultar dados  " << erro << endl;
+        sqlite3_free(erro);
+    }
+}
+
+void bancoDeDados::listarComFiltro(const string tabela, const string tipoChave, const string chave){
+    char* erro = nullptr;
+    string sql;
+
+    if (tipoChave != "quarto"){
+        sql = "SELECT * FROM "+ tabela +" WHERE "+ tipoChave +" = '"+ chave +"';";
+    } else {
+        sql = "SELECT * FROM "+ tabela +" WHERE "+ tipoChave +" = "+ chave +";";
+    }
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), mostrar, nullptr, &erro);
+
+    if (execucao != SQLITE_OK){
+        cerr << "Erro ao consultar dados  " << erro << endl;
+        sqlite3_free(erro);
+    }
+}
+
+
+//EDICAO --------------------------------------------------------------------------------------------
 
 void bancoDeDados::montarGerente(Gerente& gerente){
     string email = gerente.getGerenteEmail();
@@ -400,18 +416,182 @@ void bancoDeDados::montarHotel(Hotel& hotel){
     return;
 }
 
-/*
-void montarGerente(Gerente&);
-void montarHospede(Hospede&);
-void montarReserva(Reserva&);
-void montarQuarto(Quarto&);
-void montarHotel(Hotel&);
-void editarGerente(Gerente&);
-void editarHospede(Hospede&);
-void editarReserva(Reserva&);
-void editarQuarto(Quarto&);
-void editarHotel(Hotel&);
-*/
+void bancoDeDados::editarGerente(Gerente& gerente, string& emailReferencia){
+    string nome, email, ramal, senha;
+    int ramalInt = gerente.getRamal();
+
+    nome = gerente.getGerenteNome();
+    email = gerente.getGerenteEmail();
+    ramal = to_string(ramalInt);
+    senha = gerente.getSenha();
+
+    string sql= "UPDATE gerente"
+                "SET nome = '"+ nome +"',"
+                    "email = '"+ email +"',"
+                    "ramal = "+ ramal +","
+                    "senha = '"+ senha +"'"
+                "WHERE email = '"+ emailReferencia +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
+
+    if (execucao != SQLITE_OK){
+        cout << "Erro ao atualizar." <<  endl;
+    } else {
+        cout << "Atualizado com sucesso!" << endl;
+    }
+}
+
+void bancoDeDados::editarHospede(Hospede& hospede, string& emailReferencia){
+    string nome, email, endereco, cartao;
+
+    nome = hospede.getNome();
+    email = hospede.getEmail();
+    endereco = hospede.getEndereco();
+    cartao = hospede.getCartao();
+
+    string sql= "UPDATE hospede"
+                "SET nome = '"+ nome +"',"
+                    "email = '"+ email +"',"
+                    "endereco = '"+ endereco +"',"
+                    "cartao = '"+ cartao +"'"
+                "WHERE email = '"+ emailReferencia +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
+
+    if (execucao != SQLITE_OK){
+        cout << "Erro ao atualizar." <<  endl;
+    } else {
+        cout << "Atualizado com sucesso!" << endl;
+    }
+}
+
+void bancoDeDados::editarReserva(Reserva& reserva, string& codigoReferencia){
+    string chegada, partida, valor, codigo;
+    double valorNum = reserva.getValor();
+    string datas;
+
+    datas = reserva.getChegada();
+    if(datas.size() == 10){
+        chegada = "0" + reserva.getChegada();
+    } else {
+        chegada = reserva.getChegada();
+    }
+    datas = reserva.getPartida();
+    if(datas.size() == 10){
+        partida = "0" + reserva.getPartida();
+    } else {
+        partida = reserva.getPartida();
+    }
+    valor = to_string(valorNum);
+    codigo = reserva.getCodigo();
+
+    string sql= "UPDATE reserva"
+                "SET chegada = '"+ chegada +"',"
+                    "partida = '"+ partida +"',"
+                    "valor = "+ valor +","
+                    "codigo = '"+ codigo +"'"
+                "WHERE codigo = '"+ codigoReferencia +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
+
+    if (execucao != SQLITE_OK){
+        cout << "Erro ao atualizar." <<  endl;
+    } else {
+        cout << "Atualizado com sucesso!" << endl;
+    }
+}
+
+void bancoDeDados::editarQuarto(Quarto& quarto, int ID){
+    string numero, capacidade, diaria, ramal, id;
+    int numeroInt, capacidadeInt, ramalInt;
+    double diariaNum;
+
+    id = to_string(ID);
+
+    numeroInt = quarto.getNumero();
+    capacidadeInt = quarto.getCapacidade();
+    diariaNum = quarto.getDiaria();
+    ramalInt = quarto.getRamal();
+
+    numero = to_string(numeroInt);
+    capacidade = to_string(capacidadeInt);
+    diaria = to_string(diariaNum);
+    ramal = to_string(ramalInt);
+
+    string sql= "UPDATE quarto"
+                "SET numero = "+ numero +","
+                    "capacidade = "+ capacidade +","
+                    "diaria = "+ diaria +","
+                    "ramal = "+ ramal +""
+                "WHERE id = "+ id +";";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
+
+    if (execucao != SQLITE_OK){
+        cout << "Erro ao atualizar." <<  endl;
+    } else {
+        cout << "Atualizado com sucesso!" << endl;
+    }
+}
+
+void bancoDeDados::editarHotel(Hotel& hotel, string& codigoReferencia){
+    string nome, endereco, telefone, codigo;
+
+    nome = hotel.getNome().getNome();
+    endereco = hotel.getEndereco().getEndereco();
+    telefone = hotel.getTelefone().getTelefone();
+    codigo = hotel.getCodigo().getValor();
+
+    string sql= "UPDATE hotel"
+                "SET nome = '"+ nome +"',"
+                    "endereco = '"+ endereco +"',"
+                    "telefone = '"+ telefone +"',"
+                    "codigo = '"+ codigo +"'"
+                "WHERE codigo = '"+ codigoReferencia +"';";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
+
+    if (execucao != SQLITE_OK){
+        cout << "Erro ao atualizar." <<  endl;
+    } else {
+        cout << "Atualizado com sucesso!" << endl;
+    }
+}
+
+
+//DELETAR -------------------------------------------------------------------------------------
+
+void bancoDeDados::apagarTodos(const string tabela){
+    string sql = "DELETE FROM "+ tabela +";";
+    char* erro = nullptr;
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
+
+    if (execucao == SQLITE_OK) {
+        cout << "Dados apagados com sucesso!" << endl;
+    } else {
+        cout << "Não foi possível apagar os dados " << erro << endl;
+    }
+    return;
+}
+
+void bancoDeDados::apagarUm(const string tabela, const string tipoChave, const string& chave){
+    string sql = "DELETE FROM "+ tabela +" WHERE "+ tipoChave +" = "+ chave +";";
+    char* erro = nullptr;
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
+
+    if (execucao == SQLITE_OK) {
+        cout << "Dados apagados com sucesso!" << endl;
+    } else {
+        cout << "Não foi possível apagar os dados " << erro << endl;
+    }
+    return;
+}
+
+
+
+//CALLBACK ----------------------------------------------------------------------------------
 
 int bancoDeDados::pegarLinha(void* dado, int argc, char** argv, char** colNames) {
 
@@ -423,5 +603,13 @@ int bancoDeDados::pegarLinha(void* dado, int argc, char** argv, char** colNames)
         resultado->push_back(argv[i]);
     }
 
+    return 0;
+}
+
+int bancoDeDados::mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol) {
+    for (int i = 0; i < qtdCol; i++) {
+        cout << nomeCol[i] << " = " << valor[i] << endl;
+    }
+    cout << endl;
     return 0;
 }
