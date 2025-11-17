@@ -5,22 +5,22 @@ void criarTabelas(sqlite3* bancoDados){
     char* erro = nullptr;
 
     string sql = "CREATE TABLE gerente("
-                      "nome TEXT,"
-                      "email TEXT PRIMARY KEY,"
-                      "ramal INTEGER UNIQUE,"
+                      "nome TEXT, "
+                      "email TEXT PRIMARY KEY, "
+                      "ramal INTEGER UNIQUE, "
                       "senha TEXT"
                       ")";
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
     if (execucao != SQLITE_OK){
-        cout << "Erro SQLite: " << erro << endl;
+//        cout << "Erro SQLite: " << erro << endl;
         return;
     }
 
     sql = "CREATE TABLE IF NOT EXISTS hospede("
-                      "nome TEXT,"
-                      "email TEXT PRIMARY KEY,"
-                      "endereco TEXT,"
+                      "nome TEXT, "
+                      "email TEXT PRIMARY KEY, "
+                      "endereco TEXT, "
                       "cartao TEXT"
                       ")";
 
@@ -32,9 +32,9 @@ void criarTabelas(sqlite3* bancoDados){
     }
 
     sql = "CREATE TABLE IF NOT EXISTS hotel("
-                      "nome TEXT,"
-                      "endereco TEXT,"
-                      "telefone TEXT,"
+                      "nome TEXT, "
+                      "endereco TEXT, "
+                      "telefone TEXT, "
                       "codigo TEXT PRIMARY KEY"
                       ")";
     execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
@@ -45,15 +45,16 @@ void criarTabelas(sqlite3* bancoDados){
     }
 
     sql = "CREATE TABLE IF NOT EXISTS quarto ("
-                      "id INTEGER PRIMARY KEY AUTOINCREMENT"
-                      "numero INTEGER,"
-                      "capacidade INTEGER,"
-                      "diaria REAL,"
-                      "ramal INTEGER"
-                      "codigo_hotel TEXT"
-                      "FOREIGN KEY (codigo_hotel)"
-                         "REFERENCES hotel(codigo)"
-                         "ON DELETE CASCADE"
+                      "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                      "numero INTEGER, "
+                      "capacidade INTEGER, "
+                      "diaria REAL, "
+                      "ramal INTEGER, "
+                      "codigo_hotel TEXT, "
+                      "FOREIGN KEY (codigo_hotel) "
+                         "REFERENCES hotel(codigo) "
+                         "ON DELETE CASCADE, "
+                      "UNIQUE (codigo_hotel, numero)"
                       ")";
     execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
@@ -63,15 +64,15 @@ void criarTabelas(sqlite3* bancoDados){
     }
 
     sql = "CREATE TABLE IF NOT EXISTS reserva ("
-                      "chegada TEXT,"
-                      "partida TEXT,"
-                      "valor REAL,"
-                      "codigo TEXT PRIMARY KEY"
-                      "quarto_id INTEGER"
-                      "hospede_email TEXT"
+                      "chegada TEXT, "
+                      "partida TEXT, "
+                      "valor REAL, "
+                      "codigo TEXT PRIMARY KEY, "
+                      "quarto_id INTEGER UNIQUE, "
+                      "hospede_email TEXT, "
                       "FOREIGN KEY (quarto_id)"
                          "REFERENCES quarto(id)"
-                         "ON DELETE CASCADE"
+                         "ON DELETE CASCADE, "
                       "FOREIGN KEY (hospede_email)"
                          "REFERENCES hospede(email)"
                          "ON DELETE CASCADE"
@@ -201,7 +202,7 @@ bool bancoDeDados::criarHospede(Hospede& hospede){
     return true;
 }
 
-bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto, string& emailHospede){
+bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto, string emailHospede){
     string chegada, partida, codigo;
     int quarto_id = idQuarto;
     double valor;
@@ -236,7 +237,7 @@ bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto, string& emailHos
     return true;
 }
 
-bool bancoDeDados::criarQuarto(Quarto& quarto, string& codigoHotel){
+bool bancoDeDados::criarQuarto(Quarto& quarto, string codigoHotel){
     int numero, capacidade, ramal;
     double diaria;
     char* erro = nullptr;
@@ -268,13 +269,13 @@ bool bancoDeDados::criarHotel(Hotel& hotel){
     telefone = hotel.getTelefone().getTelefone();
     codigo = hotel.getCodigo().getValor();
 
-    string sql ="INSER INTO hotel (nome, endereco, telefone, codigo)"
+    string sql ="INSERT INTO hotel (nome, endereco, telefone, codigo)"
                 "VALUES ('"+ nome +"', '"+ endereco +"', '"+ telefone +"', '"+ codigo +"');";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
     if (execucao != SQLITE_OK) {
-        cerr << "Erro ao criar" << erro << endl;
+        cerr << "Erro ao criar " << erro << endl;
         sqlite3_free(erro);
         return false;
     }
@@ -311,6 +312,19 @@ void bancoDeDados::listarComFiltro(const string tabela, const string tipoChave, 
     if (execucao != SQLITE_OK){
         cerr << "Erro ao consultar dados  " << erro << endl;
         sqlite3_free(erro);
+    }
+}
+
+string bancoDeDados::getSenha(const string& email){
+    string sql = "SELECT 1 FROM gerente WHERE email = '"+ email +"';";
+    vector<string> dados;
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados, nullptr);
+
+    if(dados.size() == 0){
+        return "naoEcontrado";
+    } else {
+        return dados[3];
     }
 }
 
@@ -408,9 +422,11 @@ void bancoDeDados::montarHotel(Hotel& hotel){
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
 
+    string telefone = dados[2].substr(1);
+
     hotel.setNome(dados[0]);
     hotel.setEndereco(dados[1]);
-    hotel.setTelefone(dados[2]);
+    hotel.setTelefone(telefone);
     hotel.setCodigo(dados[3]);
 
     return;
@@ -589,6 +605,13 @@ void bancoDeDados::apagarUm(const string tabela, const string tipoChave, const s
     return;
 }
 
+void bancoDeDados::apagarTabela(const string tabela){
+    string sql = "DROP TABLE IF EXISTS "+ tabela +";";
+
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
+    cout << "A tabela " << tabela << " foi apagada!" << endl;
+    return;
+}
 
 
 //CALLBACK ----------------------------------------------------------------------------------
@@ -608,7 +631,13 @@ int bancoDeDados::pegarLinha(void* dado, int argc, char** argv, char** colNames)
 
 int bancoDeDados::mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol) {
     for (int i = 0; i < qtdCol; i++) {
-        cout << nomeCol[i] << " = " << valor[i] << endl;
+        if (string(nomeCol[i]) != "senha" && string(nomeCol[i]) != "quarto_id" && string(nomeCol[i]) != "hospede_email" && string(nomeCol[i]) != "codigo_hotel"){
+            if(string(nomeCol[i]).size() < 6){
+                cout << nomeCol[i] << " =\t\t" << valor[i] << endl;
+            } else {
+                cout << nomeCol[i] << " =\t" << valor[i] << endl;
+            }
+        }
     }
     cout << endl;
     return 0;
