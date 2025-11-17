@@ -1,19 +1,11 @@
-#include "dominios.data.hpp"
+#include "../Subsistemas/BancoDados/bancoDeDados.hpp"
+#include "../entidades/entidade.quarto.hpp"
 #include <iostream>
 
 using namespace std;
 
 int main(){
-    int dia, ano;
-    string mes;
-
-    cin >> dia;
-    cin >> mes;
-    cin >> ano;
-
-    Data data(dia, mes, ano);
-
-    cout << data.getValor() << endl;
+    bancoDeDados bd;
 
     return 0;
 }
