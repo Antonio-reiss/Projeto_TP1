@@ -28,13 +28,13 @@ public:
 
     bool criarGerente(Gerente&);
     bool criarHospede(Hospede&);
-    bool criarReserva(Reserva&, int);
+    bool criarReserva(Reserva&, int, string&);
     bool criarQuarto(Quarto&, string&);
     bool criarHotel(Hotel&);
 
 
-    void listarTodos(const string&);
-    void listarComFiltro(const string&, const string&, const string&);
+    void listarTodos(const string);
+    void listarComFiltro(const string, const string, const string);
 
 
     void montarGerente(Gerente&);
@@ -42,18 +42,17 @@ public:
     void montarReserva(Reserva&);
     void montarQuarto(Quarto&, int);
     void montarHotel(Hotel&);
-    void editarGerente(Gerente&);
-    void editarHospede(Hospede&);
-    void editarReserva(Reserva&);
-    void editarQuarto(Quarto&);
-    void editarHotel(Hotel&);
+    void editarGerente(Gerente&, string&);
+    void editarHospede(Hospede&, string&);
+    void editarReserva(Reserva&, string&);
+    void editarQuarto(Quarto&, int);
+    void editarHotel(Hotel&, string&);
 
 
-    bool apagarUm(const string&, const string&, const string&);
-    bool apagarTodos(const string&);
+    void apagarUm(const string, const string, const string&);
+    void apagarTodos(const string);
 
 
-    static int pegarValor(void* NaoUsado, int qtdCol, char** valor, char** nomeCol);
     static int mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol);
     static int pegarLinha(void* dado, int qtdCol, char** valor, char** nomeCol);
 

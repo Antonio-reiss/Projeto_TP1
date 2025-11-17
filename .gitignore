@@ -11,3 +11,4 @@ obj/
 
 # Arquivos de dependência
 *.depend
+*.layout
