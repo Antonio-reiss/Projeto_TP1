@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class aQuarto : public IQuarto<string>, public IQuarto<int> {
+class maQuarto : public iaQuarto<string>, public iaQuarto<int> {
 public:
     bool validarCriar(int&, int&, string&, int&) override;
     bool validarEditar(int&, string&) override;

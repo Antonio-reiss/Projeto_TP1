@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool aQuarto::validarCriar(int& numero, int& capacidade, string& diaria, int& ramal){
+bool maQuarto::validarCriar(int& numero, int& capacidade, string& diaria, int& ramal){
     try {
         Numero numeroValido(numero);
         Capacidade capacidadeValida(capacidade);
@@ -19,7 +19,7 @@ bool aQuarto::validarCriar(int& numero, int& capacidade, string& diaria, int& ra
     return true;
 }
 
-bool aQuarto::validarEditar(int& novoDado, string& tipoDado){
+bool maQuarto::validarEditar(int& novoDado, string& tipoDado){
     try {
         if (tipoDado == "numero"){
             Numero numeroValido(novoDado);
@@ -38,7 +38,7 @@ bool aQuarto::validarEditar(int& novoDado, string& tipoDado){
     return true;
 }
 
-bool aQuarto::validarEditar(string& diaria, string& tipoDado){
+bool maQuarto::validarEditar(string& diaria, string& tipoDado){
     try {
         Dinheiro diariaValida(diaria);
     }

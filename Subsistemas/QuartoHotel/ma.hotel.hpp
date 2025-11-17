@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class aHotel : public IHotel {
+class maHotel : public iaHotel {
 public:
     bool validarCriar(string&, string&, string&, string&) override;
     bool validarEditar(string&, string&) override;

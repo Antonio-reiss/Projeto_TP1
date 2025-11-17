@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class aAutenticacao : public IAutenticacao {
+class maAutenticacao : public iaAutenticacao {
 public:
     bool validarDados(string&, string&) override;
 };

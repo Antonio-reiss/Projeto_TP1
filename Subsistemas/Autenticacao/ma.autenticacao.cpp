@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool aAutenticacao::validarDados(string& email, string& senha){
+bool maAutenticacao::validarDados(string& email, string& senha){
     try {
         Email emailValido(email);
     }
