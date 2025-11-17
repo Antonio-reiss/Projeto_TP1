@@ -1,19 +1,13 @@
-# Build output
+# Build do CodeBlocks
 bin/
 obj/
 
-# Executáveis e binários
+# Arquivos binários
 *.exe
 *.o
 *.dll
-*.so
 *.a
+*.lib
 
-# CodeBlocks files
+# Arquivos de dependência
 *.depend
-*.layout
-
-# SQLite database
-*.db
-*.sqlite
-*.sqlite3
