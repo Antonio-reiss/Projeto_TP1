@@ -1,3 +1,10 @@
+/**
+* @file dominios.data.cpp
+* @brief Implementacao da classe Data.
+*
+* @author Ester Andrade Sousa - 242012109
+*/
+
 #include "dominios.data.hpp"
 #include <stdexcept>
 #include <sstream>
