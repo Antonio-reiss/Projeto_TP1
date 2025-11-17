@@ -1,0 +1,19 @@
+# Build output
+bin/
+obj/
+
+# Executáveis e binários
+*.exe
+*.o
+*.dll
+*.so
+*.a
+
+# CodeBlocks files
+*.depend
+*.layout
+
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
