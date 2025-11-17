@@ -17,7 +17,7 @@ class Telefone{
 private:
     string telefone;
     /**
-    * @brief Verifica se string do atende ao formato e tamanho exigidos ( + e 14 digitos).
+    * @brief Verifica se string do atende ao formato e tamanho exigidos ( + e 13 digitos).
     * @param telefone eh a string do telefone a ser validada.
     * @return true se o telefone for valido, caso contrario, lanca excecao.
     * @throws invalid_argument se o formato ou tamanho for incorreto.
