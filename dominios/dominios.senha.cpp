@@ -1,10 +1,15 @@
+/**
+* @file dominios.senha.cpp
+* @brief Implementacao dos metodos que representa e valida uma senha da classe Senha.
+* @author Antonio Lucas Paulo Reis Rodrigues dos Santos - 242010015
+*/
 #include "dominios.senha.hpp"
 #include <string>
 #include <stdexcept>
 
 using namespace std;
 
-//Função para determinar o tipo de caractere da senha, entre Maiúsculas, Minúsculas, Dígitos e Caracteres Especiais.
+//FunÃ§Ã£o para determinar o tipo de caractere da senha, entre MaiÃºsculas, MinÃºsculas, DÃ­gitos e Caracteres Especiais.
 string tipoCaractere(char caractere){
     string tipocaractere;
     if(caractere >= 'a' && caractere <= 'z') tipocaractere = "letra";
@@ -16,7 +21,7 @@ string tipoCaractere(char caractere){
 }
 
 bool Senha::validar_senha(string& senha){
-    //Essas são flags para determinar se a senha possui cada um dos caracteres requisitados.
+    //Essas sÃ£o flags para determinar se a senha possui cada um dos caracteres requisitados.
     short caractere_especial = 0;
     short letra_maiuscula = 0;
     short letra_minuscula = 0;
