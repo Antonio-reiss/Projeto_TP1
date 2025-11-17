@@ -122,9 +122,13 @@
 1763340106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1763409630 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763412028 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/BancoDados/bancoDeDados.hpp"
+	"../entidades/entidade.gerente.hpp"
+	"../entidades/entidade.reserva.hpp"
+	"../entidades/entidade.hospede.hpp"
 	"../entidades/entidade.quarto.hpp"
+	"../entidades/entidade.hotel.hpp"
 	<iostream>
 
 1763344024 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
@@ -875,7 +879,7 @@
 	<sys/uio.h>
 	<math.h>
 
-1763408515 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+1763411807 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
 1763409418 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp

@@ -12,9 +12,10 @@ void criarTabelas(sqlite3* bancoDados){
                       ")";
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
-    if (execucao != SQLITE_OK){
-//        cout << "Erro SQLite: " << erro << endl;
+    if (execucao == SQLITE_ERROR)
         return;
+    if (execucao != SQLITE_OK){
+        cout << "Erro SQLite: " << erro << endl;
     }
 
     sql = "CREATE TABLE IF NOT EXISTS hospede("
@@ -73,8 +74,8 @@ void criarTabelas(sqlite3* bancoDados){
                       "FOREIGN KEY (quarto_id)"
                          "REFERENCES quarto(id)"
                          "ON DELETE CASCADE, "
-                      "FOREIGN KEY (hospede_email)"
-                         "REFERENCES hospede(email)"
+                      "FOREIGN KEY (hospede_email) "
+                         "REFERENCES hospede(email) "
                          "ON DELETE CASCADE"
                       ")";
     execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
@@ -224,7 +225,7 @@ bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto, string emailHosp
     valor = reserva.getValor();
     codigo = reserva.getCodigo();
 
-    string sql ="INSERT INTO reserva (chegada, partida, valor, codigo, quarto_id)"
+    string sql ="INSERT INTO reserva (chegada, partida, valor, codigo, quarto_id, hospede_email)"
                 "VALUES ('"+ chegada +"','"+ partida +"'," + to_string(valor) +",'"+ codigo +"',"+ to_string(quarto_id) +",'"+ emailHospede +"');";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
@@ -253,8 +254,10 @@ bool bancoDeDados::criarQuarto(Quarto& quarto, string codigoHotel){
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
     if (execucao != SQLITE_OK) {
-        cerr << "Erro ao criar " << erro << endl;
-        sqlite3_free(erro);
+        cerr << "Erro ao criar" << endl;
+    }
+    if (execucao == SQLITE_CONSTRAINT) {
+        cerr << "O hotel informado ja possui um quarto com esse numero " << endl;
         return false;
     }
     return true;
