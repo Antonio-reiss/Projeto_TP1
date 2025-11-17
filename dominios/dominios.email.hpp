@@ -1,7 +1,7 @@
 /**
 * @file dominios.email.hpp
 * @brief Definicao da classe Email, que representa e valida um endereco de email.
-* * O dominio Email segue regras estritas de formato (parte local, @, dominio).
+* @details O dominio Email segue regras estritas de formato (parte local, @, dominio).
 * e limites de caracteres para garantir a validade do endereco.
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
@@ -15,7 +15,7 @@ using namespace std;
 * @class Email
 * @brief Representa e valida um endereco de email.
 *
-* Garante que o endereco possua o formato (local@dominio) e obedeca
+* @details Garante que o endereco possua o formato (local@dominio) e obedeca
 * os limites de tamanho e regras de uso de caracteres.
 */
 class Email{
