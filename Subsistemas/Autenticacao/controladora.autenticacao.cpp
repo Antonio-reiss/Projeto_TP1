@@ -1,19 +1,10 @@
 #include "autenticar.hpp"
+#include "../funcoes.de.controles.hpp"
 #include <iostream>
 #include <string>
-#include <cstdlib>
 
 using namespace std;
 
-void limparTela(){
-    #ifdef _WIN32
-        system("cls");
-    #else
-        system("clear");
-    #endif
-
-    return;
-}
 
 bool validar(){
     string email, senha;

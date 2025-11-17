@@ -9,15 +9,26 @@
 #ifndef MS_GERENTE_HPP_INCLUDED
 #define MS_GERENTE_HPP_INCLUDED
 #include "is.gerente.hpp"
+#include "ma.gerente.hpp"
+#include "../../entidades/entidade.gerente.hpp"
+#include "../../dominios/dominios.nome.hpp"
+#include "../../dominios/dominios.email.hpp"
+#include "../../dominios/dominios.ramal.hpp"
+#include "../../dominios/dominios.senha.hpp"
 
 using namespace std;
 
-class msGerente : public isGerente{
+/**
+* @class msGerente
+* @brief
+*/
+class msGerente : public isGerente<string>, public isGerente<int>{
 public:
-    bool criarGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
-    bool lerGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
-    bool editarGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
-    bool excluirGerente(const string& nome, const string& email, const int& ramal, const string& senha) override;
+    bool criarGerente(const string&, const string&, const int&, const string&) override;
+    bool listarGerentes() override;
+    bool editarGerente(const int&, const string&, const string&) override;
+    bool editarGerente(const string&, const string&, const string&) override;
+    bool excluirGerente(const string&, const string&, const int&, const string&) override;
 
 };
 
