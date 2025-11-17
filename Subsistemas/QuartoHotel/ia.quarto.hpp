@@ -5,7 +5,7 @@
 using namespace std;
 
 template <typename T>
-class IQuarto{
+class iaQuarto{
 public:
     virtual bool validarCriar(int&, int&, string&, int&) = 0;
     virtual bool validarEditar(T&, string&) = 0;

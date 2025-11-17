@@ -8,7 +8,7 @@ using namespace std;
 
 bool validar(){
     string email, senha;
-    aAutenticacao ca_autenticacao;
+    maAutenticacao ca_autenticacao;
     msAutenticacao cs_autenticacao;
 
     limparTela();

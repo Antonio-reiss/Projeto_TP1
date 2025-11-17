@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool aHotel::validarCriar(string& nome, string& endereco, string& telefone, string& codigo){
+bool maHotel::validarCriar(string& nome, string& endereco, string& telefone, string& codigo){
     try {
         Nome nomeValido(nome);
         Endereco enderecoValido(endereco);
@@ -19,7 +19,7 @@ bool aHotel::validarCriar(string& nome, string& endereco, string& telefone, stri
     return true;
 }
 
-bool aHotel::validarEditar(string& novoDado, string& tipoDado){
+bool maHotel::validarEditar(string& novoDado, string& tipoDado){
     try {
         if (tipoDado == "nome"){
             Nome nomeValido(novoDado);

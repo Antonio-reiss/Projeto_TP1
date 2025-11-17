@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class IHotel{
+class iaHotel{
 public:
     virtual bool validarCriar(string&, string&, string&, string&) = 0;
     virtual bool validarEditar(string&, string&) = 0;
