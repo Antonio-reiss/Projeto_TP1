@@ -22,6 +22,7 @@ class Nome{
         /**
         * @brief Verifica se a string do nome atende a todas as regras do dominio.
         * @param nome Em string contendo o nome a ser validado.
+        * @return retorna true caso o nome seja valido, caso contrario, lanca excecao.
         * @throws invalid_argument se o tamanho ou formato for invalido.
         */
         bool validar(string nome);
