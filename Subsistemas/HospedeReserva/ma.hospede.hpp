@@ -25,7 +25,7 @@
 using namespace std;
 
 /**
- * @class aHospede
+ * @class MAHospede
  * @brief Implementa a interface IAHospede para validacao de dados de hospedes.
  *
  * Esta classe valida os dados inseridos para que atendam aos requisitos
