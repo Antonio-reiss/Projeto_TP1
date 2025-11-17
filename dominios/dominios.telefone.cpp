@@ -1,3 +1,8 @@
+/**
+* @file dominios.telefone.cpp
+* @brief Implementacao dos metodos, que representa e valida um numero de telefone da classe Telefone.
+* @author Antonio Lucas Paulo Reis Rodrigues dos Santos - 242010015
+*/
 #include "dominios.telefone.hpp"
 #include <stdexcept>
 #include <string>
