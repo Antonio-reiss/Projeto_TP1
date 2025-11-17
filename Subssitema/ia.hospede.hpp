@@ -26,13 +26,27 @@ public:
      * @brief Valida os dados de criacao de um hospede.
      * @param nome String com o nome do hospede.
      * @param email String com o email do hospede.
-     * @param telefone String com o telefone do hospede.
+     * @param telefone String com o endereco do hospede.
+     * @param telefone String com o cartao do hospede.
      * @return true se todos os dados forem validos, false caso contrario.
      */
     virtual bool validarCriar(string&, string&, string&, string&) = 0;
+    /**
+     * @brief Valida os dados de edicao de um hospede.
+     * @param nome String com o nome do hospede (nao pode ser alterado se for chave primaria).
+     * @param endereco String com o novo endereco.
+     * @param email String com o novo email.
+     * @return true se os dados forem validos, false caso contrario.
+     */
     virtual bool validarEditar(string&, string&, string&) = 0;
+/**
+     * @brief Valida a exclusao de um hospede.
+     * @param nome String com o nome do hospede a ser excluido (chave primaria).
+     * @return true se a exclusao for permitida, false caso contrario.
+     */
     virtual bool validarExcluir(string&) = 0;
 };
 
 #endif // IA_HOSPEDE_HPP_INCLUDED
+
 
