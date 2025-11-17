@@ -9,7 +9,7 @@
 
 using namespace std;
 
-bool aReserva::validarCriar(string& codigo, string& dataChegada, string& dataPartida, string& valor, string& emailHospede) {
+bool MAReserva::validarCriar(string& codigo, string& dataChegada, string& dataPartida, string& valor, string& emailHospede) {
     try {
         Codigo codigoValido(codigo);
         Data chegadaValida(stoi(dataChegada.substr(0, 2)), dataChegada.substr(3, 3), stoi(dataChegada.substr(7, 4)));
@@ -26,7 +26,7 @@ bool aReserva::validarCriar(string& codigo, string& dataChegada, string& dataPar
     return true;
 }
 
-bool aReserva::validarEditarDatas(string& dataChegada, string& dataPartida) {
+bool MAReserva::validarEditarDatas(string& dataChegada, string& dataPartida) {
     try {
         Data chegadaValida(stoi(dataChegada.substr(0, 2)), dataChegada.substr(3, 3), stoi(dataChegada.substr(7, 4)));
         Data partidaValida(stoi(dataPartida.substr(0, 2)), dataPartida.substr(3, 3), stoi(dataPartida.substr(7, 4)));
@@ -40,7 +40,7 @@ bool aReserva::validarEditarDatas(string& dataChegada, string& dataPartida) {
     return true;
 }
 
-bool aReserva::validarCancelar(string& codigo) {
+bool MAReserva::validarCancelar(string& codigo) {
     try {
         Codigo codigoValido(codigo);
     }
