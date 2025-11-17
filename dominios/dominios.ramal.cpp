@@ -1,3 +1,8 @@
+/**
+* @file dominios.ramal.cpp
+* @brief Implemenrtacao dos metodos de validacao e acesso da classe Ramal.
+* @author Antonio Lucas Paulo Reis Rodrigues dos Santos - 242010015
+*/
 #include "dominios.ramal.hpp"
 #include <stdexcept>
 #include <math.h>
