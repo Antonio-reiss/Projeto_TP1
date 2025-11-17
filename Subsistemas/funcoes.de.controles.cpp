@@ -29,6 +29,6 @@ void esperar(int segundos) {
     #ifdef _WIN32
         Sleep(segundos*1000);
     #else
-        Sleep(segundos);
+        sleep(segundos);
     #endif
 }

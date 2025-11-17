@@ -24,7 +24,7 @@ class iaGerente{
 public:
     /**
     * @brief Valida os dados de entrada para a criacao de uma conta Gerente.
-    * * O método usa os construtores de dominio (Nome, Email, Ramal, Senha) para a validacao.
+    * @details O método usa os construtores de dominio (Nome, Email, Ramal, Senha) para a validacao.
     * @param string nome com o nome de entrada.
     * @param string email com o email de entrada.
     * @param int ramal com o ramal de entrada.

@@ -19,5 +19,6 @@
 */
 bool validarCriarGerente();
 void telaGerente();
+void opcoesGerente();
 
 #endif // CONTROLADORA_GERENTE_HPP_INCLUDED

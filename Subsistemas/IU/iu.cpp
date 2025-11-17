@@ -13,11 +13,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
-
-#define WIN32_LEAN_AND_MEAN
-#define NOMINMAX
-
 #include <rpc.h>
 
 using namespace std;
@@ -33,11 +28,11 @@ void iniciarSistema(){
         cout << "\n==================================" << endl;
         cout << "  SISTEMA DE GESTAO DE HOTELARIA  " << endl;
         cout << "==================================" << endl;
-        cout << "1. Login\n";
-        cout << "2. Cadastrar nova conta\n";
-        cout << "3. Sair\n";
+        cout << "[1] Login\n";
+        cout << "[2] Cadastrar nova conta\n";
+        cout << "[3] Sair\n";
         cout << "==================================" << endl;
-        cout << "Escolha uma opcao: ";
+        cout << "-> Escolha uma opcao: ";
         int opcao;
 
         if(cin >> opcao){
@@ -50,13 +45,17 @@ void iniciarSistema(){
                     }
                 }catch(const invalid_argument& e){
                     cerr << e.what() << endl;
+                    esperar(4);
                 }
                 break;
             case 2:
                 try{
-                    validarCriarGerente();
+                    if(validarCriarGerente()){
+                        opcoesGerente();
+                    }
                 }catch(const invalid_argument& e){
                     cerr << e.what() << endl;
+                     esperar(4);
                 }
                 break;
             case 3:
@@ -67,7 +66,7 @@ void iniciarSistema(){
                 cout << "\n==================================" << endl;
                 cout << "Opcao invalida!\nDigite um numero do menu." << endl;
                 cout << "==================================" << endl;
-                esperar(2);
+                 esperar(4);
             }
         }else{
             cin.clear();
@@ -75,7 +74,7 @@ void iniciarSistema(){
             cout << "========================================" << endl;
             cerr << "Opcao invalida! Digite um numero do menu." << endl;
             cout << "========================================" << endl;
-            esperar(2);
+             esperar(4);
         }
     }while(true);
 }
@@ -90,12 +89,12 @@ void telaGerente(){
         cout << "\n================================" << endl;
         cout << " VOCE ESTA LOGADO COMO GERENTE " << endl;
         cout << "================================" << endl;
-        cout << "1. Abrir opcoes de Gerente\n"; //abrir a controladora de cada um
-        cout << "2. Abrir opcoes de Hoteis\n";
-        cout << "3. Abrir opcoes de Quartos\n";
-        cout << "4. Abrir opcoes de Reservas\n";
-        cout << "5. Abrir opcoes de Hospedes\n";
-        cout << "6. Sair\n";
+        cout << "[1] Abrir opcoes de Gerente\n"; //abrir a controladora de cada um
+        cout << "[2] Abrir opcoes de Hoteis\n";
+        cout << "[3] Abrir opcoes de Quartos\n";
+        cout << "[4] Abrir opcoes de Reservas\n";
+        cout << "[5] Abrir opcoes de Hospedes\n";
+        cout << "[6] Sair\n";
         cout << "==================================" << endl;
         cout << "Escolha uma opcao: ";
         int opcao;
@@ -103,40 +102,21 @@ void telaGerente(){
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             switch(opcao){
                 case 1:
-                    cout << "\n================================" << endl;
-                    cout << " GERENTES CADASTRADOS NO SISTEMA " << endl;
-                    cout << "================================" << endl;
+                    opcoesGerente();
                     break;
                 case 2:
-                    cout << "\n================================" << endl;
-                    cout << " HOTEIS CADASTRADOS NO SISTEMA " << endl;
-                    cout << "================================" << endl;
+                    cout << "Opcoes De Hoteis" << endl;
                     break;
                 case 3:
-                    cout << "\n================================" << endl;
-                    cout << " QUARTOS CADASTRADOS NO SISTEMA " << endl;
-                    cout << "================================" << endl;
+                    cout << "Opcoes de Reservas" << endl;
                     break;
                 case 4:
-                    cout << "\n================================" << endl;
-                    cout << " RESERVAS CADASTRADAS NO SISTEMA " << endl;
-                    cout << "================================" << endl;
+                    cout << "Opcoes de Reservas" << endl;
                     break;
                 case 5:
-                    cout << "\n=====================" << endl;
-                    cout << " EXCLUIR CONTA GERENTE " << endl;
-                    cout << "=======================" << endl;
+                    cout << "Opcoes de Hospedes" << endl;
                     break;
                 case 6:
-                    cout << "\n=====================" << endl;
-                    cout << " EDITAR CONTA GERENTE " << endl;
-                    cout << "=======================" << endl;
-                    cout << "Digite qual dado voce deseja alterar: ";
-                    cin >> tipoDado;
-                    cout << "Digite o novo " << tipoDado << ": ";
-                    cin >> novoDado;
-                    break;
-                case 7:
                     cout << "Retornando ao menu inicial..." << endl;
                     return;
                 default:
