@@ -18,7 +18,7 @@ using namespace std;
 * @class maGerente
 * @brief Classe concreta que valida os dados de entrada para uma conta Gerente.
 *
-* Esta classe usa heranca de templates (iaGerente<string>, iaGerente<int> para delegar
+* @details Esta classe usa heranca de templates (iaGerente<string>, iaGerente<int> para delegar
 * a validacao dos dados brutos de entrada aos domínios.
 */
  class maGerente : public iaGerente<string>, public iaGerente<int>{
