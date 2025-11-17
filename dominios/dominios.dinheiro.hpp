@@ -2,9 +2,6 @@
 * @file dominios.dinheiro.hpp
 * @brief Definicao da classe Dinheiro, responsavel por armazenar valores monetarios.
 *
-* O valor eh armazenado como inteiro (centavos) para evitar erros de arredondamento.
-* @brief Definicao da classe Dinheiro.
-*
 * O valor eh armazenado em centavos (inteiros) para evitar arrendodamentos e garantir precisao nos calculos.
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
@@ -18,10 +15,7 @@ using namespace std;
 * @class Dinheiro
 * @brief Representa e valida valores monetarios no intervalo de 0,01 a 1.000.000,00.
 *
-* * Utiliza armazenamento em centavos (int) para garantir precisao.
-* @class Endereco
-* @brief Representa e valida um valor monetario no intervalo de 0,01 e 1.000.000,00.
-*
+* Utiliza armazenamento em centavos (int) para garantir precisao.
 * Armazena em centavos (int) para garantir precisao.
 */
 class Dinheiro{
@@ -36,7 +30,8 @@ private:
     int validarConverter(string valor);
     /**
     * @brief valida se o valor em centavos esta dentro do intervalo de 1 a 1000.000.000.
-    * @param valor Valor em centavos.
+    * @param valor em centavos.
+    * @return retorna true caso o valor esteja dentro do intervalo, caso contrario, lanca excecao.
     * @throws invalid_argument se o valor for invalido.
     */
     bool validar(int valor);
