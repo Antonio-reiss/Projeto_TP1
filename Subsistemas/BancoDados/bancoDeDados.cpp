@@ -68,8 +68,12 @@ void criarTabelas(sqlite3* bancoDados){
                       "valor REAL,"
                       "codigo TEXT PRIMARY KEY"
                       "quarto_id INTEGER"
+                      "hospede_email TEXT"
                       "FOREIGN KEY (quarto_id)"
                          "REFERENCES quarto(id)"
+                         "ON DELETE CASCADE"
+                      "FOREIGN KEY (hospede_email)"
+                         "REFERENCES hospede(email)"
                          "ON DELETE CASCADE"
                       ")";
     execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
@@ -81,7 +85,7 @@ void criarTabelas(sqlite3* bancoDados){
 
     sql = R"(
              CREATE TRIGGER IF NOT EXISTS evitarEmailDuplicadoGerente
-             BEFORE INSERT ON hospede
+             BEFORE INSERT OR UPDATE ON hospede
              FOR EACH ROW
              BEGIN
                 SELECT CASE
@@ -94,7 +98,7 @@ void criarTabelas(sqlite3* bancoDados){
 
     sql = R"(
              CREATE TRIGGER IF NOT EXISTS evitarEmailDuplicadoHospede
-             BEFORE INSERT ON gerente
+             BEFORE INSERT OR UPDATE ON gerente
              FOR EACH ROW
              BEGIN
                 SELECT CASE
@@ -107,7 +111,7 @@ void criarTabelas(sqlite3* bancoDados){
 
     sql = R"(
              CREATE TRIGGER IF NOT EXISTS evitarCodigoDuplicadoReserva
-             BEFORE INSERT ON Hotel
+             BEFORE INSERT OR UPDATE ON Hotel
              FOR EACH ROW
              BEGIN
                 SELECT CASE
@@ -120,7 +124,7 @@ void criarTabelas(sqlite3* bancoDados){
 
     sql = R"(
              CREATE TRIGGER IF NOT EXISTS evitarCodigoDuplicadoHotel
-             BEFORE INSERT ON hospede
+             BEFORE INSERT OR UPDATE ON hospede
              FOR EACH ROW
              BEGIN
                 SELECT CASE
@@ -222,9 +226,20 @@ bool bancoDeDados::criarReserva(Reserva& reserva, int idQuarto){
     int quarto_id = idQuarto;
     double valor;
     char* erro = nullptr;
+    string datas;
 
-    chegada = reserva.getChegada();
-    partida = reserva.getPartida();
+    datas = reserva.getChegada();
+    if(datas.size() == 10){
+        chegada = "0" + reserva.getChegada();
+    } else {
+        chegada = reserva.getChegada();
+    }
+    datas = reserva.getPartida();
+    if(datas.size() == 10){
+        partida = "0" + reserva.getPartida();
+    } else {
+        partida = reserva.getPartida();
+    }
     valor = reserva.getValor();
     codigo = reserva.getCodigo();
 
@@ -293,7 +308,15 @@ void bancoDeDados::montarGerente(Gerente& gerente){
     string sql = "SELECT * FROM gerente WHERE email = '"+ email +"';";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
+    string ramal = dados[2];
+    int ramalInt = stoi(ramal);
 
+    gerente.setNome(dados[0]);
+    gerente.setEmail(dados[1]);
+    gerente.setRamal(ramalInt);
+    gerente.setSenha(dados[3]);
+
+    return;
 }
 
 void bancoDeDados::montarHospede(Hospede& hospede){
@@ -304,6 +327,12 @@ void bancoDeDados::montarHospede(Hospede& hospede){
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
 
+    hospede.setNome(dados[0]);
+    hospede.setEmail(dados[1]);
+    hospede.setEndereco(dados[2]);
+    hospede.setCartao(dados[3]);
+
+    return;
 }
 
 void bancoDeDados::montarReserva(Reserva& reserva){
@@ -314,6 +343,31 @@ void bancoDeDados::montarReserva(Reserva& reserva){
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
 
+    string data = dados[0];
+    string dia, mes, ano;
+
+    dia = data[0] + data[1];
+    mes = data[3] + data[4] + data[5];
+    ano = data[7] + data[8] + data[9] + data[10];
+    int diaInt = stoi(dia), anoInt = stoi(ano);
+
+    Data chegada(diaInt, mes, anoInt);
+    reserva.setChegada(chegada);
+
+    data = dados[1];
+
+    dia = data[0] + data[1];
+    mes = data[3] + data[4] + data[5];
+    ano = data[7] + data[8] + data[9] + data[10];
+    diaInt = stoi(dia), anoInt = stoi(ano);
+
+    Data partida(diaInt, mes, anoInt);
+    reserva.setPartida(partida);
+
+    reserva.setValorDinheiro(stod(dados[2]));
+    reserva.setCodigo(dados[3]);
+
+    return;
 }
 
 void bancoDeDados::montarQuarto(Quarto& quarto, int ID){
@@ -324,6 +378,10 @@ void bancoDeDados::montarQuarto(Quarto& quarto, int ID){
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
 
+    quarto.setNumero(stoi(dados[1]));
+    quarto.setCapacidade(stoi(dados[2]));
+    quarto.setDiaria(dados[3]);
+    quarto.setRamal(stoi(dados[4]));
 }
 
 void bancoDeDados::montarHotel(Hotel& hotel){
@@ -334,6 +392,12 @@ void bancoDeDados::montarHotel(Hotel& hotel){
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
 
+    hotel.setNome(dados[0]);
+    hotel.setEndereco(dados[1]);
+    hotel.setTelefone(dados[2]);
+    hotel.setCodigo(dados[3]);
+
+    return;
 }
 
 /*

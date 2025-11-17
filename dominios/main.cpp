@@ -1,12 +1,19 @@
-#include "../Subsistemas/IU/iu.hpp"
+#include "dominios.data.hpp"
+#include <iostream>
 
 using namespace std;
 
-void iniciarSistema();
-
 int main(){
+    int dia, ano;
+    string mes;
 
-    iniciarSistema();
+    cin >> dia;
+    cin >> mes;
+    cin >> ano;
+
+    Data data(dia, mes, ano);
+
+    cout << data.getValor() << endl;
 
     return 0;
 }
