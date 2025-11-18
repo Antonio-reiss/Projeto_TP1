@@ -1,3 +1,9 @@
+/**
+* @file dominios.cartao.cpp
+* @brief Implementacao da classe Cartao.
+*
+* @author Ester Andrade Sousa - 242012109
+*/
 #include "dominios.cartao.hpp"
 #include <stdexcept>
 #include <cctype>
@@ -39,3 +45,4 @@ void Cartao::setValor(string valor){
 string Cartao::getValor() const{
     return valor;
 }
+

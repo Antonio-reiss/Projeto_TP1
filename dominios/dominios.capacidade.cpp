@@ -1,3 +1,9 @@
+/**
+* @file dominios.capacidade.cpp
+* @brief Implementacao dos metodos da classe Capacidade.
+*
+* @author Ester Andrade Sousa - 242012109
+*/
 #include "dominios.capacidade.hpp"
 #include <stdexcept>
 
