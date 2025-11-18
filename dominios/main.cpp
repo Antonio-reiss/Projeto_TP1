@@ -13,15 +13,9 @@ int main(){
 
     iniciarSistema();
 
-    bancoDeDados bd;
-    Nome nome("Asas Douradas");
-    Endereco endereco("Avenida 6 Bloco 16");
-    Telefone telefone("5561995916016");
-    Codigo codigo("asadourada");
+   bancoDeDados bd;
 
-    Reserva reserva(9, "FEV", 2005, 31, "MAR", 2005, 4550.00, "aaaaaaaaaa");
-    bd.criarReserva(reserva, 1, "lucas@gmail.com");
-    bd.listarTodos("reserva");
+   bd.listarTodos("gerente");
 
     return 0;
 }
