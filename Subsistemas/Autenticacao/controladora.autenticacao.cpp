@@ -1,4 +1,4 @@
-#include "autenticar.hpp"
+#include "controladora.autenticacao.hpp"
 #include "../funcoes.de.controles.hpp"
 #include <iostream>
 #include <string>
@@ -12,13 +12,13 @@ bool validar(){
     msAutenticacao cs_autenticacao;
 
     while (1){
-        limparTela();
+        //limparTela();
 
         cout << "\n==================================" << endl;
         cout << "             TELA DE LOGIN  " << endl;
         cout <<   "==================================" << endl;
-        cout << "Para logar como gerente, digite sua senha e email." << endl;
-        cout << endl << endl << endl;
+        cout << "\tDigite senha e email." << endl;
+        cout << endl << endl;
         cout << "email:\t";
         getline(cin, email);
         if(email == "0")
@@ -40,12 +40,12 @@ bool validar(){
         }
         if (validado == "Usuario validado!"){
             cout << validado << endl;
-            esperar(4);
+            esperar(2);
             return true;
         }
         if (validado == "Senha incorreta!!"){
             cout << validado << endl;
-            esperar(4);
+            esperar(3);
         }
     }
     return false;
