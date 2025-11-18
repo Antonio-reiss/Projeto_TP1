@@ -5,10 +5,6 @@
 * Contem o loop de menu principal e a logica de limpeza de tela.
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
-
-#define WIN32_LEAN_AND_MEAN
-#define NOMINMAX
-
 #include "iu.hpp"
 #include <iostream>
 #include <string>
