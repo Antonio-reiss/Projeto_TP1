@@ -30,7 +30,7 @@ public:
     bool criarHospede(Hospede&);
     bool criarReserva(Reserva&, int, string);
     bool criarQuarto(Quarto&, string);
-    bool criarHotel(Hotel&);
+    bool criarHotel(Hotel&, string&);
 
 
     void listarTodos(const string);

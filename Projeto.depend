@@ -85,7 +85,7 @@
 
 1763387358 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.hpp
 
-1763387358 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
+1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
 	"dominios.ramal.hpp"
 	<stdexcept>
 	<math.h>
@@ -122,15 +122,8 @@
 1763340106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
-	"../Subsistemas/BancoDados/bancoDeDados.hpp"
-	"../entidades/entidade.gerente.hpp"
-	"../entidades/entidade.reserva.hpp"
-	"../entidades/entidade.hospede.hpp"
-	"../entidades/entidade.quarto.hpp"
-	"../entidades/entidade.hotel.hpp"
-	<iostream>
 
 1763344024 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.dinheiro.hpp"
@@ -602,13 +595,13 @@
 	<cstdlib>
 	<string>
 
-1763431829 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
-	"autenticar.hpp"
+1763486842 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
+	"controladora.autenticacao.hpp"
 	"../funcoes.de.controles.hpp"
 	<iostream>
 	<string>
 
-1763431181 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
+1763476958 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
 	"ms.autenticacao.hpp"
 	<stdexcept>
 	<iostream>
@@ -624,7 +617,7 @@
 
 1763404368 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
-1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
 	"ma.gerente.hpp"
 	<stdexcept>
 	<iostream>
@@ -645,9 +638,10 @@
 	"../../dominios/dominios.senha.hpp"
 	<string>
 
-1763431781 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
 	"ms.gerente.hpp"
 	"ma.gerente.hpp"
+	"../BancoDados/bancoDeDados.hpp"
 	<iostream>
 	<stdexcept>
 	<string>
@@ -663,17 +657,17 @@
 	"../../dominios/dominios.senha.hpp"
 	"../funcoes.de.controles.hpp"
 
-1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+1763475758 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
 	<string>
 	<stdexcept>
 	<vector>
 
-1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
 
-1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+1763475758 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"../Autenticacao/autenticar.hpp"
 	"ma.gerente.hpp"
 	"ms.gerente.hpp"
@@ -682,13 +676,13 @@
 	<iostream>
 	<limits>
 
-1763340106 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+1763475758 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/autenticar.hpp"
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
 
-1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -881,16 +875,17 @@
 	<sys/uio.h>
 	<math.h>
 
-1763431181 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+1763498042 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
-1763409418 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
+1763499960 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../entidades/entidade.hospede.hpp"
 	"../../entidades/entidade.reserva.hpp"
 	"../../entidades/entidade.quarto.hpp"
 	"../../entidades/entidade.hotel.hpp"
 	"../../zSQL/sqlite3.h"
+	<sqlite3.h>
 	<iostream>
 	<cstdlib>
 	<string>
@@ -928,15 +923,36 @@
 
 1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\funcoes.de.controles.hpp
 
-1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\funcoes.de.controles.cpp
+1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\funcoes.de.controles.cpp
+	"funcoes.de.controles.hpp"
 	<cstdlib>
 	<windows.h>
 	<unistd.h>
-	"funcoes.de.controles.hpp"
 
 1763469033 source:c:\users\ellen\onedrive\Área de trabalho\projeto_tp1\subsistemas\funcoes.de.controles.cpp
 	"funcoes.de.controles.hpp"
 	<cstdlib>
 	<windows.h>
 	<unistd.h>
+
+1763486814 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.hpp
+	"ma.autenticacao.hpp"
+	"ms.autenticacao.hpp"
+	<iostream>
+	<cstdlib>
+	<string>
+
+1763498243 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\controladora.hotel.cpp
+	"controladora.hotel.hpp"
+	<iostream>
+	<limits>
+	<string>
+
+1763497453 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\controladora.hotel.hpp
+	"../funcoes.de.controles.hpp"
+	"../../entidades/entidade.hotel.hpp"
+	"../../dominios/dominios.codigo.hpp"
+	"../../dominios/dominios.endereco.hpp"
+	"../../dominios/dominios.telefone.hpp"
+	"../../dominios/dominios.nome.hpp"
 

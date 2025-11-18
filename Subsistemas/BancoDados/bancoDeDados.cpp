@@ -37,6 +37,10 @@ void criarTabelas(sqlite3* bancoDados){
                       "endereco TEXT, "
                       "telefone TEXT, "
                       "codigo TEXT PRIMARY KEY"
+                      "responsavel TEXT, "
+                      "FOREIGN KEY (responsavel)"
+                        "REFERENCES gerente(email) "
+                        "ON DELETE CASCADE"
                       ")";
     execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
@@ -263,7 +267,7 @@ bool bancoDeDados::criarQuarto(Quarto& quarto, string codigoHotel){
     return true;
 }
 
-bool bancoDeDados::criarHotel(Hotel& hotel){
+bool bancoDeDados::criarHotel(Hotel& hotel, string& responsavel){
     string nome, endereco, telefone, codigo;
     char* erro = nullptr;
 
@@ -272,8 +276,8 @@ bool bancoDeDados::criarHotel(Hotel& hotel){
     telefone = hotel.getTelefone().getTelefone();
     codigo = hotel.getCodigo().getValor();
 
-    string sql ="INSERT INTO hotel (nome, endereco, telefone, codigo)"
-                "VALUES ('"+ nome +"', '"+ endereco +"', '"+ telefone +"', '"+ codigo +"');";
+    string sql ="INSERT INTO hotel (nome, endereco, telefone, codigo, responsavel)"
+                "VALUES ('"+ nome +"', '"+ endereco +"', '"+ telefone +"', '"+ codigo +"','"+ responsavel +"');";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
 
@@ -319,13 +323,13 @@ void bancoDeDados::listarComFiltro(const string tabela, const string tipoChave, 
 }
 
 string bancoDeDados::getSenha(const string& email){
-    string sql = "SELECT 1 FROM gerente WHERE email = '"+ email +"';";
+    string sql = "SELECT * FROM gerente WHERE email = '"+ email +"';";
     vector<string> dados;
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados, nullptr);
 
     if(dados.size() == 0){
-        return "naoEcontrado";
+        return "404";
     } else {
         return dados[3];
     }
