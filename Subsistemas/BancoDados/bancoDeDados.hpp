@@ -8,7 +8,7 @@
 #include "../../entidades/entidade.hotel.hpp"
 
 #include "../../zSQL/sqlite3.h"
-//#include <sqlite3.h>
+#include <sqlite3.h>
 #include <iostream>
 #include <cstdlib>
 #include <string>

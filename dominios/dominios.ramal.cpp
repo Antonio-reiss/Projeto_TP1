@@ -13,13 +13,7 @@ bool Ramal::validar_ramal(int ramal){
     if (ramal < MIN_RAMAL || ramal > MAX_RAMAL){
         throw invalid_argument("O valor do ramal deve ser de 00 a 50");
     }
-    //int ramalInteiro;
-    //ramalInteiro = ramal;
-
-//    if (ramal - ramalInteiro != 0){
-//        throw invalid_argument("O ramal deve ser um valor inteiro");
-//    }
-//    return true;
+    return true;
 }
 
 void Ramal::setRamal(int ramal){

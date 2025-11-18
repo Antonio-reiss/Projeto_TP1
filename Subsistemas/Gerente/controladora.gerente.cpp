@@ -89,13 +89,8 @@ bool validarCriarGerente(){
         getline(cin, senha);
         cout << endl << endl;
 
-<<<<<<< Updated upstream
         if(ma_gerente.validarConta(nome, email, ramal, senha)){
-=======
-        //não esta entrando
-        cout << "Antes" << endl;
-        if(gerente.validarConta(nome, email, ramal, senha)){
->>>>>>> Stashed changes
+                cout << "Entrou aqui" << endl;
             novoGerente.criarGerente(nome, email, ramal, senha);
             cout << "Conta criada com sucesso!\nRedirecionando..." << endl;
             esperar(2);

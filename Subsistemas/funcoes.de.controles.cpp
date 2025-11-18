@@ -1,12 +1,15 @@
+#include "funcoes.de.controles.hpp"
 #include <cstdlib>
+#define WIN32_LEAN_AND_MEAN
+#define NOGDI
+#define WIN32_EXTRA_LEAN
+#define NOMINMAX
 
 #ifdef _WIN32
     #include <windows.h>
 #else
     #include <unistd.h>
 #endif
-
-#include "funcoes.de.controles.hpp"
 
 void limparTela(){
     #ifdef _WIN32

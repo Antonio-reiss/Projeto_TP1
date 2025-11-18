@@ -55,7 +55,9 @@ void iniciarSistema(){
                 }
                 break;
             case 3:
+                cout << "\n==================================" << endl;
                 cout << "Saindo do sistema..." << endl;
+                cout << "==================================" << endl;
                 esperar(2);
                 return;
             default:
@@ -92,7 +94,7 @@ void telaGerente(){
         cout << "[5] Abrir opcoes de Hospedes\n";
         cout << "[6] Sair\n";
         cout << "==================================" << endl;
-        cout << "Escolha uma opcao: ";
+        cout << "-> Escolha uma opcao: ";
         int opcao;
         if(cin >> opcao){
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

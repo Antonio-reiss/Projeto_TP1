@@ -1,8 +1,8 @@
 /**
 * @file ma.gerente.cpp
-* @brief Implementação dos métodos de validacao da camada de apresentacao.
+* @brief Implementacao dos metodos de validacao da camada de apresentacao.
 *
-* Contém a logica concreta que instancia os dominios (Nome, Email, Senha, ramal) para forçar a validacao.
+* Contem a logica concreta que instancia os dominios (Nome, Email, Senha e Ramal) para forcar a validacao.
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
 #include "ma.gerente.hpp"
@@ -13,14 +13,12 @@
 using namespace std;
 
 bool maGerente::validarConta(const string& nome, const string& email, const int& ramal, const string& senha){
-    //nao está entrando aqui
-    cout << "chegou aqui\n";
+    cout << "function" << endl;
     try{
         Nome nomeValido(nome);
         Email emailValido(email);
         Ramal ramalValido(ramal);
         Senha senhaValida(senha);
-        cout << "chamou\n";
         return true;
     }catch(const exception& erro){
         cerr << "Dados invalidos!\nErro: " << erro.what() << endl;
