@@ -4,6 +4,7 @@
 */
 #include "ms.gerente.hpp"
 #include "ma.gerente.hpp"
+#include "../BancoDados/bancoDeDados.hpp"
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -15,24 +16,20 @@ using namespace std;
 
 bool msGerente::criarGerente(const string& nome, const string& email, const int& ramal, const string& senha){
     bancoDeDados bd;
-    /*try{
-        Gerente gerente(nome, email, ramal, senha);
-        cout << "Gerente criado com sucesso." << endl;
-        return true;
-    }catch(const invalid_argument& erro){
-        throw;
-    }*/
     Gerente gerente(nome, email, ramal, senha);
     bd.criarGerente(gerente);
-    cout << "gerente criado" << endl;
+    cout << "Gerente criado com sucesso!" << endl;
+    esperar(5);
     return true;
 }
 
 bool msGerente::listarGerentes(){ //listar todos os gerentes
     try{
         cout << "\n================================" <<  endl;
-        cout << " LISTA DE GERENTES " << endl;
+        cout << "       LISTA DE GERENTES    " << endl;
         cout << "================================" <<  endl;
+        bancoDeDados bd;
+        bd.listarTodos("gerente");
         return true;
     }catch(const invalid_argument& erro){
         throw;

@@ -15,7 +15,7 @@
 
 /**
 * @brief Contém o menu que inicializa o sistema.
-* * Responsavel por receber a opcao do usuario e delegar o fluxo.
+*  Responsavel por receber a opcao do usuario e delegar o fluxo.
 */
 void iniciarSistema();
 

@@ -15,6 +15,7 @@
 
 /**
 * @brief Executa a coleta de dados e a validacao para a criacao da conta de Gerente.
+* @details Esta funcao lida com a coleta de dados e validacao.
 * @return Retorna true se os dados forem validos, e false caso nao sejam validos.
 */
 bool validarCriarGerente();
