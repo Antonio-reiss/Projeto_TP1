@@ -28,13 +28,14 @@ public:
 
     bool criarGerente(Gerente&);
     bool criarHospede(Hospede&);
-    bool criarReserva(Reserva&, int, string&);
-    bool criarQuarto(Quarto&, string&);
+    bool criarReserva(Reserva&, int, string);
+    bool criarQuarto(Quarto&, string);
     bool criarHotel(Hotel&);
 
 
     void listarTodos(const string);
     void listarComFiltro(const string, const string, const string);
+    string getSenha(const string&);
 
 
     void montarGerente(Gerente&);
@@ -51,6 +52,7 @@ public:
 
     void apagarUm(const string, const string, const string&);
     void apagarTodos(const string);
+    void apagarTabela(const string);
 
 
     static int mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol);

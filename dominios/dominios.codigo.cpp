@@ -1,3 +1,9 @@
+/**
+* @file dominios.codigo.cpp
+* @brief Implementacao da classe Codigo.
+*
+* @author Ester Andrade Sousa - 242012109
+*/
 #include "dominios.codigo.hpp"
 #include <stdexcept>
 #include <cctype>
@@ -19,3 +25,4 @@ void Codigo::setValor(string valor){
 string Codigo::getValor() const{
     return this->valor;
 }
+

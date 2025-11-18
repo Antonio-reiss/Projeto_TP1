@@ -11,21 +11,39 @@ bool validar(){
     maAutenticacao ca_autenticacao;
     msAutenticacao cs_autenticacao;
 
-    limparTela();
+    while (1){
+        limparTela();
 
-    cout << "Para logar como gerente digite sua senha e email." << endl;
-    cout << endl << endl << endl;
-    cout << "email:   ";
-    getline(cin, email);
-    cout << endl;
-    cout << "Senha:   ";
-    getline(cin, senha);
-    cout << endl << endl;
+        cout << "\n==================================" << endl;
+        cout << "             TELA DE LOGIN  " << endl;
+        cout <<   "==================================" << endl;
+        cout << "Para logar como gerente, digite sua senha e email." << endl;
+        cout << endl << endl << endl;
+        cout << "email:\t";
+        getline(cin, email);
+        cout << endl;
+        cout << "Senha:\t";
+        getline(cin, senha);
+        cout << endl << endl;
 
-    if (ca_autenticacao.validarDados(email, senha)){
-        if(cs_autenticacao.validarGerente(email, senha)){
-            cout << "Autenticado com sucesso!" << endl;
+        string validado;
+        if (ca_autenticacao.validarDados(email, senha)){
+            validado = cs_autenticacao.validarGerente(email, senha);
+        }
+
+        if (validado == "Usuario nao encontrado."){
+            cout << validado << endl;
+            esperar(4);
+            break;
+        }
+        if (validado == "Usuario validado!"){
+            cout << validado << endl;
+            esperar(4);
             return true;
+        }
+        if (validado == "Senha incorreta!!"){
+            cout << validado << endl;
+            esperar(4);
         }
     }
     return false;
