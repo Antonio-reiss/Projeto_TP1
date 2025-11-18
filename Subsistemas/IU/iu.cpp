@@ -41,7 +41,7 @@ void iniciarSistema(){
                     }
                 }catch(const invalid_argument& e){
                     cerr << e.what() << endl;
-                    esperar(4);
+                    esperar(10);
                 }
                 break;
             case 2:
@@ -51,7 +51,7 @@ void iniciarSistema(){
                     }
                 }catch(const invalid_argument& e){
                     cerr << e.what() << endl;
-                     esperar(4);
+                     esperar(10);
                 }
                 break;
             case 3:
@@ -62,7 +62,7 @@ void iniciarSistema(){
                 cout << "\n==================================" << endl;
                 cout << "Opcao invalida!\nDigite um numero do menu." << endl;
                 cout << "==================================" << endl;
-                 esperar(4);
+                 esperar(6);
             }
         }else{
             cin.clear();
@@ -70,7 +70,7 @@ void iniciarSistema(){
             cout << "========================================" << endl;
             cerr << "Opcao invalida! Digite um numero do menu." << endl;
             cout << "========================================" << endl;
-             esperar(4);
+             esperar(6);
         }
     }while(true);
 }

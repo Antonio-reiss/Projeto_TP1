@@ -13,11 +13,14 @@
 using namespace std;
 
 bool maGerente::validarConta(const string& nome, const string& email, const int& ramal, const string& senha){
+    //nao está entrando aqui
+    cout << "chegou aqui\n";
     try{
         Nome nomeValido(nome);
         Email emailValido(email);
         Ramal ramalValido(ramal);
         Senha senhaValida(senha);
+        cout << "chamou\n";
         return true;
     }catch(const exception& erro){
         cerr << "Dados invalidos!\nErro: " << erro.what() << endl;
