@@ -21,6 +21,8 @@ bool validar(){
         cout << endl << endl << endl;
         cout << "email:\t";
         getline(cin, email);
+        if(email == "0")
+            return false;
         cout << endl;
         cout << "Senha:\t";
         getline(cin, senha);

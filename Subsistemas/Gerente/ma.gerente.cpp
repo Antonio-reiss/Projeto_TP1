@@ -19,8 +19,8 @@ bool maGerente::validarConta(const string& nome, const string& email, const int&
         Ramal ramalValido(ramal);
         Senha senhaValida(senha);
         return true;
-    }catch(const exception& e){
-        cerr << "Dados invalidos!\nErro: " << e.what() << endl;
+    }catch(const exception& erro){
+        cerr << "Dados invalidos!\nErro: " << erro.what() << endl;
         return false;
     }
 

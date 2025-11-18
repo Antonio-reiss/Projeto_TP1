@@ -9,16 +9,23 @@
 #include <string>
 #include <cmath>
 
+#include "../BancoDados/bancoDeDados.hpp"
+
 using namespace std;
 
 bool msGerente::criarGerente(const string& nome, const string& email, const int& ramal, const string& senha){
-    try{
+    bancoDeDados bd;
+    /*try{
         Gerente gerente(nome, email, ramal, senha);
         cout << "Gerente criado com sucesso." << endl;
         return true;
     }catch(const invalid_argument& erro){
         throw;
-    }
+    }*/
+    Gerente gerente(nome, email, ramal, senha);
+    bd.criarGerente(gerente);
+    cout << "gerente criado" << endl;
+    return true;
 }
 
 bool msGerente::listarGerentes(){ //listar todos os gerentes
@@ -61,10 +68,10 @@ bool msGerente::editarGerente(int novoDado, string tipoDado, string email){
             if(tipoDado == "ramal"){
                     cout << "Digite o novo ramal: ";
                     if(std::cin >> novoDado){
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                     }else{
                         std::cin.clear();
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                     }
                 if(validarEdicao.validarEditar(novoDado, "ramal")){
                     edicaoGerente.setRamal(novoDado);

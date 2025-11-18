@@ -69,7 +69,7 @@ void opcoesGerente(){
 bool validarCriarGerente(){
     string nome, email, senha;
     int ramal;
-    maGerente gerente;
+    maGerente ma_gerente;
     msGerente novoGerente;
 
     do{
@@ -89,7 +89,7 @@ bool validarCriarGerente(){
         getline(cin, senha);
         cout << endl << endl;
 
-        if(gerente.validarConta(nome, email, ramal, senha)){
+        if(ma_gerente.validarConta(nome, email, ramal, senha)){
             novoGerente.criarGerente(nome, email, ramal, senha);
             cout << "Conta criada com sucesso!\nRedirecionando..." << endl;
             esperar(2);
