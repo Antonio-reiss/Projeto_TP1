@@ -1,3 +1,8 @@
+/**
+ * @file entidade.hotel.cpp
+ * @brief Implementação da classe Hotel.
+ * @author Ester Andrade Sousa - 242012109
+ */
 #include "entidade.hotel.hpp"
 
 Hotel::Hotel(Nome nome, Endereco endereco, Telefone telefone, Codigo codigo) : nome(nome), endereco(endereco), telefone(telefone), codigo(codigo){}
