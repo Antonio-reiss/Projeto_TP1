@@ -1,3 +1,8 @@
+/**
+ * @file entidade.hospede.cpp
+ * @brief Implementação dos métodos da classe Hospede.
+ * @author Ester Andrade Sousa - 242012109
+ */
 #include "entidade.hospede.hpp"
 
 Hospede::Hospede(const std::string& nome, const std::string& email, const std::string& endereco, const std::string& cartao) : Pessoa(nome,email), endereco(endereco),cartao(cartao){}
