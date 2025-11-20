@@ -109,8 +109,6 @@ void validarEditarGerente(){
     cout << "Digite o e-mail do gerente a ser editado: " << endl;
     getline(cin, email);
     Gerente edicaoGerente("Ellen", email, 01, "1!a!A");
-    bd.montarGerente(edicaoGerente);
-
 
     do{
         limparTela();
@@ -125,7 +123,11 @@ void validarEditarGerente(){
         cout << "==================================\n" << endl;
         cout << "-> Digite o numero do dado que deseja editar: ";
         int tipoDado;
-        cout << "==================================\n" << endl;
+        cin.clear();
+        cin >> tipoDado;
+        cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        cout << "\n==================================\n" << endl;
         string novoDado;
         maGerente validarEdicao;
 

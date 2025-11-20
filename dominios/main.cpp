@@ -4,7 +4,9 @@ using namespace std;
 
 int main(){
 
-    iniciarSistema();
+    validarEditarGerente();
+
+    //iniciarSistema();
 
     return 0;
 }
