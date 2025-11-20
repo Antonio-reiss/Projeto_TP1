@@ -1,3 +1,8 @@
+/**
+* @file entidade.reserva.cpp
+* @brief Implementacao dos metodos da Entidade Reserva.
+* @author Antonio Lucas Paulo Reis Rodrigues dos Santos - 242010015
+*/
 #include "entidade.reserva.hpp"
 #include <stdexcept>
 #include <iostream>
