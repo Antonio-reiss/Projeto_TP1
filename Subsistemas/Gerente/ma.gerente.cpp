@@ -13,7 +13,6 @@
 using namespace std;
 
 bool maGerente::validarConta(const string& nome, const string& email, const int& ramal, const string& senha){
-    cout << "function" << endl;
     try{
         Nome nomeValido(nome);
         Email emailValido(email);
@@ -27,33 +26,30 @@ bool maGerente::validarConta(const string& nome, const string& email, const int&
 
 }
 
-bool maGerente::validarEditar(const string& novoDado, const string& tipoDado){
+bool maGerente::validarEditar(const string& novoDado, const int& tipoDado){
     try{
-        if(tipoDado == "nome"){
+        if(tipoDado == 1){
             Nome nomeValido(novoDado);
+            return true;
         }
-        else if(tipoDado == "email"){
+        else if(tipoDado == 2){
             Email emailValido(novoDado);
+            cout << "Agora aqui\n";
+            return true;
         }
-        else if(tipoDado == "senha"){
+        else if(tipoDado == 3){
+            int ramalInt = stoi(novoDado);
+            Ramal ramalValido(ramalInt);
+            return true;
+        }
+        else if(tipoDado == 4){
             Senha senhaValida(novoDado);
+            return true;
         }
     }catch(const exception& error){
-        cout << error.what() << endl;
+        cout << "Erro: " << error.what() << endl;
         return false;
     }
-    return true;
 }
 
-bool maGerente::validarEditar(const int& novoDado, const string& tipoDado){
-    try{
-        if(tipoDado == "ramal"){
-            Ramal ramalValido(novoDado);
-        }
-    }catch(const exception& error){
-        cout << error.what() << endl;
-        return false;
-    }
-    return true;
-}
 

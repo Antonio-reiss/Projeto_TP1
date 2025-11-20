@@ -13,7 +13,6 @@
 
 using namespace std;
 
-template <typename T>
 /**
 * @class iaGerente
 * @brief Contrato para o módulo de apresentacao do Gerente.
@@ -33,7 +32,7 @@ public:
     */
     virtual bool validarConta(const string&, const string&, const int&, const string&) = 0;
 
-    virtual bool validarEditar(const T& novoDado, const string& tipoDado) = 0;
+    virtual bool validarEditar(const string& novoDado, const int& tipoDado) = 0;
 
 };
 
