@@ -49,6 +49,7 @@ bool msGerente::editarGerente(int tipoDado, string novoDado, string& email){
     bancoDeDados bd;
     Gerente edicaoGerente("Ellen", email, 04, "E5&0l");
     bd.editarGerente(edicaoGerente, email);
+    esperar(4);
     return true;
 }
 
