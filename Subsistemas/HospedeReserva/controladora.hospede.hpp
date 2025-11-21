@@ -15,14 +15,14 @@
 #include <string>
 
 /**
- * @class ctrlHospede
+ * @class controladoraHospede
  * @brief Controladora de hóspedes.
  *
  * Implementa métodos que utilizam o módulo de serviço de hóspedes para realizar
  * operações de CRUD, garantindo que a camada de apresentação não acesse
  * diretamente o serviço.
  */
-class ctrlHospede {
+class controladoraHospede {
 private:
     /**
      * @brief Ponteiro para o módulo de serviço de hóspedes.
