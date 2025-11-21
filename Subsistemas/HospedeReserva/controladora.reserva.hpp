@@ -7,8 +7,8 @@
  * Encapsula a lógica de fluxo e delega operações ao serviço.
  */
 
-#ifndef CRTL_RESERVA_HPP_INCLUDED
-#define CTRL_RESERVA_HPP_INCLUDED
+#ifndef CONTROLADORA_RESERVA_HPP_INCLUDED
+#define CONTROLADORA_RESERVA_HPP_INCLUDED
 
 #include "interface.controladora.reserva.h"
 #include "ms.reserva.hpp"
