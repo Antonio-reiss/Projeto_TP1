@@ -21,7 +21,7 @@ using namespace std;
 * @details Esta classe usa heranca de templates (iaGerente<string>, iaGerente<int> para delegar
 * a validacao dos dados brutos de entrada aos domínios.
 */
- class maGerente : public iaGerente<string>, public iaGerente<int>{
+ class maGerente : public iaGerente{
  public:
      /**
      * @brief Valida se todos os domínio para a conta do Gerente sao validos.
@@ -38,13 +38,6 @@ using namespace std;
     * @param tipoDado eh o campo a ser editado.
     * @return Retorna true se a validacao for bem-sucedida, false caso contrario.
     */
-    bool validarEditar(const string&, const string&) override;
-    /**
-    * @brief Valida um unico dado de entrada do tipo inteiro para edicao.
-    * @param novoDado eh o novo valor inteiro a ser validado.
-    * @param tipoDado eh o campo a ser editado.
-    * @return Retorna true se a validacao for bem-sucedida, false caso contrario.
-    */
-    bool validarEditar(const int&, const string&) override;
+    bool validarEditar(const string&, const int&) override;
 };
 #endif // MA_GERENTE_HPP

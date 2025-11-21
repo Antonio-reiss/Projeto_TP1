@@ -340,7 +340,7 @@
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
-1763471243 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
+1763654413 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.pessoa.hpp
@@ -358,10 +358,10 @@
 	"../dominios/dominios.ramal.hpp"
 	"../dominios/dominios.senha.hpp"
 
-1763376059 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hospede.cpp
+1763653617 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hospede.cpp
 	"entidade.hospede.hpp"
 
-1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hospede.hpp
+1763653617 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hospede.hpp
 	"entidade.pessoa.hpp"
 	"../dominios/dominios.endereco.hpp"
 	"../dominios/dominios.cartao.hpp"
@@ -369,10 +369,10 @@
 1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.cartao.hpp
 	<string>
 
-1763376059 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hotel.cpp
+1763653617 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hotel.cpp
 	"entidade.hotel.hpp"
 
-1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hotel.hpp
+1763653617 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.hotel.hpp
 	"entidade.quarto.hpp"
 	"../dominios/dominios.codigo.hpp"
 	"../dominios/dominios.nome.hpp"
@@ -406,7 +406,7 @@
 	<iostream>
 	<string>
 
-1763472334 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+1763605225 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
 	"ma.gerente.hpp"
 	<stdexcept>
 	<iostream>
@@ -441,7 +441,7 @@
 	<iostream>
 	<string>
 
-1763402725 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
+1763605247 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.ramal.hpp"
@@ -449,12 +449,12 @@
 	"ia.gerente.hpp"
 	<string>
 
-1763472245 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763654506 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
 
-1763466130 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+1763605171 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"../Autenticacao/autenticar.hpp"
 	"ma.gerente.hpp"
 	"ms.gerente.hpp"
@@ -465,7 +465,7 @@
 
 1762644611 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\i.gerente.hpp
 
-1763402725 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ia.gerente.hpp
+1763605212 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ia.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.ramal.hpp"
@@ -480,7 +480,7 @@
 
 1762456217 inios/dominios.senha.hpp"
 
-1763471625 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+1763606211 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
 	"ms.gerente.hpp"
 	"ma.gerente.hpp"
 	"../BancoDados/bancoDeDados.hpp"
@@ -490,7 +490,9 @@
 	<cmath>
 	"../BancoDados/bancoDeDados.hpp"
 
-1763407527 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
+1763606143 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
+	<algorithm>
+	<cctype>
 	"is.gerente.hpp"
 	"../../entidades/entidade.gerente.hpp"
 	"../../dominios/dominios.nome.hpp"
@@ -499,12 +501,12 @@
 	"../../dominios/dominios.senha.hpp"
 	"../funcoes.de.controles.hpp"
 
-1763466130 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+1763515499 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\is.gerente.hpp
 	<string>
 	<stdexcept>
 	<vector>
 
-1763469147 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
+1763653442 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -513,7 +515,7 @@
 
 1762890253 e/controladora.gerente.hpp"
 
-1763466130 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
+1763606346 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/autenticar.hpp"
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
@@ -897,10 +899,10 @@
 	<unistd.h>
 	<stdarg.h>
 
-1763428465 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+1763516848 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
-1763468718 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
+1763476084 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../entidades/entidade.hospede.hpp"
 	"../../entidades/entidade.reserva.hpp"

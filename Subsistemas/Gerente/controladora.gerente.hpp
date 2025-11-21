@@ -15,18 +15,25 @@
 
 /**
 * @brief Executa a coleta de dados e a validacao para a criacao da conta de Gerente.
-* @details Esta funcao lida com a coleta de dados e validacao.
+* @details Lida com o loop de coleta de dados e utiliza a camada de apresentacao para validar
+* o formato antes de chamar a camada de servico para persistencia.
 * @return Retorna true se os dados forem validos, e false caso nao sejam validos.
 */
 bool validarCriarGerente();
 /**
-* @brief Exibe o menu principal para o Gerente logado.
-* @details Eh chamada apos um login/cadastro bem-sucedido. Contem o loop principal para as entidades.
-*/
-void telaGerente();
-/**
-* @brief Exibe as opcoes de CRUD para a entidade Gerente e gerencia o fluxo de controle do mesmo.
+* @brief Exibe o menu de opcoes CRUD para a entidade Gerente e gerencia o fluxo de controle.
+* @details Delega as tarefas de CRUD para as respectivas funcoes de validacao/execucao.
 */
 void opcoesGerente();
+/**
+* @brief Gerencia o fluxo de coleta e validacao dos dados da criacao de um Gerente.
+*/
+void validarEditarGerente();
+/**
+* @brief Gerencia o fluxo de exclusao de um gerente.
+* @details Coleta o e-mail (chave), valida o formato (MA) e solicita a confirmacao antes de chamar
+* a camada de servico.
+*/
+void excluirGerente();
 
 #endif // CONTROLADORA_GERENTE_HPP_INCLUDED

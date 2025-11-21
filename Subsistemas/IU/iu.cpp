@@ -1,8 +1,6 @@
 /**
 * @file iu.cpp
 * @brief Implementacao do modulo principal de apresentacao (IU).
-*
-* Contem o loop de menu principal e a logica de limpeza de tela.
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
 #include "iu.hpp"
@@ -13,11 +11,6 @@
 
 using namespace std;
 
-void telaGerente();
-
-/**
-* @brief Contem o menu principal que inicializa o sistema.
-*/
 void iniciarSistema(){
     do{
         limparTela();
@@ -57,7 +50,6 @@ void iniciarSistema(){
             case 3:
                 cout << "\n==================================" << endl;
                 cout << "Saindo do sistema..." << endl;
-                cout << "==================================" << endl;
                 esperar(2);
                 return;
             default:
@@ -78,9 +70,6 @@ void iniciarSistema(){
 }
 
 void telaGerente(){
-    msGerente novoGerente;
-    string novoDado, tipoDado;
-
     do{
         limparTela();
 
@@ -88,10 +77,10 @@ void telaGerente(){
         cout << " VOCE ESTA LOGADO COMO GERENTE " << endl;
         cout << "================================" << endl;
         cout << "[1] Abrir opcoes de Gerente\n"; //abrir a controladora de cada um
-        cout << "[2] Abrir opcoes de Hoteis\n";
-        cout << "[3] Abrir opcoes de Quartos\n";
-        cout << "[4] Abrir opcoes de Reservas\n";
-        cout << "[5] Abrir opcoes de Hospedes\n";
+        cout << "[2] Abrir opcoes de Hospedes\n";
+        cout << "[3] Abrir opcoes de Hoteis\n";
+        cout << "[4] Abrir opcoes de Quartos\n";
+        cout << "[5] Abrir opcoes de Reservas\n";
         cout << "[6] Sair\n";
         cout << "==================================" << endl;
         cout << "-> Escolha uma opcao: ";
@@ -103,19 +92,20 @@ void telaGerente(){
                     opcoesGerente();
                     break;
                 case 2:
-                    cout << "Opcoes De Hoteis" << endl;
+                    cout << "Opcoes De Hospedes" << endl;//chama a tela de opcoes de hospedes
                     break;
                 case 3:
-                    cout << "Opcoes de Reservas" << endl;
+                    cout << "Opcoes de Hoteis" << endl;//chama a tela de opcoes de hoteis
                     break;
                 case 4:
-                    cout << "Opcoes de Reservas" << endl;
+                    cout << "Opcoes de quartos" << endl;//chama a tela de opcoes de quartos
                     break;
                 case 5:
-                    cout << "Opcoes de Hospedes" << endl;
+                    cout << "Opcoes de reservas" << endl;//chama a tela de opcoes de reservas
                     break;
                 case 6:
                     cout << "Retornando ao menu inicial..." << endl;
+                    esperar(3);
                     return;
                 default:
                 cout << "\n==================================" << endl;
@@ -132,3 +122,4 @@ void telaGerente(){
     }while(true);
 
 }
+

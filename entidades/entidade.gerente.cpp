@@ -1,3 +1,8 @@
+/**
+* @file entidade.gerente.cpp
+* @brief Implementacao dos metodos da Entidade Gerente.
+* @author Antonio Lucas Paulo Reis Rodrigues dos Santos - 242010015
+*/
 #include "entidade.gerente.hpp"
 
 using namespace std;

@@ -13,7 +13,6 @@
 
 using namespace std;
 
-template <typename T>
 /**
 * @class isGerente
 * @brief classe abstrata que define o CRUD do gerente.
@@ -24,9 +23,9 @@ public:
 
     */
     virtual bool criarGerente(const string&, const string&, const int&, const string&) = 0;
-    virtual bool listarGerentes() = 0;
-    virtual bool editarGerente(T, string, string) = 0;
-    virtual bool excluirGerente(const string&, const string&, const int&, const string&) = 0;
+    virtual void listarGerentes() = 0;
+    virtual bool editarGerente(int, string, string&) = 0;
+    virtual bool excluirGerente(const string&) = 0;
 };
 
 #endif // IS_GERENTE_HPP_INCLUDED
