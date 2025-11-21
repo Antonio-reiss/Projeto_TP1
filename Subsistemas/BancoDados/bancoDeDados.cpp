@@ -607,7 +607,7 @@ void bancoDeDados::apagarUm(const string tabela, const string tipoChave, const s
     if (execucao == SQLITE_OK) {
         cout << "Dados apagados com sucesso!" << endl;
     } else {
-        cout << "Não foi possível apagar os dados " << erro << endl;
+        cout << "Nao foi possivel apagar os dados " << erro << endl;
     }
     return;
 }
