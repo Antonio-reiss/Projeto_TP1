@@ -64,7 +64,7 @@ public:
 
     /**
      * @brief Exclui uma reserva pelo código.
-     *
+
      * @param codigo Código da reserva.
      *
      * @return true se a exclusão ocorrer com sucesso, false em caso de falha.
