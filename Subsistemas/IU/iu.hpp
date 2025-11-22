@@ -7,12 +7,13 @@
 */
 #ifndef IU_HPP_INCLUDED
 #define IU_HPP_INCLUDED
-#include "../Autenticacao/autenticar.hpp"
+#include "../Autenticacao/controladora.autenticacao.hpp"
 #include "../HospedeReserva/controladora.hospede.hpp"
 #include "../HospedeReserva/controladora.reserva.hpp"
 #include "../Gerente/controladora.gerente.hpp"
 #include "../Gerente/ma.gerente.hpp"
 #include "../funcoes.de.controles.hpp"
+#include "../BancoDados/bancoDeDados.hpp"
 
 /**
 * @brief Contem o loop do menu principal que inicializa o sistema.
