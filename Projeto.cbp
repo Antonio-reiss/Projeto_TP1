@@ -39,6 +39,7 @@
 		</Compiler>
 		<Unit filename="Subsistemas/Autenticacao/autenticar.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/controladora.autenticacao.cpp" />
+		<Unit filename="Subsistemas/Autenticacao/controladora.autenticacao.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/ia.autenticacao.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/is.autenticacao.hpp" />
 		<Unit filename="Subsistemas/Autenticacao/ma.autenticacao.cpp" />

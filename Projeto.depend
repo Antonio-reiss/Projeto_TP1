@@ -347,7 +347,7 @@
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
-1763659659 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
+1763818843 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.pessoa.hpp
@@ -461,11 +461,11 @@
 	<iostream>
 	<limits>
 
-1763605171 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
-	"../Autenticacao/autenticar.hpp"
+1763823393 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"ma.gerente.hpp"
 	"ms.gerente.hpp"
 	"../IU/iu.hpp"
+	"../Autenticacao/controladora.autenticacao.hpp"
 	"../funcoes.de.controles.hpp"
 	<iostream>
 	<limits>
@@ -522,13 +522,14 @@
 
 1762890253 e/controladora.gerente.hpp"
 
-1763775418 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
-	"../Autenticacao/autenticar.hpp"
+1763823395 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
+	"../Autenticacao/controladora.autenticacao.hpp"
 	"../HospedeReserva/controladora.hospede.hpp"
 	"../HospedeReserva/controladora.reserva.hpp"
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
+	"../BancoDados/bancoDeDados.hpp"
 
 1762886274 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\autenticar.cpp
 
@@ -1025,5 +1026,18 @@
 	<string>
 
 1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\interface.controladora.reserva.hpp
+	<string>
+
+1763777401 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.reserva.cpp
+	"ma.reserva.hpp"
+	"ms.reserva.hpp"
+	<string>
+	<sstream>
+
+1763823281 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.hpp
+	"ma.autenticacao.hpp"
+	"ms.autenticacao.hpp"
+	<iostream>
+	<cstdlib>
 	<string>
 
