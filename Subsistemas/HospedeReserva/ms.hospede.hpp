@@ -12,14 +12,14 @@
 #define MS_HOSPEDE_HPP_INCLUDED
 
 #include "is.hospede.hpp"
-#include "subsistemas/BancoDados/bancoDeDados.hpp"
-#include "subsistemas/funcoes.de.controles.hpp"
+#include "../BancoDados/bancoDeDados.hpp"
+#include "../funcoes.de.controles.hpp"
 
-#include "entidades/entidade.hospede.hpp"
-#include "dominios/dominios.nome.hpp"
-#include "dominios/dominios.email.hpp"
-#include "dominios/dominios.endereco.hpp"
-#include "dominios/dominios.cartao.hpp"
+#include "../../entidades/entidade.hospede.hpp"
+#include "../../dominios/dominios.nome.hpp"
+#include "../../dominios/dominios.email.hpp"
+#include "../../dominios/dominios.endereco.hpp"
+#include "../../dominios/dominios.cartao.hpp"
 
 /**
  * @class msHospede

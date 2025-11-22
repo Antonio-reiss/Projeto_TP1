@@ -11,14 +11,13 @@
 #define MS_RESERVA_HPP_INCLUDED
 
 #include "is.reserva.hpp"
-#include "subsistemas/BancoDados/bancoDedados.hpp"
-#include "subsistemas/funcoes.de.controles.hpp"
-
-#include "entidades/entidade.reserva.hpp"
-#include "dominios/dominios.codigo.hpp"
-#include "dominios/dominios.data.hpp"
-#include "dominios/dominios.dinheiro.hpp"
-#include "dominios/dominios.email.hpp"
+#include "../BancoDados/bancoDeDados.hpp"
+#include "../funcoes.de.controles.hpp"
+#include "../../entidades/entidade.reserva.hpp"
+#include "../../dominios/dominios.codigo.hpp"
+#include "../../dominios/dominios.data.hpp"
+#include "../../dominios/dominios.dinheiro.hpp"
+#include "../../dominios/dominios.email.hpp"
 
 /**
  * @class msReserva
