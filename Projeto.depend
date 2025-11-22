@@ -456,7 +456,7 @@
 	"ia.gerente.hpp"
 	<string>
 
-1763654506 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763775685 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
@@ -522,8 +522,10 @@
 
 1762890253 e/controladora.gerente.hpp"
 
-1763606346 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
+1763775418 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/autenticar.hpp"
+	"../HospedeReserva/controladora.hospede.hpp"
+	"../HospedeReserva/controladora.reserva.hpp"
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
@@ -987,7 +989,7 @@
 	"ms.hospede.hpp"
 	<string>
 
-1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.hospede.hpp
+1763775799 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.hospede.hpp
 	<string>
 
 1763772524 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.hospede.hpp
@@ -1004,4 +1006,24 @@
 	"ms.hospede.hpp"
 	<iostream>
 	<stdexcept>
+
+1763777367 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.hpp
+	"interface.controladora.reserva.hpp"
+	"ms.reserva.hpp"
+
+1763772610 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.reserva.hpp
+	"is.reserva.hpp"
+	"../BancoDados/bancoDeDados.hpp"
+	"../funcoes.de.controles.hpp"
+	"../../entidades/entidade.reserva.hpp"
+	"../../dominios/dominios.codigo.hpp"
+	"../../dominios/dominios.data.hpp"
+	"../../dominios/dominios.dinheiro.hpp"
+	"../../dominios/dominios.email.hpp"
+
+1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.reserva.hpp
+	<string>
+
+1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\interface.controladora.reserva.hpp
+	<string>
 
