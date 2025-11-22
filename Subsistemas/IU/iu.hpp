@@ -8,6 +8,8 @@
 #ifndef IU_HPP_INCLUDED
 #define IU_HPP_INCLUDED
 #include "../Autenticacao/autenticar.hpp"
+#include "../HospedeReserva/controladora.hospede.hpp"
+#include "../HospedeReserva/controladora.reserva.hpp"
 #include "../Gerente/controladora.gerente.hpp"
 #include "../Gerente/ma.gerente.hpp"
 #include "../funcoes.de.controles.hpp"

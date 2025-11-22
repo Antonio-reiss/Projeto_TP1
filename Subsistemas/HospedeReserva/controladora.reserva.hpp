@@ -10,7 +10,7 @@
 #ifndef CONTROLADORA_RESERVA_HPP_INCLUDED
 #define CONTROLADORA_RESERVA_HPP_INCLUDED
 
-#include "interface.controladora.reserva.h"
+#include "interface.controladora.reserva.hpp"
 #include "ms.reserva.hpp"
 
 /**
@@ -64,7 +64,7 @@ public:
 
     /**
      * @brief Exclui uma reserva pelo código.
-     *
+
      * @param codigo Código da reserva.
      *
      * @return true se a exclusão ocorrer com sucesso, false em caso de falha.

@@ -85,7 +85,7 @@
 
 1763387358 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.numero.hpp
 
-1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
+1763387358 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.ramal.cpp
 	"dominios.ramal.hpp"
 	<stdexcept>
 	<math.h>
@@ -122,8 +122,15 @@
 1763340106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
+	"../Subsistemas/BancoDados/bancoDeDados.hpp"
+	"../entidades/entidade.gerente.hpp"
+	"../entidades/entidade.reserva.hpp"
+	"../entidades/entidade.hospede.hpp"
+	"../entidades/entidade.quarto.hpp"
+	"../entidades/entidade.hotel.hpp"
+	<iostream>
 
 1763344024 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.dinheiro.hpp"
@@ -340,7 +347,7 @@
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
-1763654413 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
+1763659659 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.pessoa.hpp
@@ -350,10 +357,10 @@
 
 1762870528 os/dominios.email.hpp"
 
-1763376059 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.gerente.cpp
+1763661680 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.gerente.cpp
 	"entidade.gerente.hpp"
 
-1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.gerente.hpp
+1763661611 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.gerente.hpp
 	"entidade.pessoa.hpp"
 	"../dominios/dominios.ramal.hpp"
 	"../dominios/dominios.senha.hpp"
@@ -393,13 +400,13 @@
 
 1762870528 os/dominios.capacidade.hpp"
 
-1763376059 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.reserva.cpp
+1763664300 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.reserva.cpp
 	"entidade.reserva.hpp"
 	<stdexcept>
 	<iostream>
 	<string>
 
-1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.reserva.hpp
+1763664277 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.dinheiro.hpp"
 	"../dominios/dominios.codigo.hpp"
 	"../dominios/dominios.data.hpp"
@@ -449,7 +456,7 @@
 	"ia.gerente.hpp"
 	<string>
 
-1763654506 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763775685 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
@@ -480,7 +487,7 @@
 
 1762456217 inios/dominios.senha.hpp"
 
-1763606211 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+1763771777 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
 	"ms.gerente.hpp"
 	"ma.gerente.hpp"
 	"../BancoDados/bancoDeDados.hpp"
@@ -515,8 +522,10 @@
 
 1762890253 e/controladora.gerente.hpp"
 
-1763606346 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
+1763775418 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/autenticar.hpp"
+	"../HospedeReserva/controladora.hospede.hpp"
+	"../HospedeReserva/controladora.reserva.hpp"
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
@@ -597,13 +606,13 @@
 	<cstdlib>
 	<string>
 
-1763486842 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
-	"controladora.autenticacao.hpp"
+1763431829 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
+	"autenticar.hpp"
 	"../funcoes.de.controles.hpp"
 	<iostream>
 	<string>
 
-1763476958 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
+1763431181 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
 	"ms.autenticacao.hpp"
 	<stdexcept>
 	<iostream>
@@ -619,7 +628,7 @@
 
 1763404368 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
-1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
 	"ma.gerente.hpp"
 	<stdexcept>
 	<iostream>
@@ -640,10 +649,9 @@
 	"../../dominios/dominios.senha.hpp"
 	<string>
 
-1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+1763431781 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
 	"ms.gerente.hpp"
 	"ma.gerente.hpp"
-	"../BancoDados/bancoDeDados.hpp"
 	<iostream>
 	<stdexcept>
 	<string>
@@ -659,17 +667,17 @@
 	"../../dominios/dominios.senha.hpp"
 	"../funcoes.de.controles.hpp"
 
-1763475758 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
 	<string>
 	<stdexcept>
 	<vector>
 
-1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
 
-1763475758 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"../Autenticacao/autenticar.hpp"
 	"ma.gerente.hpp"
 	"ms.gerente.hpp"
@@ -678,13 +686,13 @@
 	<iostream>
 	<limits>
 
-1763475758 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+1763340106 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/autenticar.hpp"
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
 
-1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -877,17 +885,16 @@
 	<sys/uio.h>
 	<math.h>
 
-1763498042 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+1763431181 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
-1763499960 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
+1763409418 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../entidades/entidade.hospede.hpp"
 	"../../entidades/entidade.reserva.hpp"
 	"../../entidades/entidade.quarto.hpp"
 	"../../entidades/entidade.hotel.hpp"
 	"../../zSQL/sqlite3.h"
-	<sqlite3.h>
 	<iostream>
 	<cstdlib>
 	<string>
@@ -925,11 +932,11 @@
 
 1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\funcoes.de.controles.hpp
 
-1763475758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\funcoes.de.controles.cpp
-	"funcoes.de.controles.hpp"
+1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\funcoes.de.controles.cpp
 	<cstdlib>
 	<windows.h>
 	<unistd.h>
+	"funcoes.de.controles.hpp"
 
 1763469033 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\funcoes.de.controles.cpp
 	"funcoes.de.controles.hpp"
@@ -937,24 +944,86 @@
 	<windows.h>
 	<unistd.h>
 
-1763486814 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.hpp
-	"ma.autenticacao.hpp"
-	"ms.autenticacao.hpp"
+1763428465 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ma.hospede.cpp
+	"ma.hospede.hpp"
 	<iostream>
-	<cstdlib>
+	<stdexcept>
+
+1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ma.hospede.hpp
+	"ia.hospede.hpp"
+	"../dominios/dominios.nome.hpp"
+	"../dominios/dominios.email.hpp"
+	"../dominios/dominios.endereco.hpp"
+	"../dominios/dominios.cartao.hpp"
+	<string>
+	<iostream>
+	<stdexcept>
+
+1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ia.hospede.hpp
 	<string>
 
-1763498243 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\controladora.hotel.cpp
-	"controladora.hotel.hpp"
+1763428465 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ma.reserva.cpp
+	"ma.reserva.hpp"
 	<iostream>
-	<limits>
+	<stdexcept>
+
+1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ma.reserva.hpp
+	"ia.reserva.hpp"
+	"../dominios/dominios.codigo.hpp"
+	"../dominios/dominios.data.hpp"
+	"../dominios/dominios.dinheiro.hpp"
+	"../dominios/dominios.email.hpp"
+	<string>
+	<iostream>
+	<stdexcept>
+
+1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ia.reserva.hpp
 	<string>
 
-1763497453 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\controladora.hotel.hpp
+1763771567 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
+	"controladora.hospede.hpp"
+	<iostream>
+
+1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.hpp
+	"is.hospede.hpp"
+	"ms.hospede.hpp"
+	<string>
+
+1763775799 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.hospede.hpp
+	<string>
+
+1763772524 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.hospede.hpp
+	"is.hospede.hpp"
+	"../BancoDados/bancoDeDados.hpp"
 	"../funcoes.de.controles.hpp"
-	"../../entidades/entidade.hotel.hpp"
-	"../../dominios/dominios.codigo.hpp"
-	"../../dominios/dominios.endereco.hpp"
-	"../../dominios/dominios.telefone.hpp"
+	"../../entidades/entidade.hospede.hpp"
 	"../../dominios/dominios.nome.hpp"
+	"../../dominios/dominios.email.hpp"
+	"../../dominios/dominios.endereco.hpp"
+	"../../dominios/dominios.cartao.hpp"
+
+1763773828 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.hospede.cpp
+	"ms.hospede.hpp"
+	<iostream>
+	<stdexcept>
+
+1763777367 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.hpp
+	"interface.controladora.reserva.hpp"
+	"ms.reserva.hpp"
+
+1763772610 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.reserva.hpp
+	"is.reserva.hpp"
+	"../BancoDados/bancoDeDados.hpp"
+	"../funcoes.de.controles.hpp"
+	"../../entidades/entidade.reserva.hpp"
+	"../../dominios/dominios.codigo.hpp"
+	"../../dominios/dominios.data.hpp"
+	"../../dominios/dominios.dinheiro.hpp"
+	"../../dominios/dominios.email.hpp"
+
+1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.reserva.hpp
+	<string>
+
+1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\interface.controladora.reserva.hpp
+	<string>
 
