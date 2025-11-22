@@ -122,10 +122,9 @@
 1763340106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763159586 ated upstream
+
+1763774051 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 	"../Subsistemas/BancoDados/bancoDeDados.hpp"
 	"../entidades/entidade.gerente.hpp"
@@ -134,18 +133,44 @@
 	"../entidades/entidade.quarto.hpp"
 	"../entidades/entidade.hotel.hpp"
 	<iostream>
-=======
-1763774051 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/BancoDados/bancoDeDados.hpp"
->>>>>>> Stashed changes
-=======
-1763774051 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/BancoDados/bancoDeDados.hpp"
->>>>>>> Stashed changes
-=======
-1763774051 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/BancoDados/bancoDeDados.hpp"
->>>>>>> Stashed changes
+
+1763431185 
+
+1763774466 shed changes
+	"ma.gerente.hpp"
+	<stdexcept>
+	<iostream>
+	<string>
+	"ms.gerente.hpp"
+	"ma.gerente.hpp"
+	<iostream>
+	<stdexcept>
+	<string>
+	<cmath>
+	"../BancoDados/bancoDeDados.hpp"
+	<string>
+	<stdexcept>
+	<vector>
+	"controladora.gerente.hpp"
+	<iostream>
+	<limits>
+	"ma.gerente.hpp"
+	"ms.gerente.hpp"
+	"../IU/iu.hpp"
+	<iostream>
+	<limits>
+	"../Gerente/controladora.gerente.hpp"
+	"../Gerente/ma.gerente.hpp"
+	"../funcoes.de.controles.hpp"
+	"iu.hpp"
+	<iostream>
+	<string>
+	<cstdlib>
+	<rpc.h>
+	"bancoDeDados.hpp"
 
 1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.dinheiro.hpp"
@@ -325,7 +350,7 @@
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.endereco.hpp
 	<string>
 
-1763376059 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.nome.cpp
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.nome.cpp
 	"dominios.nome.hpp"
 	<stdexcept>
 
@@ -362,7 +387,7 @@
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
-1763818843 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
+1763842469 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 
 1763376059 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.pessoa.hpp
@@ -415,7 +440,7 @@
 
 1762870528 os/dominios.capacidade.hpp"
 
-1763664300 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.reserva.cpp
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\entidades\entidade.reserva.cpp
 	"entidade.reserva.hpp"
 	<stdexcept>
 	<iostream>
@@ -436,8 +461,8 @@
 
 1762890632 e.hpp"
 
-1763432442 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
-	"autenticar.hpp"
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
+	"controladora.autenticacao.hpp"
 	"../funcoes.de.controles.hpp"
 	<iostream>
 	<string>
@@ -476,7 +501,7 @@
 	<iostream>
 	<limits>
 
-1763823393 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+1763841596 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"ma.gerente.hpp"
 	"ms.gerente.hpp"
 	"../IU/iu.hpp"
@@ -528,7 +553,7 @@
 	<stdexcept>
 	<vector>
 
-1763653442 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
+1763842967 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -537,10 +562,10 @@
 
 1762890253 e/controladora.gerente.hpp"
 
-1763823395 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
-	"../Autenticacao/controladora.autenticacao.hpp"
+1763841640 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.hpp
 	"../HospedeReserva/controladora.hospede.hpp"
 	"../HospedeReserva/controladora.reserva.hpp"
+	"../Autenticacao/controladora.autenticacao.hpp"
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
@@ -644,23 +669,7 @@
 
 1763404368 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
-=======
 1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
->>>>>>> Stashed changes
-	"ma.gerente.hpp"
-	<stdexcept>
-	<iostream>
-	<string>
 
 1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
@@ -677,26 +686,7 @@
 	"../../dominios/dominios.senha.hpp"
 	<string>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431781 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
-=======
 1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
->>>>>>> Stashed changes
-	"ms.gerente.hpp"
-	"ma.gerente.hpp"
-	<iostream>
-	<stdexcept>
-	<string>
-	<cmath>
-	"../BancoDados/bancoDeDados.hpp"
 
 1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
 	<algorithm>
@@ -709,106 +699,25 @@
 	"../../dominios/dominios.senha.hpp"
 	"../funcoes.de.controles.hpp"
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
-=======
 1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
->>>>>>> Stashed changes
-=======
-1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
->>>>>>> Stashed changes
-=======
-1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
->>>>>>> Stashed changes
-	<string>
-	<stdexcept>
-	<vector>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
-=======
 1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
->>>>>>> Stashed changes
-	"controladora.gerente.hpp"
-	<iostream>
-	<limits>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
-	"../Autenticacao/autenticar.hpp"
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 1763766920 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+	"../Autenticacao/autenticar.hpp"
 	"../BancoDados/bancoDeDados.hpp"
 	"../funcoes.de.controles.hpp"
 	"../Autenticacao/controladora.autenticacao.hpp"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-	"ma.gerente.hpp"
-	"ms.gerente.hpp"
-	"../IU/iu.hpp"
-	<iostream>
-	<limits>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763340106 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+1763340106 icacao/autenticar.hpp"
+
+1763766706 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/autenticar.hpp"
-=======
-1763766706 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/controladora.autenticacao.hpp"
->>>>>>> Stashed changes
-=======
-1763766706 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/controladora.autenticacao.hpp"
->>>>>>> Stashed changes
-=======
-1763766706 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/controladora.autenticacao.hpp"
->>>>>>> Stashed changes
-	"../Gerente/controladora.gerente.hpp"
-	"../Gerente/ma.gerente.hpp"
-	"../funcoes.de.controles.hpp"
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
-=======
 1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
->>>>>>> Stashed changes
-=======
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
->>>>>>> Stashed changes
-	"iu.hpp"
-	<iostream>
-	<string>
-	<cstdlib>
-	<rpc.h>
 
 1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.hpp
 	"../../entidades/entidade.gerente.hpp"
@@ -819,7 +728,7 @@
 
 1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
-1763428465 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
 	"ms.autenticacao.hpp"
 	<stdexcept>
 	<iostream>
@@ -996,20 +905,7 @@
 	<sys/uio.h>
 	<math.h>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1763431181 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
-=======
 1763774466 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
->>>>>>> Stashed changes
-=======
-1763774466 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
->>>>>>> Stashed changes
-=======
-1763774466 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
->>>>>>> Stashed changes
-	"bancoDeDados.hpp"
 
 1763409418 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
 	"../../entidades/entidade.gerente.hpp"
@@ -1029,10 +925,10 @@
 	<unistd.h>
 	<stdarg.h>
 
-1763516848 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
-1763476084 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
+1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../entidades/entidade.hospede.hpp"
 	"../../entidades/entidade.reserva.hpp"
@@ -1103,19 +999,23 @@
 1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ia.reserva.hpp
 	<string>
 
-1763771567 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
-	"controladora.hospede.hpp"
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
+	"controladora.reserva.hpp"
 	<iostream>
+	<algorithm>
 
-1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.hpp
-	"is.hospede.hpp"
+1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.hpp
+	"../BancoDados/bancoDeDados.hpp"
+	"../funcoes.de.controles.hpp"
+	"ma.hospede.hpp"
 	"ms.hospede.hpp"
+	<iostream>
+	<limits>
+
+1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.hospede.hpp
 	<string>
 
-1763775799 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.hospede.hpp
-	<string>
-
-1763772524 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.hospede.hpp
+1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.hospede.hpp
 	"is.hospede.hpp"
 	"../BancoDados/bancoDeDados.hpp"
 	"../funcoes.de.controles.hpp"
@@ -1125,16 +1025,20 @@
 	"../../dominios/dominios.endereco.hpp"
 	"../../dominios/dominios.cartao.hpp"
 
-1763773828 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.hospede.cpp
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.hospede.cpp
 	"ms.hospede.hpp"
 	<iostream>
 	<stdexcept>
 
-1763777367 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.hpp
-	"interface.controladora.reserva.hpp"
+1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.hpp
+	"../BancoDados/bancoDeDados.hpp"
+	"../funcoes.de.controles.hpp"
+	"ma.reserva.hpp"
 	"ms.reserva.hpp"
+	<iostream>
+	<limits>
 
-1763772610 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.reserva.hpp
+1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.reserva.hpp
 	"is.reserva.hpp"
 	"../BancoDados/bancoDeDados.hpp"
 	"../funcoes.de.controles.hpp"
@@ -1144,13 +1048,13 @@
 	"../../dominios/dominios.dinheiro.hpp"
 	"../../dominios/dominios.email.hpp"
 
-1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.reserva.hpp
+1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\is.reserva.hpp
 	<string>
 
 1763771567 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\interface.controladora.reserva.hpp
 	<string>
 
-1763777401 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.reserva.cpp
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ms.reserva.cpp
 	"ma.reserva.hpp"
 	"ms.reserva.hpp"
 	<string>
@@ -1162,4 +1066,9 @@
 	<iostream>
 	<cstdlib>
 	<string>
+
+1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.cpp
+	"controladora.reserva.hpp"
+	<iostream>
+	<algorithm>
 
