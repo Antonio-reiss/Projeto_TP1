@@ -5,7 +5,7 @@
  * Declara as funcoes responsaveis por intermediar a interacao entre a
  * apresentacao e as camadas de logica e servico, incluindo operacoes
  * de criacao, edicao, listagem e exclusao de reservas.
- * author Ester Andrade Sousa - 242012109
+ * @author Ester Andrade Sousa - 242012109
  */
 
 #ifndef CONTROLADORA_RESERVA_HPP_INCLUDED
