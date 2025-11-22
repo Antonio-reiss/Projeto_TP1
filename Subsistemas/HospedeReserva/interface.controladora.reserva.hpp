@@ -1,11 +1,11 @@
 /**
  * @file ic.reserva.hpp
- * @brief Interface de controle para o módulo de Reserva.
+ * @brief Interface de controle para o modulo de Reserva.
  *
- * Define as operações que a camada de controle deve implementar
- * para gerenciar reservas, incluindo criação, listagem, edição e exclusão.
- * Serve como ponte entre a camada de apresentação e o serviço de reservas.
- * @author Ester Andrade Sousa - 242012109
+ * Define as operacoes que a camada de controle deve implementar
+ * para gerenciar reservas, incluindo criacao, listagem, edicao e exclusao.
+ * Serve como ponte entre a camada de apresentacao e o servico de reservas.
+ * author Ester Andrade Sousa - 242012109
  */
 #ifndef IC_RESERVA_HPP_INCLUDED
 #define IC_RESERVA_HPP_INCLUDED
@@ -14,10 +14,10 @@
 
 /**
  * @class icReserva
- * @brief Interface de controle para operações de reserva.
+ * @brief Interface de controle para operacoes de reserva.
  *
- * Define as operações essenciais relacionadas ao fluxo de reserva,
- * normalmente chamadas pela camada de apresentação.
+ * Define as operacoes essenciais relacionadas ao fluxo de reserva,
+ * normalmente chamadas pela camada de apresentacao.
  */
 class icReserva {
 public:
@@ -25,14 +25,14 @@ public:
     /**
      * @brief Cria uma nova reserva.
      *
-     * @param codigo Código da reserva.
+     * @param codigo Codigo da reserva.
      * @param chegada Data de chegada.
      * @param partida Data de partida.
-     * @param valor Valor monetário.
-     * @param emailHospede E-mail do hóspede associado.
-     * @param numeroQuarto Número do quarto associado.
+     * @param valor Valor monetario.
+     * @param emailHospede Email do hospede associado.
+     * @param numeroQuarto Numero do quarto associado.
      *
-     * @return true se a reserva for criada com sucesso, false caso contrário.
+     * @return true se a reserva for criada com sucesso, false caso contrario.
      */
     virtual bool criarReserva(const std::string&, const std::string&, const std::string&,
                               const std::string&, const std::string&, int) = 0;
@@ -47,20 +47,20 @@ public:
     /**
      * @brief Edita as datas de uma reserva existente.
      *
-     * @param codigo Código da reserva.
+     * @param codigo Codigo da reserva.
      * @param novaChegada Nova data de chegada.
      * @param novaPartida Nova data de partida.
      *
-     * @return true se a atualização ocorrer com sucesso, false se falhar.
+     * @return true se a atualizacao ocorrer com sucesso, false se falhar.
      */
     virtual bool editarReserva(const std::string&, const std::string&, const std::string&) = 0;
 
     /**
-     * @brief Exclui uma reserva pelo código.
+     * @brief Exclui uma reserva pelo codigo.
      *
-     * @param codigo Código da reserva.
+     * @param codigo Codigo da reserva.
      *
-     * @return true se a exclusão for bem-sucedida, false em caso de erro.
+     * @return true se a exclusao for bem sucedida, false em caso de erro.
      */
     virtual bool excluirReserva(const std::string&) = 0;
 
