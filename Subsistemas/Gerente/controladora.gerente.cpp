@@ -69,8 +69,6 @@ bool validarCriarGerente(){
         cout << "\n================================" << endl;
         cout << "      Criar conta Gerente         " << endl;
         cout << "================================" << endl;
-        //cout << "      [0] Para sair \n";
-        //cout << "================================" << endl;
         cout << "Nome: ";
         getline(cin, nome);
         cout << "E-mail: ";
@@ -173,7 +171,7 @@ void excluirGerente(){
     msGerente servicoExcluir;
 
     do{
-        //limparTela();
+        limparTela();
         cout << "\n=====================================" << endl;
         cout << "       Excluir conta Gerente      " << endl;
         cout << "========================================" << endl;

@@ -20,7 +20,7 @@ using namespace std;
  * @brief Interface que define as operações essenciais do CRUD de hóspede.
  *
  * As classes que implementarem esta interface devem garantir validação dos
- * dados de entrada e integração com o mecanismo de persistência adotado.
+ * dados de entrada e integração com o mecanismo de persistencia adotado.
  */
 class isHospede {
 public:
