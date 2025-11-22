@@ -376,16 +376,16 @@ void bancoDeDados::montarReserva(Reserva& reserva){
     string codigo = reserva.getCodigo();
     vector<string> dados;
 
-    string sql = "SELEC * FROM reserva WHERE codigo = '"+ codigo +"';";
+    string sql = "SELECT * FROM reserva WHERE codigo = '"+ codigo +"';";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
 
     string data = dados[0];
     string dia, mes, ano;
 
-    dia = data[0] + data[1];
-    mes = data[3] + data[4] + data[5];
-    ano = data[7] + data[8] + data[9] + data[10];
+    dia = data.substr(0,2);
+    mes = data.substr(3,3);
+    ano = data.substr(7,4);
     int diaInt = stoi(dia), anoInt = stoi(ano);
 
     Data chegada(diaInt, mes, anoInt);
@@ -393,15 +393,16 @@ void bancoDeDados::montarReserva(Reserva& reserva){
 
     data = dados[1];
 
-    dia = data[0] + data[1];
-    mes = data[3] + data[4] + data[5];
-    ano = data[7] + data[8] + data[9] + data[10];
+    dia = data.substr(0,2);
+    mes = data.substr(3,3);
+    ano = data.substr(7,4);
     diaInt = stoi(dia), anoInt = stoi(ano);
 
     Data partida(diaInt, mes, anoInt);
     reserva.setPartida(partida);
 
-    reserva.setValorDinheiro(stod(dados[2]));
+    double valor = stod(dados[2]);
+    reserva.setValorDinheiro(valor);
     reserva.setCodigo(dados[3]);
 
     return;
@@ -425,16 +426,22 @@ void bancoDeDados::montarHotel(Hotel& hotel){
     string codigo = hotel.getCodigo().getValor();
     vector<string> dados;
 
-    string sql = "SELECT * FROM quarto WHERE codigo = '"+ codigo +"';";
+
+    string sql = "SELECT * FROM hotel WHERE codigo = '"+ codigo +"';";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
 
     string telefone = dados[2].substr(1);
 
-    hotel.setNome(dados[0]);
-    hotel.setEndereco(dados[1]);
-    hotel.setTelefone(telefone);
-    hotel.setCodigo(dados[3]);
+    Nome bdNome(dados[0]);
+    Endereco bdEndereco(dados[1]);
+    Telefone bdTelefone(telefone);
+    Codigo bdCodigo(dados[3]);
+
+    hotel.setNome(bdNome);
+    hotel.setEndereco(bdEndereco);
+    hotel.setTelefone(bdTelefone);
+    hotel.setCodigo(bdCodigo);
 
     return;
 }
@@ -448,11 +455,11 @@ void bancoDeDados::editarGerente(Gerente& gerente, string& emailReferencia){
     ramal = to_string(ramalInt);
     senha = gerente.getSenha();
 
-    string sql= "UPDATE gerente"
-                "SET nome = '"+ nome +"',"
-                    "email = '"+ email +"',"
-                    "ramal = "+ ramal +","
-                    "senha = '"+ senha +"'"
+    string sql= "UPDATE gerente "
+                "SET nome = '"+ nome +"', "
+                    "email = '"+ email +"', "
+                    "ramal = "+ ramal +", "
+                    "senha = '"+ senha +"' "
                 "WHERE email = '"+ emailReferencia +"';";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
@@ -472,11 +479,11 @@ void bancoDeDados::editarHospede(Hospede& hospede, string& emailReferencia){
     endereco = hospede.getEndereco();
     cartao = hospede.getCartao();
 
-    string sql= "UPDATE hospede"
-                "SET nome = '"+ nome +"',"
-                    "email = '"+ email +"',"
-                    "endereco = '"+ endereco +"',"
-                    "cartao = '"+ cartao +"'"
+    string sql= "UPDATE hospede "
+                "SET nome = '"+ nome +"', "
+                    "email = '"+ email +"', "
+                    "endereco = '"+ endereco +"', "
+                    "cartao = '"+ cartao +"' "
                 "WHERE email = '"+ emailReferencia +"';";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
@@ -508,11 +515,11 @@ void bancoDeDados::editarReserva(Reserva& reserva, string& codigoReferencia){
     valor = to_string(valorNum);
     codigo = reserva.getCodigo();
 
-    string sql= "UPDATE reserva"
-                "SET chegada = '"+ chegada +"',"
-                    "partida = '"+ partida +"',"
-                    "valor = "+ valor +","
-                    "codigo = '"+ codigo +"'"
+    string sql= "UPDATE reserva "
+                "SET chegada = '"+ chegada +"', "
+                    "partida = '"+ partida +"', "
+                    "valor = "+ valor +", "
+                    "codigo = '"+ codigo +"' "
                 "WHERE codigo = '"+ codigoReferencia +"';";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
@@ -541,11 +548,11 @@ void bancoDeDados::editarQuarto(Quarto& quarto, int ID){
     diaria = to_string(diariaNum);
     ramal = to_string(ramalInt);
 
-    string sql= "UPDATE quarto"
-                "SET numero = "+ numero +","
-                    "capacidade = "+ capacidade +","
-                    "diaria = "+ diaria +","
-                    "ramal = "+ ramal +""
+    string sql= "UPDATE quarto "
+                "SET numero = "+ numero +", "
+                    "capacidade = "+ capacidade +", "
+                    "diaria = "+ diaria +", "
+                    "ramal = "+ ramal +" "
                 "WHERE id = "+ id +";";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);
@@ -565,11 +572,11 @@ void bancoDeDados::editarHotel(Hotel& hotel, string& codigoReferencia){
     telefone = hotel.getTelefone().getTelefone();
     codigo = hotel.getCodigo().getValor();
 
-    string sql= "UPDATE hotel"
-                "SET nome = '"+ nome +"',"
-                    "endereco = '"+ endereco +"',"
-                    "telefone = '"+ telefone +"',"
-                    "codigo = '"+ codigo +"'"
+    string sql= "UPDATE hotel "
+                "SET nome = '"+ nome +"', "
+                    "endereco = '"+ endereco +"', "
+                    "telefone = '"+ telefone +"', "
+                    "codigo = '"+ codigo +"' "
                 "WHERE codigo = '"+ codigoReferencia +"';";
 
     int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, nullptr);

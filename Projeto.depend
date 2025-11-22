@@ -75,7 +75,7 @@
 1763387358 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
-1763340106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.cpp
+1763768367 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.cpp
 	"dominios.nome.hpp"
 	<stdexcept>
 
@@ -106,7 +106,7 @@
 	<string>
 	<iostream>
 
-1761054547 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.cpp
+1763592367 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.cpp
 	"entidade.hospede.hpp"
 
 1760702430 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.h
@@ -122,6 +122,9 @@
 1763340106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.pessoa.cpp
 	"entidade.pessoa.hpp"
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 	"../Subsistemas/BancoDados/bancoDeDados.hpp"
@@ -131,21 +134,33 @@
 	"../entidades/entidade.quarto.hpp"
 	"../entidades/entidade.hotel.hpp"
 	<iostream>
+=======
+1763774051 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+	"../Subsistemas/BancoDados/bancoDeDados.hpp"
+>>>>>>> Stashed changes
+=======
+1763774051 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+	"../Subsistemas/BancoDados/bancoDeDados.hpp"
+>>>>>>> Stashed changes
+=======
+1763774051 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+	"../Subsistemas/BancoDados/bancoDeDados.hpp"
+>>>>>>> Stashed changes
 
-1763344024 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.hpp
 	"../dominios/dominios.dinheiro.hpp"
 	"../dominios/dominios.codigo.hpp"
 	"../dominios/dominios.data.hpp"
 	<iostream>
 	<string>
 
-1763272000 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.cpp
+1763773267 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.reserva.cpp
 	"entidade.reserva.hpp"
 	<stdexcept>
 	<iostream>
 	<string>
 
-1761054711 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.hpp
+1763592367 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hospede.hpp
 	"entidade.pessoa.hpp"
 	"../dominios/dominios.endereco.hpp"
 	"../dominios/dominios.cartao.hpp"
@@ -153,20 +168,20 @@
 1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.cartao.hpp
 	<string>
 
-1761054580 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.cpp
+1763592367 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.cpp
 	"entidade.hotel.hpp"
 
-1763262597 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.hpp
+1763592367 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.hotel.hpp
 	"entidade.quarto.hpp"
 	"../dominios/dominios.codigo.hpp"
 	"../dominios/dominios.nome.hpp"
 	"../dominios/dominios.telefone.hpp"
 	"../dominios/dominios.endereco.hpp"
 
-1763340106 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.cpp
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.cpp
 	"entidade.gerente.hpp"
 
-1763340106 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.hpp
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\entidades\entidade.gerente.hpp
 	"entidade.pessoa.hpp"
 	"../dominios/dominios.ramal.hpp"
 	"../dominios/dominios.senha.hpp"
@@ -628,13 +643,25 @@
 
 1763404368 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+>>>>>>> Stashed changes
 	"ma.gerente.hpp"
 	<stdexcept>
 	<iostream>
 	<string>
 
-1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.ramal.hpp"
@@ -642,14 +669,26 @@
 	"ia.gerente.hpp"
 	<string>
 
-1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ia.gerente.hpp
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ia.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.ramal.hpp"
 	"../../dominios/dominios.senha.hpp"
 	<string>
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431781 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+>>>>>>> Stashed changes
 	"ms.gerente.hpp"
 	"ma.gerente.hpp"
 	<iostream>
@@ -658,7 +697,9 @@
 	<cmath>
 	"../BancoDados/bancoDeDados.hpp"
 
-1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.hpp
+	<algorithm>
+	<cctype>
 	"is.gerente.hpp"
 	"../../entidades/entidade.gerente.hpp"
 	"../../dominios/dominios.nome.hpp"
@@ -667,32 +708,101 @@
 	"../../dominios/dominios.senha.hpp"
 	"../funcoes.de.controles.hpp"
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+=======
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+>>>>>>> Stashed changes
+=======
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+>>>>>>> Stashed changes
+=======
+1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
+>>>>>>> Stashed changes
 	<string>
 	<stdexcept>
 	<vector>
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431717 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+>>>>>>> Stashed changes
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431185 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
 	"../Autenticacao/autenticar.hpp"
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+1763766920 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.hpp
+	"../BancoDados/bancoDeDados.hpp"
+	"../funcoes.de.controles.hpp"
+	"../Autenticacao/controladora.autenticacao.hpp"
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 	"ma.gerente.hpp"
 	"ms.gerente.hpp"
 	"../IU/iu.hpp"
-	"../funcoes.de.controles.hpp"
 	<iostream>
 	<limits>
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763340106 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../Autenticacao/autenticar.hpp"
+=======
+1763766706 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+	"../Autenticacao/controladora.autenticacao.hpp"
+>>>>>>> Stashed changes
+=======
+1763766706 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+	"../Autenticacao/controladora.autenticacao.hpp"
+>>>>>>> Stashed changes
+=======
+1763766706 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+	"../Autenticacao/controladora.autenticacao.hpp"
+>>>>>>> Stashed changes
 	"../Gerente/controladora.gerente.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+>>>>>>> Stashed changes
+=======
+1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+>>>>>>> Stashed changes
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -885,7 +995,19 @@
 	<sys/uio.h>
 	<math.h>
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1763431181 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+=======
+1763774466 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+>>>>>>> Stashed changes
+=======
+1763774466 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+>>>>>>> Stashed changes
+=======
+1763774466 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+>>>>>>> Stashed changes
 	"bancoDeDados.hpp"
 
 1763409418 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
