@@ -40,7 +40,7 @@ void iniciarSistema(){
             case 2:
                 try{
                     if(validarCriarGerente()){
-                        opcoesGerente();
+                        telaGerente();
                     }
                 }catch(const invalid_argument& e){
                     cerr << e.what() << endl;

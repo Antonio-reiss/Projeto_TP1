@@ -40,7 +40,7 @@ void opcoesGerente(){
                 excluirGerente();
                 break;
             case 4:
-                cout << "Saindo do sistema..." << endl;
+                cout << "Saindo..." << endl;
                 esperar(2);
                 return;
             default:
@@ -84,8 +84,6 @@ bool validarCriarGerente(){
 
         if(ma_gerente.validarConta(nome, email, ramal, senha)){
             novoGerente.criarGerente(nome, email, ramal, senha);
-            cout << "Conta criada com sucesso!\nRedirecionando..." << endl;
-            esperar(2);
             return true;
         }else{
             cout << "\n==================================" << endl;
@@ -106,7 +104,7 @@ void validarEditarGerente(){
     string email;
     cout << "Digite o e-mail do gerente a ser editado: " << endl;
     getline(cin, email);
-    Gerente edicaoGerente("Ellen", email, 01, "1!a!A");
+    Gerente edicaoGerente("nomee", email, 01, "1!a!A");
 
     do{
         limparTela();

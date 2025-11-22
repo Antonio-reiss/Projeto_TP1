@@ -553,7 +553,7 @@
 	<stdexcept>
 	<vector>
 
-1763842967 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
+1763844461 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -999,10 +999,7 @@
 1763428465 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\ia.reserva.hpp
 	<string>
 
-1763841036 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
-	"controladora.reserva.hpp"
-	<iostream>
-	<algorithm>
+1763844274 source:c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
 
 1763841036 c:\users\ellen\onedrive\햞ea de trabalho\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.hpp
 	"../BancoDados/bancoDeDados.hpp"
