@@ -10,6 +10,8 @@ obj/
 *.lib
 
 # Arquivos de dependência
+Projeto.depend
+Projeto.layout
 *.depend
 *.layout
 *.hotelaria

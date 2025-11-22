@@ -1,12 +1,8 @@
 /**
  * @file ms.hospede.hpp
- * @brief Implementação concreta do módulo de serviço do Hóspede.
- *
- * Esta classe faz a ponte entre a lógica de aplicação e o banco de dados,
- * permitindo criação, edição, listagem e exclusão de hóspedes.
+ * @brief Implementacao concreta do modulo de servico do Hospede.
  * @author Ester Andrade Sousa - 242012109
  */
-
 
 #ifndef MS_HOSPEDE_HPP_INCLUDED
 #define MS_HOSPEDE_HPP_INCLUDED
@@ -23,54 +19,63 @@
 
 /**
  * @class msHospede
- * @brief Serviço de gerenciamento de hóspedes com integração ao banco de dados.
+ * @brief Implementacao do modulo de servico responsavel pela gerencia de hospedes.
  *
- * A classe implementa a interface isHospede e utiliza o subsistema bancoDeDados
- * para executar as operações de armazenamento e consulta.
+ * Esta classe implementa a interface isHospede, oferecendo operacoes de criacao,
+ * listagem, edicao e exclusao de registros de hospedes utilizando o banco de dados.
  */
 class msHospede : public isHospede {
 
 private:
-/**
-     * @brief Instância do banco de dados utilizada para persistência.
+    /**
+     * @brief Instancia do banco de dados utilizada para armazenar e recuperar informacoes.
      */
     bancoDeDados db;
 
 public:
-/**
-     * @brief Cria um novo hóspede no sistema.
-     * @details Valida os domínios (Nome, Email, Endereco, Cartao) antes de persistir no banco.
-     *
-     * @param string nome do hóspede.
-     * @param string email do hóspede.
-     * @param string endereco do hóspede.
-     * @param string cartao associado.
-     * @return true se a criação for concluída com sucesso, false caso contrário.
-     */
 
-    bool criarHospede(const string&, const string&, const string&, const string&) override;
-/**
-     * @brief Lista todos os hóspedes cadastrados.
-     * @details Recupera e exibe os registros armazenados no banco de dados.
+    /**
+     * @brief Cria um novo hospede no sistema.
      *
-     * @return true se a operação ocorrer corretamente, false se houver falha.
+     * O metodo valida os dados recebidos por meio dos dominios e registra
+     * o novo hospede na base de dados caso todos os valores sejam validos.
+     *
+     * @param string nome do hospede.
+     * @param string email do hospede.
+     * @param string endereco do hospede.
+     * @param string cartao do hospede.
+     * @return Retorna true se o hospede for criado com sucesso, false caso contrario.
+     */
+    bool criarHospede(const string&, const string&, const string&, const string&) override;
+
+    /**
+     * @brief Lista todos os hospedes cadastrados.
+     *
+     * O metodo acessa o banco de dados e exibe as informacoes de cada hospede.
+     *
+     * @return Retorna true se a listagem ocorrer corretamente, false caso contrario.
      */
     bool listarHospedes() override;
- /**
-     * @brief Edita os dados de um hóspede existente.
+
+    /**
+     * @brief Edita informacoes de um hospede existente.
      *
-     * @param string email do hóspede a ser alterado.
-     * @param string campo nome do campo que será editado.
-     * @param string novoDado valor atualizado a ser gravado.
-     * @return true se a atualização for bem-sucedida, false caso contrário.
+     * Permite atualizar campos especificos conforme a identificacao recebida.
+     *
+     * @param string identificador do hospede.
+     * @param string novoDado valor atualizado.
+     * @param string tipoDado tipo do dado que sera alterado.
+     * @return Retorna true se a edicao for bem-sucedida, false caso contrario.
      */
     bool editarHospede(string, string, string) override;
 
-   /**
-     * @brief Exclui um hóspede com base no nome.
+    /**
+     * @brief Exclui um hospede da base de dados.
      *
-     * @param string nome do hóspede a ser excluído.
-     * @return true se a exclusão for concluída, false caso contrário.
+     * Remove permanentemente o registro associado ao identificador informado.
+     *
+     * @param string identificador do hospede.
+     * @return Retorna true se a exclusao ocorrer corretamente, false caso contrario.
      */
     bool excluirHospede(const string&) override;
 

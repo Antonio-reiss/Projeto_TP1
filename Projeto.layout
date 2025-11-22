@@ -2,11 +2,36 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="entidades\entidade.gerente.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+	<File name="Subsistemas\Gerente\controladora.gerente.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3" topLine="0" />
+			<Cursor1 position="3366" topLine="71" />
 		</Cursor>
 	</File>
+	<File name="Subsistemas\Autenticacao\controladora.autenticacao.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="265" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Subsistemas\IU\iu.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="957" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Subsistemas\Gerente\controladora.gerente.hpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="365" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="entidades\entidade.reserva.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> f97ff59b0683dca14e489749001286e16e22193b
+		<Cursor>
+			<Cursor1 position="1507" topLine="16" />
+		</Cursor>
+	</File>
+<<<<<<< HEAD
 	<File name="Subsistemas\Gerente\is.gerente.hpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="288" topLine="5" />
@@ -106,6 +131,9 @@
 		</Cursor>
 	</File>
 	<File name="Subsistemas\Gerente\controladora.gerente.hpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+	<File name="dominios\dominios.data.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> f97ff59b0683dca14e489749001286e16e22193b
 		<Cursor>
 			<Cursor1 position="361" topLine="0" />
 		</Cursor>
@@ -115,11 +143,12 @@
 			<Cursor1 position="449" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Subsistemas\Gerente\ms.gerente.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Subsistemas\BancoDados\bancoDeDados.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1715" topLine="0" />
+			<Cursor1 position="14181" topLine="397" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="Subsistemas\BancoDados\bancoDeDados.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="14131" topLine="432" />
@@ -146,15 +175,19 @@
 		</Cursor>
 	</File>
 	<File name="Subsistemas\BancoDados\bancoDeDados.hpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+	<File name="dominios\main.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> f97ff59b0683dca14e489749001286e16e22193b
 		<Cursor>
-			<Cursor1 position="994" topLine="0" />
+			<Cursor1 position="121" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Subsistemas\funcoes.de.controles.hpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Subsistemas\IU\iu.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="184" topLine="0" />
+			<Cursor1 position="253" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="Subsistemas\HospedeReserva\ms.hospede.hpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="723" topLine="21" />
@@ -168,6 +201,11 @@
 	<File name="Subsistemas\HospedeReserva\ma.hospede.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="26" />
+=======
+	<File name="dominios\dominios.nome.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="346" topLine="0" />
+>>>>>>> f97ff59b0683dca14e489749001286e16e22193b
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -1,6 +1,6 @@
 /**
  * @file ms.reserva.cpp
- * @brief Implementação dos métodos de serviço da classe msReserva.
+ * @brief Implementacao dos metodos de servico da classe msReserva.
  * @author Ester Andrade Sousa - 242012109
  */
 

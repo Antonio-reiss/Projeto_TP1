@@ -11,4 +11,4 @@ using namespace std;
 void limparTela();
 bool validar();
 
-#endif // AUTENTICAR_HPP_INCLUDED
+#endif // CONTROLADORA_INCLUDED

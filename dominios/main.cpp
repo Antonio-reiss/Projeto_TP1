@@ -1,9 +1,8 @@
-#include "../Subsistemas/IU/iu.hpp"
+#include "../Subsistemas/BancoDados/bancoDeDados.hpp"
 
 using namespace std;
 
 int main(){
-
     bancoDeDados bd;
 
     bd.apagarTabela("gerente");

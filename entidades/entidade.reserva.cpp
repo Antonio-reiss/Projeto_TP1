@@ -33,13 +33,17 @@ bool Reserva::validarDatas(Data &chegada, Data &partida)
     {
         throw logic_error("A data de chegada nao pode ser posterior a de saida.");
     }
-    else if (meschegada > mespartida)
-    {
-        throw logic_error("A data de chegada nao pode ser posterior a de saida.");
-    }
-    else if (chegada.getDia() > partida.getDia())
-    {
-        throw logic_error("A data de chegada nao pode ser posterior a de saida.");
+    else if (chegada.getAno() == partida.getAno()){
+        if (meschegada > mespartida)
+        {
+            throw logic_error("A data de chegada nao pode ser posterior a de saida.");
+        }
+        else if (meschegada == mespartida)
+        {
+            if (chegada.getDia() > partida.getDia()){
+                throw logic_error("A data de chegada nao pode ser posterior a de saida.");
+            }
+        }
     }
     return true;
 }
@@ -52,6 +56,7 @@ void Reserva::setChegada(Data novaChegada)
         string mes = novaChegada.getMes();
         int ano = novaChegada.getAno();
         this->chegada.setValor(dia, mes, ano);
+        return;
     }
     throw logic_error("A data de chegada deve anteceder a de partida.");
 }
@@ -64,6 +69,7 @@ void Reserva::setPartida(Data novaPartida)
         string mes = novaPartida.getMes();
         int ano = novaPartida.getAno();
         this->partida.setValor(dia, mes, ano);
+        return;
     }
     throw logic_error("A data de chegada deve anteceder a de partida.");
 }
