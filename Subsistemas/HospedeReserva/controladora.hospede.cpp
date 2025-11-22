@@ -1,118 +1,161 @@
-/**
- * @file controladora.hospede.cpp
- * @brief Implementação da controladora de hóspedes.
- *
- * Contém as funções que fazem a ponte entre a camada de apresentação
- * e o módulo de serviço de hóspedes (msHospede). Todas as operações
- * de CRUD são delegadas ao serviço e mensagens de status são exibidas
- * no console.
- * @author Ester Andrade Sousa - 242012109
- */
-
-#include "controladora.hospede.hpp"
+#include "controladora.reserva.hpp"
 #include <iostream>
+#include <algorithm>
+
 using namespace std;
 
-/**
- * @brief Construtor da controladora de hóspedes.
- *
- * @details Inicializa a instância do módulo de serviço (msHospede).
- */
-controladoraHospede::controladoraHospede() {
-    ms = new msHospede();
+// ---------------- MENU PRINCIPAL RESERVA ---------------- //
+
+void opcoesReserva() {
+    msReserva servico;
+
+    while (true) {
+        limparTela();
+
+        cout << "\n================================\n";
+        cout << "        OPCOES DE RESERVA        \n";
+        cout << "================================\n";
+        cout << "[1] Listar reservas\n";
+        cout << "[2] Criar reserva\n";
+        cout << "[3] Editar datas da reserva\n";
+        cout << "[4] Excluir reserva\n";
+        cout << "[5] Voltar\n";
+        cout << "================================\n";
+        cout << "-> Escolha uma opcao: ";
+
+        int op;
+        if (cin >> op) {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            switch (op) {
+            case 1:
+                servico.listarReservas();
+                esperar(2);
+                break;
+            case 2:
+                validarCriarReserva();
+                break;
+            case 3:
+                validarEditarReserva();
+                break;
+            case 4:
+                excluirReserva();
+                break;
+            case 5:
+                return;
+            default:
+                cout << "Opcao invalida!\n";
+                esperar(2);
+            }
+        }
+        else {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+    }
 }
 
-/**
- * @brief Destrutor da controladora de hóspedes.
- *
- * @details Libera os recursos alocados para o módulo de serviço.
- */
-controladoraHospede::~controladoraHospede() {
-    delete ms;
+// ---------------- CRIAR RESERVA ---------------- //
+
+bool validarCriarReserva() {
+    MAReserva validar;
+    msReserva servico;
+
+    string codigo, chegada, partida, valor, email;
+    int numeroQuarto = 0;
+
+    while (true) {
+        limparTela();
+        cout << "==== Criar Reserva ====\n";
+
+        cout << "Codigo da reserva: ";
+        getline(cin, codigo);
+
+        cout << "Data de chegada (DD-MES-AAAA): ";
+        getline(cin, chegada);
+
+        cout << "Data de partida (DD-MES-AAAA): ";
+        getline(cin, partida);
+
+        cout << "Valor (somente numeros): ";
+        getline(cin, valor);
+
+        cout << "Email do hospede: ";
+        getline(cin, email);
+
+        cout << "Numero do quarto: ";
+        cin >> numeroQuarto;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        if (validar.validarCriar(codigo, chegada, partida, valor, email)) {
+            servico.criarReserva(codigo, chegada, partida, valor, email, numeroQuarto);
+            cout << "Reserva criada!\n";
+            esperar(2);
+            return true;
+        }
+        else {
+            cout << "Dados invalidos. Tente novamente.\n";
+            esperar(2);
+        }
+    }
 }
 
-/**
- * @brief Cria um novo hóspede.
- *
- * @param nome Nome do hóspede.
- * @param email Email do hóspede.
- * @param endereco Endereço do hóspede.
- * @param cartao Cartão do hóspede.
- *
- * @return true se a criação ocorrer com sucesso, false caso contrário.
- */
-bool controladoraHospede::criarHospede(const string& nome,
-                                       const string& email,
-                                       const string& endereco,
-                                       const string& cartao)
-{
-    bool ok = ms->criarHospede(nome, email, endereco, cartao);
+// ---------------- EDITAR RESERVA ---------------- //
 
-    if (!ok) {
-        cout << "Falha ao criar hóspede." << endl;
-        return false;
+void validarEditarReserva() {
+    MAReserva validar;
+    msReserva servico;
+
+    string codigo;
+    cout << "Codigo da reserva a editar:\n-> ";
+    getline(cin, codigo);
+
+    string novaChegada, novaPartida;
+
+    cout << "Nova data de chegada (DD-MES-AAAA): ";
+    getline(cin, novaChegada);
+
+    cout << "Nova data de partida (DD-MES-AAAA): ";
+    getline(cin, novaPartida);
+
+    if (validar.validarEditarDatas(novaChegada, novaPartida)) {
+        servico.editarReserva(codigo, novaChegada, novaPartida);
+        cout << "Reserva atualizada!\n";
+    } else {
+        cout << "Erro na validacao.\n";
     }
 
-    cout << "Hóspede criado com sucesso!" << endl;
-    return true;
+    esperar(2);
 }
 
-/**
- * @brief Lista todos os hóspedes cadastrados.
- *
- * @return true se a listagem ocorrer corretamente, false em caso de falha.
- */
-bool controladoraHospede::listarHospedes() {
-    bool ok = ms->listarHospedes();
+// ---------------- EXCLUIR RESERVA ---------------- //
 
-    if (!ok) {
-        cout << "Falha ao listar hóspedes." << endl;
-        return false;
+void excluirReserva() {
+    MAReserva validar;
+    msReserva servico;
+
+    string codigo;
+    cout << "Codigo da reserva a excluir:\n-> ";
+    getline(cin, codigo);
+
+    if (!validar.validarCancelar(codigo)) {
+        cout << "Codigo invalido!\n";
+        esperar(2);
+        return;
     }
 
-    return true;
-}
+    cout << "Confirmar exclusao? (s/n): ";
+    string c;
+    getline(cin, c);
+    transform(c.begin(), c.end(), c.begin(), ::tolower);
 
-/**
- * @brief Edita os dados de um hóspede existente.
- *
- * @param email Email do hóspede que será editado.
- * @param novoEndereco Novo endereço.
- * @param novoCartao Novo cartão.
- *
- * @return true se a edição for bem-sucedida, false caso contrário.
- */
-bool controladoraHospede::editarHospede(const string& email,
-                                        const string& novoEndereco,
-                                        const string& novoCartao)
-{
-    bool ok = ms->editarHospede(email, novoEndereco, novoCartao);
-
-    if (!ok) {
-        cout << "Falha ao editar hóspede." << endl;
-        return false;
+    if (c == "s") {
+        servico.excluirReserva(codigo);
+        cout << "Reserva excluida.\n";
+    }
+    else {
+        cout << "Cancelado.\n";
     }
 
-    cout << "Hóspede atualizado com sucesso!" << endl;
-    return true;
-}
-
-/**
- * @brief Exclui um hóspede pelo email.
- *
- * @param email Email do hóspede que será removido.
- *
- * @return true se a exclusão ocorrer com sucesso, false em caso de falha.
- */
-bool controladoraHospede::excluirHospede(const string& email)
-{
-    bool ok = ms->excluirHospede(email);
-
-    if (!ok) {
-        cout << "Falha ao excluir hóspede." << endl;
-        return false;
-    }
-
-    cout << "Hóspede excluído com sucesso!" << endl;
-    return true;
+    esperar(2);
 }
