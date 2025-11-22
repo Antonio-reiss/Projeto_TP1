@@ -47,7 +47,7 @@ string Nome::getNome() const{
 }
 
 void Nome::setNome(string nome){
-    if(validar(nome)){
+    if(!validar(nome)){
         throw invalid_argument("O nome inserido eh invalido!");
     }
     this->nome = nome;
