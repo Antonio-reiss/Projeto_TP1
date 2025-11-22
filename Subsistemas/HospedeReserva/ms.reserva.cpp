@@ -4,6 +4,11 @@
  * @author Ester Andrade Sousa - 242012109
  */
 
+#include "ma.reserva.hpp"
+#include "ms.reserva.hpp"
+#include <string>
+#include <sstream>
+
 using namespace std;
 
 static void parseData(const string& dataStr, int& dia, string& mes, int& ano) {
