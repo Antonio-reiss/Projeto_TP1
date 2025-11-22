@@ -1,87 +1,44 @@
 /**
  * @file controladora.hospede.hpp
- * @brief Controladora da camada de controle para hóspedes.
+ * @brief Cabecalho da controladora do modulo de Hospede.
  *
- * Atua como intermediária entre a camada de apresentação e o serviço de hóspedes (isHospede / msHospede),
- * delegando operações de criação, listagem, edição e exclusão.
- *@author Ester Andrade Sousa - 242012109
+ * Declara as funcoes responsaveis por intermediar a interacao entre a
+ * apresentacao e as camadas de logica e servico, incluindo operacoes
+ * de criacao, edicao, listagem e exclusao de hospedes.
+ * @author Ester Andrade Sousa - 242012109
  */
 
 #ifndef CONTROLADORA_HOSPEDE_HPP_INCLUDED
 #define CONTROLADORA_HOSPEDE_HPP_INCLUDED
 
-#include "is.hospede.hpp"
+#include "../BancoDados/bancoDeDados.hpp"
+#include "../funcoes.de.controles.hpp"
+#include "ma.hospede.hpp"
 #include "ms.hospede.hpp"
-#include <string>
+#include <iostream>
+#include <limits>
 
 /**
- * @class controladoraHospede
- * @brief Controladora de hóspedes.
- *
- * Implementa métodos que utilizam o módulo de serviço de hóspedes para realizar
- * operações de CRUD, garantindo que a camada de apresentação não acesse
- * diretamente o serviço.
+ * @brief Exibe o menu de opcoes relacionadas ao modulo de hospede.
  */
-class controladoraHospede {
-private:
-    /**
-     * @brief Ponteiro para o módulo de serviço de hóspedes.
-     */
-    isHospede* ms;
+void opcoesHospede();
 
-public:
-    /**
-     * @brief Construtor da controladora.
-     *
-     * Inicializa o ponteiro para o módulo de serviço (msHospede).
-     */
-    controladoraHospede();
+/**
+ * @brief Valida e solicita os dados necessarios para criar um novo hospede.
+ *
+ * @return true se os dados forem validados e a criacao for bem sucedida,
+ * false caso contrario.
+ */
+bool validarCriarHospede();
 
-    /**
-     * @brief Destrutor da controladora.
-     *
-     * Libera recursos alocados e garante destruição correta do serviço.
-     */
-    ~controladoraHospede();
+/**
+ * @brief Solicita e valida os dados necessarios para editar um hospede.
+ */
+void validarEditarHospede();
 
-    /**
-     * @brief Cria um novo hóspede.
-     *
-     * @param nome Nome do hóspede.
-     * @param email Email do hóspede.
-     * @param endereco Endereço do hóspede.
-     * @param cartao Cartão do hóspede.
-     *
-     * @return true se a criação ocorrer com sucesso, false caso contrário.
-     */
-    bool criarHospede(const std::string&, const std::string&, const std::string&, const std::string&);
-
-    /**
-     * @brief Lista todos os hóspedes cadastrados.
-     *
-     * @return true se a listagem ocorrer corretamente, false em caso de erro.
-     */
-    bool listarHospedes();
-
-    /**
-     * @brief Edita os dados de um hóspede existente.
-     *
-     * @param emailChave Email do hóspede a ser editado.
-     * @param novoEndereco Novo endereço.
-     * @param novoCartao Novo cartão.
-     *
-     * @return true se a edição for bem-sucedida, false caso contrário.
-     */
-    bool editarHospede(const std::string&, const std::string&, const std::string&);
-
-    /**
-     * @brief Exclui um hóspede pelo email.
-     *
-     * @param email Email do hóspede que será removido.
-     *
-     * @return true se a exclusão ocorrer com sucesso, false em caso de falha.
-     */
-    bool excluirHospede(const std::string&);
-};
+/**
+ * @brief Realiza o processo de exclusao de um hospede com base no email informado.
+ */
+void excluirHospede();
 
 #endif // CONTROLADORA_HOSPEDE_HPP_INCLUDED

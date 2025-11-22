@@ -1,9 +1,6 @@
 /**
  * @file ms.hospede.cpp
- * @brief Implementação dos métodos de serviço da classe msHospede.
- *
- * Contém as operações de criação, listagem, edição e exclusão de hóspedes,
- * com validação por domínios e integração direta com o banco de dados.
+ * @brief Implementacao dos metodos de serviço da classe msHospede.
  * @author Ester Andrade Sousa - 242012109
  */
 
@@ -13,20 +10,7 @@
 
 using namespace std;
 
-/**
- * @brief Cria um novo hóspede no sistema.
- *
- * @details O método instancia um objeto Hospede utilizando os domínios
- * (Nome, Email, Endereco, Cartao). Caso algum domínio seja inválido,
- * uma exceção é lançada e tratada, garantindo que o sistema não quebre.
- *
- * @param nome nome do hóspede.
- * @param email email do hóspede.
- * @param endereco endereço do hóspede.
- * @param cartao número do cartão associado.
- *
- * @return true se o hóspede for criado com sucesso, false se ocorrer erro.
- */
+
 bool msHospede::criarHospede(const string& nome,
                              const string& email,
                              const string& endereco,
@@ -38,19 +22,11 @@ bool msHospede::criarHospede(const string& nome,
         return db.criarHospede(novo);
     }
     catch (const exception& e) {
-        cout << "Erro ao criar hóspede: " << e.what() << endl;
+        cout << "Erro ao criar hospede: " << e.what() << endl;
         return false;
     }
 }
 
-/**
- * @brief Lista todos os hóspedes cadastrados.
- *
- * @details Solicita ao banco de dados a listagem completa da tabela HOSPEDE.
- * Exceções genéricas são tratadas para evitar interrupção do fluxo.
- *
- * @return true se a listagem ocorrer sem erros, false caso contrário.
- */
 bool msHospede::listarHospedes()
 {
     try {
@@ -58,30 +34,15 @@ bool msHospede::listarHospedes()
         return true;
     }
     catch (...) {
-        cout << "Erro ao listar hóspedes.\n";
+        cout << "Erro ao listar hospedes.\n";
         return false;
     }
 }
-
-/**
- * @brief Edita informações de um hóspede já existente.
- *
- * @details O método monta um objeto temporário com dados do banco,
- * aplica a modificação desejada no campo informado e persiste a alteração.
- * Validações de domínio são aplicadas automaticamente pelos setters.
- *
- * @param codigo identificador do hóspede no banco.
- * @param campo nome do campo a ser alterado (nome, email, endereco, cartao).
- * @param novoValor valor atualizado a ser aplicado.
- *
- * @return true se a edição for bem-sucedida, false em caso de erro.
- */
 bool msHospede::editarHospede(string codigo,
                               string campo,
                               string novoValor)
 {
     try {
-      // Instância temporária apenas para receber valores do banco
         Hospede hospedeTemporario("nome", "email", "ender,", "1234123412341234");
 
         db.montarHospede(hospedeTemporario);
@@ -99,28 +60,18 @@ bool msHospede::editarHospede(string codigo,
             hospedeTemporario.setCartao(novoValor);
         }
         else {
-            throw invalid_argument("Campo inválido para edição.");
+            throw invalid_argument("Campo invalido para edicao.");
         }
 
         db.editarHospede(hospedeTemporario, codigo);
         return true;
     }
     catch (const exception& e) {
-        cout << "Erro ao editar hóspede: " << e.what() << endl;
+        cout << "Erro ao editar hospede: " << e.what() << endl;
         return false;
     }
 }
 
-/**
- * @brief Exclui um hóspede do sistema com base no código.
- *
- * @details A remoção é feita diretamente no banco de dados.
- * Caso ocorra falha, uma exceção genérica é capturada.
- *
- * @param codigo código do hóspede que será removido.
- *
- * @return true se a exclusão ocorrer normalmente, false em erro.
- */
 bool msHospede::excluirHospede(const string& codigo)
 {
     try {
@@ -128,7 +79,7 @@ bool msHospede::excluirHospede(const string& codigo)
         return true;
     }
     catch (...) {
-        cout << "Erro ao excluir hóspede.\n";
+        cout << "Erro ao excluir hospede.\n";
         return false;
     }
 }
