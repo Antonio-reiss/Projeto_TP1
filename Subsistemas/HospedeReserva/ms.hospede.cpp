@@ -1,6 +1,6 @@
 /**
  * @file ms.hospede.cpp
- * @brief Implementacao dos metodos de serviço da classe msHospede.
+ * @brief Implementacao dos metodos de servico da classe msHospede.
  * @author Ester Andrade Sousa - 242012109
  */
 
@@ -31,39 +31,41 @@ bool msHospede::listarHospedes()
 {
     try {
         db.listarTodos("HOSPEDE");
+        esperar(5);
         return true;
     }
     catch (...) {
         cout << "Erro ao listar hospedes.\n";
+        esperar(5);
         return false;
     }
 }
-bool msHospede::editarHospede(string codigo,
-                              string campo,
-                              string novoValor)
+
+bool msHospede::editarHospede(string codigo, string campo, string novoValor)
 {
     try {
-        Hospede hospedeTemporario("nome", "email", "ender,", "1234123412341234");
-
-        db.montarHospede(hospedeTemporario);
-
+        // valida apenas o campo que está sendo alterado
         if (campo == "nome") {
-            hospedeTemporario.setNome(novoValor);
+            Nome n(novoValor);             // valida nome
         }
         else if (campo == "email") {
-            hospedeTemporario.setEmail(novoValor);
+            Email e(novoValor);           // valida email
         }
         else if (campo == "endereco") {
-            hospedeTemporario.setEndereco(novoValor);
+            Endereco end(novoValor);     // valida endereco
         }
         else if (campo == "cartao") {
-            hospedeTemporario.setCartao(novoValor);
+            Cartao c(novoValor);         
         }
         else {
             throw invalid_argument("Campo invalido para edicao.");
         }
 
-        db.editarHospede(hospedeTemporario, codigo);
+        if (!db.editarHospedeCampo(codigo, campo, novoValor)) {
+            cout << "Erro ao atualizar no banco." << endl;
+            return false;
+        }
+
         return true;
     }
     catch (const exception& e) {
@@ -71,6 +73,7 @@ bool msHospede::editarHospede(string codigo,
         return false;
     }
 }
+
 
 bool msHospede::excluirHospede(const string& codigo)
 {
