@@ -9,7 +9,6 @@ string msAutenticacao::validarGerente(string& email, string& senha){
 
     string achou = bd.getSenha(email);
 
-    cout << "Aqui";
     if (achou == "404"){
         return "Usuario nao encontrado.";
     }

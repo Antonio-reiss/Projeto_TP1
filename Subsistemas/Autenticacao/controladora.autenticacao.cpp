@@ -12,10 +12,10 @@ bool validar(){
     msAutenticacao cs_autenticacao;
 
     while (1){
-        //limparTela();
+        limparTela();
 
         cout << "\n==================================" << endl;
-        cout << "             TELA DE LOGIN  " << endl;
+        cout << "           TELA DE LOGIN  " << endl;
         cout <<   "==================================" << endl;
         cout << "\tDigite senha e email." << endl;
         cout << endl << endl;

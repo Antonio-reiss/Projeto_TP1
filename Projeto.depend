@@ -75,7 +75,7 @@
 1763387358 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
-1763932458 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.cpp
+1763936210 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.cpp
 	"dominios.nome.hpp"
 	<stdexcept>
 
@@ -124,8 +124,9 @@
 
 1763159586 ated upstream
 
-1763931813 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763938622 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
+	"../Subsistemas/Quarto/controladora.quarto.hpp"
 
 1763431185 
 
@@ -637,13 +638,13 @@
 	<cstdlib>
 	<string>
 
-1763932458 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
+1763935427 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.cpp
 	"controladora.autenticacao.hpp"
 	"../funcoes.de.controles.hpp"
 	<iostream>
 	<string>
 
-1763932458 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
+1763935427 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.cpp
 	"ms.autenticacao.hpp"
 	<stdexcept>
 	<iostream>
@@ -699,7 +700,7 @@
 
 1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
 
-1763857397 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763934998 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
@@ -715,16 +716,18 @@
 
 1763340106 icacao/autenticar.hpp"
 
-1763932458 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
+1763935545 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.hpp
 	"../HospedeReserva/controladora.hospede.hpp"
 	"../HospedeReserva/controladora.reserva.hpp"
 	"../Autenticacao/controladora.autenticacao.hpp"
 	"../Gerente/controladora.gerente.hpp"
+	"../Quarto/controladora.quarto.hpp"
+	"../Hotel/controladora.hotel.hpp"
 	"../Gerente/ma.gerente.hpp"
 	"../funcoes.de.controles.hpp"
 	"../BancoDados/bancoDeDados.hpp"
 
-1763934356 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+1763935507 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -917,7 +920,7 @@
 	<sys/uio.h>
 	<math.h>
 
-1763932554 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
+1763938758 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.cpp
 	"bancoDeDados.hpp"
 
 1763932678 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\bancodados\bancodedados.hpp
@@ -1218,7 +1221,7 @@
 1763932458 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hotel\ia.hotel.hpp
 	<string>
 
-1763932458 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hotel\ms.hotel.cpp
+1763935379 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hotel\ms.hotel.cpp
 	"ms.hotel.hpp"
 
 1763857346 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hotel\ms.hotel.hpp
@@ -1236,7 +1239,7 @@
 	<string>
 	<iostream>
 
-1763932458 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hotel\controladora.hotel.cpp
+1763936639 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hotel\controladora.hotel.cpp
 	"controladora.hotel.hpp"
 	<iostream>
 	<limits>
@@ -1252,7 +1255,7 @@
 	"../../dominios/dominios.telefone.hpp"
 	"../../dominios/dominios.nome.hpp"
 
-1763934250 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quarto\controladora.quarto.cpp
+1763937880 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quarto\controladora.quarto.cpp
 	"controladora.quarto.hpp"
 
 1763921212 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quarto\controladora.quarto.hpp

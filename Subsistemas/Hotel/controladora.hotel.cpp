@@ -9,7 +9,7 @@ void opcoesHotel(){
         cout << "\n================================" << endl;
         cout << "          OPCOES HOTEL         " << endl;
         cout << "================================" << endl;
-        cout << "[0] Criar hotel\n";
+        cout << "[1] Criar hotel\n";
         cout << "[2] Visualizar hoteis\n";
         cout << "[3] Editar hotel\n";
         cout << "[4] Excluir hotel\n";
@@ -71,14 +71,20 @@ void validarCriarHotel(){
         getline(cin, telefone);
         cout << "Codigo: ";
         getline(cin, codigo);
-        cout << "Email do responsavel";
+        cout << "Email do responsavel: ";
         getline(cin, responsavel);
         cout << endl << endl;
 
         if(maNovoHotel.validarCriar(nome, endereco, telefone, codigo)){
             Nome nomeHotel(nome); Endereco enderecoHotel(endereco); Telefone telefoneHotel(telefone); Codigo codigoHotel(codigo);
             Hotel hotelCriado(nomeHotel, enderecoHotel, telefoneHotel, codigoHotel);
-            msNovoHotel.criarHotel(hotelCriado, responsavel);
+            if (msNovoHotel.criarHotel(hotelCriado, responsavel)){
+                cout << "Hotel criado com sucesso!" << endl;
+                esperar(3);
+                return;
+            }
+            cout << "Nao foi possivel criar o Hotel" << endl;
+            esperar(3);
             return;
         }else{
             cout << "\n==================================" << endl;
@@ -131,11 +137,16 @@ void editarHotel(){
         string novoDado;
 
         if(tipoDado == 1){
-                cout << "Digite o novo nome: ";
-                getline(cin, novoDado);
-            if(maEdicaoHotel.validarEditar(novoDado, "nome")){
-                nomeHotel.setNome(novoDado);
-                hotelEdicao.setNome(nomeHotel);
+            cout << "Digite o novo nome: ";
+            getline(cin, novoDado);
+            try{
+                if(maEdicaoHotel.validarEditar(novoDado, "nome")){
+                    nomeHotel.setNome(novoDado);
+                    hotelEdicao.setNome(nomeHotel);
+                }
+            } catch (exception& erro){
+                cout << erro.what() << endl;
+                esperar(2);
             }
         }
         else if(tipoDado == 2){

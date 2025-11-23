@@ -36,9 +36,9 @@ void criarTabelas(sqlite3* bancoDados){
                       "nome TEXT, "
                       "endereco TEXT, "
                       "telefone TEXT, "
-                      "codigo TEXT PRIMARY KEY"
+                      "codigo TEXT PRIMARY KEY, "
                       "responsavel TEXT, "
-                      "FOREIGN KEY (responsavel)"
+                      "FOREIGN KEY(responsavel)"
                         "REFERENCES gerente(email) "
                         "ON DELETE CASCADE"
                       ")";
@@ -55,8 +55,8 @@ void criarTabelas(sqlite3* bancoDados){
                       "capacidade INTEGER, "
                       "diaria REAL, "
                       "ramal INTEGER, "
-                      "codigo_hotel TEXT, "
-                      "FOREIGN KEY (codigo_hotel) "
+                      "codigo_hotel TEXT NOT NULL, "
+                      "FOREIGN KEY(codigo_hotel) "
                          "REFERENCES hotel(codigo) "
                          "ON DELETE CASCADE, "
                       "UNIQUE (codigo_hotel, numero)"
@@ -75,10 +75,10 @@ void criarTabelas(sqlite3* bancoDados){
                       "codigo TEXT PRIMARY KEY, "
                       "quarto_id INTEGER UNIQUE, "
                       "hospede_email TEXT, "
-                      "FOREIGN KEY (quarto_id)"
+                      "FOREIGN KEY(quarto_id)"
                          "REFERENCES quarto(id)"
                          "ON DELETE CASCADE, "
-                      "FOREIGN KEY (hospede_email) "
+                      "FOREIGN KEY(hospede_email) "
                          "REFERENCES hospede(email) "
                          "ON DELETE CASCADE"
                       ")";
@@ -148,6 +148,7 @@ bancoDeDados::bancoDeDados(){
         cerr << "Erro ao abrir o banco: " << sqlite3_errmsg(bancoDados) << endl;
         bancoDados = nullptr;
     }
+    sqlite3_exec(bancoDados, "PRAGMA foreign_keys = ON;", nullptr, nullptr, nullptr);
     criarTabelas(bancoDados);
 }
 
@@ -648,7 +649,7 @@ int bancoDeDados::pegarLinha(void* dado, int argc, char** argv, char** colNames)
 
 int bancoDeDados::mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeCol) {
     for (int i = 0; i < qtdCol; i++) {
-        if (string(nomeCol[i]) != "senha" && string(nomeCol[i]) != "quarto_id" && string(nomeCol[i]) != "hospede_email" && string(nomeCol[i]) != "codigo_hotel"){
+        if (string(nomeCol[i]) != "senha" && string(nomeCol[i]) != "quarto_id" && string(nomeCol[i]) != "hospede_email"/* && string(nomeCol[i]) != "codigo_hotel"*/){
             if(string(nomeCol[i]).size() < 6){
                 cout << nomeCol[i] << " =\t\t" << valor[i] << endl;
             } else {

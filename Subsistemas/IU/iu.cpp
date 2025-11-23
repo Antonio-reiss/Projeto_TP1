@@ -95,10 +95,10 @@ void telaGerente(){
                     //opcoesHospede();
                     break;
                 case 3:
-                    cout << "Opcoes de Hoteis" << endl;//chama a tela de opcoes de hoteis
+                    opcoesHotel();//chama a tela de opcoes de hoteis
                     break;
                 case 4:
-                    cout << "Opcoes de quartos" << endl;//chama a tela de opcoes de quartos
+                    opcoesQuarto();//chama a tela de opcoes de quartos
                     break;
                 case 5:
                     //opcoesReserva();

@@ -11,6 +11,8 @@
 #include "../HospedeReserva/controladora.reserva.hpp"
 #include "../Autenticacao/controladora.autenticacao.hpp"
 #include "../Gerente/controladora.gerente.hpp"
+#include "../Quarto/controladora.quarto.hpp"
+#include "../Hotel/controladora.hotel.hpp"
 #include "../Gerente/ma.gerente.hpp"
 #include "../funcoes.de.controles.hpp"
 #include "../BancoDados/bancoDeDados.hpp"

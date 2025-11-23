@@ -43,9 +43,8 @@ void msHotel::listarHotelFiltro(string& responsavel){
 bool msHotel::updateHotel(Hotel& hotel, string& codigo){
     bancoDeDados bd;
 
-    bd.montarHotel(hotel);
-
     if (codigo == "0"){
+        bd.montarHotel(hotel);
         return true;
     }
 

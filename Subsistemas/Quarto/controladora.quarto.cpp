@@ -7,7 +7,7 @@ void opcoesQuarto(){
         cout << "\n================================" << endl;
         cout << "          OPCOES QUARTO         " << endl;
         cout << "================================" << endl;
-        cout << "[0] Criar quarto\n";
+        cout << "[1] Criar quarto\n";
         cout << "[2] Visualizar quartos\n";
         cout << "[3] Editar quarto\n";
         cout << "[4] Excluir quarto\n";
@@ -67,6 +67,7 @@ void validarCriarQuarto(){
         cin >> numero;
         if (cin.fail()){
             cout << "Valor invalido. Tente novamente." << endl;
+            esperar(2);
             cin.clear();
             std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             goto inicio;
@@ -75,23 +76,33 @@ void validarCriarQuarto(){
         cin >> capacidade;
         if (cin.fail()){
             cout << "Valor invalido. Tente novamente." << endl;
+            esperar(2);
             cin.clear();
             std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             goto inicio;
         }
         cout << "Diaria: ";
-        getline(cin, diaria);
+            cin.clear();
+            std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+        cin >> diaria;
+            cin.clear();
+            std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
 
         cout << "Ramal: ";
         cin >> ramal;
         if (cin.fail()){
             cout << "Valor invalido. Tente novamente." << endl;
+            esperar(2);
             cin.clear();
             std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             goto inicio;
         }
         cout << "Codigo do hotel: ";
-        getline(cin, codigo);
+            cin.clear();
+            std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+        cin >> codigo;
+            cin.clear();
+            std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
         cout << endl << endl;
 
         if(maNovoQuarto.validarCriar(numero, capacidade, diaria, ramal, codigo)){
