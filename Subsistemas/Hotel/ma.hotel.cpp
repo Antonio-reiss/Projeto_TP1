@@ -19,7 +19,7 @@ bool maHotel::validarCriar(string& nome, string& endereco, string& telefone, str
     return true;
 }
 
-bool maHotel::validarEditar(string& novoDado, string& tipoDado){
+bool maHotel::validarEditar(string& novoDado, string tipoDado){
     try {
         if (tipoDado == "nome"){
             Nome nomeValido(novoDado);

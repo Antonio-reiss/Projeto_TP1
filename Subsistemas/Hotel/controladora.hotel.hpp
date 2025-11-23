@@ -1,6 +1,8 @@
 #ifndef CONTROLADORA_HOTEL_HPP_INCLUDED
 #define CONTROLADORA_HOTEL_HPP_INCLUDED
 #include "../funcoes.de.controles.hpp"
+#include "ma.hotel.hpp"
+#include "ms.hotel.hpp"
 #include "../../entidades/entidade.hotel.hpp"
 #include "../../dominios/dominios.codigo.hpp"
 #include "../../dominios/dominios.endereco.hpp"

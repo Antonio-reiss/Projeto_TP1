@@ -12,7 +12,7 @@ using namespace std;
 class maHotel : public iaHotel {
 public:
     bool validarCriar(string&, string&, string&, string&) override;
-    bool validarEditar(string&, string&) override;
+    bool validarEditar(string&, string) override;
 };
 
 #endif // MA_HOTEL_HPP_INCLUDED
