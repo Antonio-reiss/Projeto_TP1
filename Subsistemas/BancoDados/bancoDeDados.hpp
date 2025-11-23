@@ -49,6 +49,8 @@ public:
     void editarQuarto(Quarto&, int);
     void editarHotel(Hotel&, string&);
 
+    bool editarHospedeCampo(const std::string& email, const std::string& campo, const std::string& valor);
+
 
     void apagarUm(const string, const string, const string&);
     void apagarTodos(const string);
