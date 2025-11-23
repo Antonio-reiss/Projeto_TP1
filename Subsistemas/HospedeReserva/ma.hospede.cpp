@@ -1,6 +1,6 @@
 /**
 * @file controladora.hospede.cpp
-* @brief Implementação das operações de apresentação para gerenciamento de hóspedes.
+* @brief Implementação das operaçoes de apresentação para gerenciamento de hospedes.
 * @author Ester Andrade Sousa - 242012109
 */
 
