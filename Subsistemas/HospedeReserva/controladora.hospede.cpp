@@ -1,10 +1,17 @@
+/**
+* @file controladora.hospede.cpp
+* @brief Implementação das operações de apresentação para gerenciamento de hóspedes.
+*
+* Contém as funções responsáveis por interagir com o usuário, coletar dados,
+* realizar validações e acionar a camada de serviço (msHospede) referente ao módulo Hóspede.
+* @author Ester Andrade Sousa - 242012109
+*/
+
 #include "controladora.hospede.hpp"
 #include <iostream>
 #include <algorithm>
 
 using namespace std;
-
-// ---------------- MENU PRINCIPAL ---------------- //
 
 void opcoesHospede() {
     int op;
@@ -50,9 +57,6 @@ void opcoesHospede() {
 }
 
 
-
-// ---------------- CRIAR ---------------- //
-
 bool validarCriarHospede() {
     MAHospede ma;
     msHospede ms;
@@ -62,65 +66,144 @@ bool validarCriarHospede() {
     limparTela();
     cout << "==== Criar Hospede ====\n";
 
-    cout << "Nome: ";
-    getline(cin, nome);
+    // Valida nome
+    while (true) {
+        cout << "Nome: ";
+        getline(cin, nome);
 
-    cout << "Email: ";
-    getline(cin, email);
+        if (ma.validarCriar(nome, "teste@teste.com", "Endereco valido", "1111222233334444")) {
+            break;
+        }
 
-    cout << "Endereco: ";
-    getline(cin, endereco);
-
-    cout << "Cartao: ";
-    getline(cin, cartao);
-
-    if (ma.validarCriar(nome, email, endereco, cartao)) {
-        ms.criarHospede(nome, email, endereco, cartao);
-        esperar(2);
-        return true;
+        cout << "Nome invalido! Tente novamente.\n\n";
     }
 
-    cout << "Dados invalidos.\n";
+    // Valida email
+    while (true) {
+        cout << "Email: ";
+        getline(cin, email);
+
+        if (ma.validarCriar(nome, email, "Endereco valido", "1111222233334444")) {
+            break;
+        }
+
+        cout << "Email invalido! Tente novamente.\n\n";
+    }
+
+    // Valida endereço
+    while (true) {
+        cout << "Endereco: ";
+        getline(cin, endereco);
+
+        if (ma.validarCriar(nome, email, endereco, "1111222233334444")) {
+            break;
+        }
+
+        cout << "Endereco invalido! Tente novamente.\n\n";
+    }
+
+    // Valida cartão
+    while (true) {
+        cout << "Cartao: ";
+        getline(cin, cartao);
+
+        if (ma.validarCriar(nome, email, endereco, cartao)) {
+            break;
+        }
+
+        cout << "Cartao invalido! Tente novamente.\n\n";
+    }
+
+    // Validação final
+    if (!ma.validarCriar(nome, email, endereco, cartao)) {
+        cout << "Erro inesperado na validacao.\n";
+        esperar(2);
+        return false;
+    }
+
+    ms.criarHospede(nome, email, endereco, cartao);
+
+    cout << "Hospede criado com sucesso!\n";
     esperar(2);
-    return false;
+
+    return true;
 }
-
-
-
-// ---------------- EDITAR ---------------- //
 
 void validarEditarHospede() {
     MAHospede ma;
     msHospede ms;
 
-    string email, novoEndereco, novoCartao;
-
+    string email;
     limparTela();
     cout << "==== Editar Hospede ====\n";
 
     cout << "Email do hospede a editar:\n-> ";
     getline(cin, email);
 
-    cout << "Novo endereco:\n-> ";
-    getline(cin, novoEndereco);
-
-    cout << "Novo cartao:\n-> ";
-    getline(cin, novoCartao);
-
-    if (!ma.validarEditar(email, novoEndereco, novoCartao)) {
-        cout << "Dados invalidos.\n";
+    if (!ma.validarExcluir(email)) {
+        cout << "Email invalido.\n";
         esperar(2);
         return;
     }
 
-    ms.editarHospede(email, novoEndereco, novoCartao);
-    cout << "Atualizado com sucesso!\n";
+    int opcao = 0;
+    do {
+        limparTela();
+        cout << "==== O que deseja editar? ====\n";
+        cout << "[1] Endereco\n";
+        cout << "[2] Cartao\n";
+        cout << "[3] Sair\n";
+        cout << "Escolha: ";
+        cin >> opcao;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        if (opcao == 1) {
+            string novoEndereco;
+            cout << "Novo endereco:\n-> ";
+            getline(cin, novoEndereco);
+
+            bool valido = ma.validarEditar(email, novoEndereco, "");
+
+            if (!valido) {
+                cout << "Falha na validacao do endereco. Nao alterado.\n";
+                esperar(2);
+                continue;
+            }
+
+            bool ok = ms.editarHospede(email, "endereco", novoEndereco);
+            if (ok) cout << "Endereco atualizado com sucesso!\n";
+            else cout << "Erro ao atualizar no banco.\n";
+            esperar(2);
+        }
+        else if (opcao == 2) {
+            string novoCartao;
+            cout << "Novo cartao:\n-> ";
+            getline(cin, novoCartao);
+
+            bool valido = ma.validarEditar(email, "", novoCartao);
+
+            if (!valido) {
+                cout << "Falha na validacao do cartao. Nao alterado.\n";
+                esperar(2);
+                continue;
+            }
+
+            bool ok = ms.editarHospede(email, "cartao", novoCartao);
+            if (ok) cout << "Cartao atualizado com sucesso!\n";
+            else cout << "Erro ao atualizar no banco.\n";
+            esperar(2);
+        }
+        else if (opcao != 3) {
+            cout << "Opcao invalida!\n";
+            esperar(2);
+        }
+
+    } while (opcao != 3);
+
+    cout << "Edicao concluida!\n";
     esperar(2);
 }
 
-
-
-// ---------------- EXCLUIR ---------------- //
 
 void excluirHospede() {
     MAHospede ma;
@@ -151,3 +234,4 @@ void excluirHospede() {
 
     esperar(2);
 }
+
