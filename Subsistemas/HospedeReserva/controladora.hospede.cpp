@@ -1,9 +1,6 @@
 /**
 * @file controladora.hospede.cpp
-* @brief Implementação das operações de apresentação para gerenciamento de hóspedes.
-*
-* Contém as funções responsáveis por interagir com o usuário, coletar dados,
-* realizar validações e acionar a camada de serviço (msHospede) referente ao módulo Hóspede.
+* @brief Implementação das operaçoes de apresentaçao para gerenciamento de hospedes.
 * @author Ester Andrade Sousa - 242012109
 */
 
