@@ -16,11 +16,17 @@ using namespace std;
 
 bool msGerente::criarGerente(const string& nome, const string& email, const int& ramal, const string& senha){
     bancoDeDados bd;
+
     Gerente gerente(nome, email, ramal, senha);
-    bd.criarGerente(gerente);
-    cout << "Gerente criado com sucesso!" << endl;
-    esperar(5);
-    return true;
+    if(bd.criarGerente(gerente)){
+        cout << "Gerente criado com sucesso!" << endl;
+        esperar(3);
+        return true;
+    }
+    cout << "Email ou Ramal ja em uso." << endl;
+    esperar(3);
+
+    return false;
 }
 
 void msGerente::listarGerentes(){

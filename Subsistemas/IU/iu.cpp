@@ -101,7 +101,7 @@ void telaGerente(){
                     cout << "Opcoes de quartos" << endl;//chama a tela de opcoes de quartos
                     break;
                 case 5:
-                    opcoesReserva();
+                    //opcoesReserva();
                     break;
                 case 6:
                     cout << "Retornando ao menu inicial..." << endl;

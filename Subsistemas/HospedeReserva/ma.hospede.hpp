@@ -59,9 +59,9 @@ public:
      * @param cartao Novo numero de cartao.
      * @return true se todos os dados forem validos, false caso contrario.
      */
-    bool validarEditar(const string& email,
-                       const string& endereco,
-                       const string& cartao);
+    bool validarEditar(string& email,
+                       string& endereco,
+                        string& cartao) override ;
 
     /**
      * @brief Valida os dados para exclusao de um hospede.
@@ -92,7 +92,7 @@ public:
      * @param endereco Endereco a ser validado.
      * @return true se valido, false caso contrario.
      */
-    bool validarEndereco(const string&);
+    bool validarEndereco(const string);
 
     /**
      * @brief Valida apenas o numero do cartao.

@@ -83,8 +83,10 @@ bool validarCriarGerente(){
         cout << endl << endl;
 
         if(ma_gerente.validarConta(nome, email, ramal, senha)){
-            novoGerente.criarGerente(nome, email, ramal, senha);
-            return true;
+            if (novoGerente.criarGerente(nome, email, ramal, senha)){
+                return true;
+            }
+            return false;
         }else{
             cout << "\n==================================" << endl;
             cout << " Falha na validacao. Tente novamente." << endl;

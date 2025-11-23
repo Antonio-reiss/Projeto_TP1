@@ -4,6 +4,7 @@
 #include "../../dominios/dominios.capacidade.hpp"
 #include "../../dominios/dominios.dinheiro.hpp"
 #include "../../dominios/dominios.ramal.hpp"
+#include "../../dominios/dominios.codigo.hpp"
 #include "ia.quarto.hpp"
 #include <string>
 
@@ -11,9 +12,9 @@ using namespace std;
 
 class maQuarto : public iaQuarto<string>, public iaQuarto<int> {
 public:
-    bool validarCriar(int&, int&, string&, int&) override;
-    bool validarEditar(int&, string&) override;
-    bool validarEditar(string&, string&) override;
+    bool validarCriar(int&, int&, string&, int&, string&) override;
+    bool validarEditar(int&, string) override;
+    bool validarEditar(string&, string) override;
 };
 
 #endif // MA_QUARTO_HPP_INCLUDED

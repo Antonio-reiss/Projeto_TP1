@@ -34,7 +34,7 @@ public:
 
 
     void listarTodos(const string);
-    void listarComFiltro(const string, const string, const string);
+    bool listarComFiltro(const string, const string, const string);
     string getSenha(const string&);
 
 
