@@ -356,21 +356,31 @@ void bancoDeDados::montarGerente(Gerente& gerente){
     return;
 }
 
-void bancoDeDados::montarHospede(Hospede& hospede){
-    string email = hospede.getEmail();
-    vector<string> dados;
+void bancoDeDados::montarHospede(Hospede& h, const std::string& codigo)
+{
+    sqlite3_stmt* stmt;
+    string sql = "SELECT nome, email, endereco, cartao FROM hospedes WHERE codigo = ?;";
 
-    string sql = "SELECT * FROM hospede WHERE email = '"+ email +"';";
+    if (sqlite3_prepare_v2(bancoDados, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) {
+        throw runtime_error("Erro ao preparar consulta.");
+    }
 
-    int execucao = sqlite3_exec(bancoDados, sql.c_str(), pegarLinha, &dados , nullptr);
+    sqlite3_bind_text(stmt, 1, codigo.c_str(), -1, SQLITE_TRANSIENT);
 
-    hospede.setNome(dados[0]);
-    hospede.setEmail(dados[1]);
-    hospede.setEndereco(dados[2]);
-    hospede.setCartao(dados[3]);
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        h.setNome((const char*)sqlite3_column_text(stmt, 0));
+        h.setEmail((const char*)sqlite3_column_text(stmt, 1));
+        h.setEndereco((const char*)sqlite3_column_text(stmt, 2));
+        h.setCartao((const char*)sqlite3_column_text(stmt, 3));
+    } else {
+        sqlite3_finalize(stmt);
+        throw invalid_argument("Hospede nao encontrado.");
+    }
 
-    return;
+    sqlite3_finalize(stmt);
 }
+
+
 
 void bancoDeDados::montarReserva(Reserva& reserva){
     string codigo = reserva.getCodigo();
@@ -600,7 +610,7 @@ void bancoDeDados::apagarTodos(const string tabela){
     if (execucao == SQLITE_OK) {
         cout << "Dados apagados com sucesso!" << endl;
     } else {
-        cout << "Não foi possível apagar os dados " << erro << endl;
+        cout << "NÃ£o foi possÃ­vel apagar os dados " << erro << endl;
     }
     return;
 }
@@ -656,3 +666,25 @@ int bancoDeDados::mostrar(void* NaoUsado, int qtdCol, char** valor, char** nomeC
     cout << endl;
     return 0;
 }
+bool bancoDeDados::editarHospedeCampo(const std::string& email, const std::string& campo, const std::string& valor){
+  
+    if (campo != "nome" && campo != "email" && campo != "endereco" && campo != "cartao") {
+        std::cerr << "Campo invalido para edicao: " << campo << std::endl;
+        return false;
+    }
+
+   
+    std::string sql = "UPDATE hospede SET " + campo + " = '" + valor + "' WHERE email = '" + email + "';";
+
+    char* erro = nullptr;
+    int execucao = sqlite3_exec(bancoDados, sql.c_str(), nullptr, nullptr, &erro);
+    if (execucao != SQLITE_OK) {
+        std::cerr << "Erro ao atualizar: " << (erro ? erro : (char*)"") << std::endl;
+        if (erro) sqlite3_free(erro);
+        return false;
+    }
+
+    std::cout << "Atualizado com sucesso!" << std::endl;
+    return true;
+}
+
