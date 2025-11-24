@@ -124,7 +124,7 @@
 
 1763159586 ated upstream
 
-1763938622 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763946062 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 	"../Subsistemas/Quarto/controladora.quarto.hpp"
 
@@ -580,13 +580,13 @@
 	<iostream>
 	<string>
 
-1763402084 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.hpp
+1763944548 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ma.autenticacao.hpp
 	"../../dominios/dominios.email.hpp"
 	"../../dominios/dominios.senha.hpp"
 	"ia.autenticacao.hpp"
 	<string>
 
-1763402046 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ia.autenticacao.hpp
+1763942889 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ia.autenticacao.hpp
 
 1763402251 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quartohotel\ma.hotel.hpp
 	"../../dominios/dominios.nome.hpp"
@@ -651,14 +651,14 @@
 	<string>
 	<vector>
 
-1763404377 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.hpp
+1763945317 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\ms.autenticacao.hpp
 	"../../entidades/entidade.gerente.hpp"
 	"../../dominios/dominios.senha.hpp"
 	"../../dominios/dominios.email.hpp"
 	"../BancoDados/bancoDeDados.hpp"
 	"is.autenticacao.hpp"
 
-1763404368 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
+1763945319 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
 1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
 
@@ -727,7 +727,8 @@
 	"../funcoes.de.controles.hpp"
 	"../BancoDados/bancoDeDados.hpp"
 
-1763935507 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+1763946228 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+	"../HospedeReserva/controladora.hospede.hpp"
 	"iu.hpp"
 	<iostream>
 	<string>
@@ -1086,7 +1087,7 @@
 	<iostream>
 	<algorithm>
 
-1763486814 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.hpp
+1763942894 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\controladora.autenticacao.hpp
 	"ma.autenticacao.hpp"
 	"ms.autenticacao.hpp"
 	<iostream>
@@ -1119,7 +1120,7 @@
 	<iostream>
 	<limits>
 
-1763933283 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ma.hospede.hpp
+1763945816 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ma.hospede.hpp
 	"ia.hospede.hpp"
 	"../dominios/dominios.nome.hpp"
 	"../dominios/dominios.email.hpp"
@@ -1129,7 +1130,7 @@
 	<iostream>
 	<stdexcept>
 
-1763777698 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ia.hospede.hpp
+1763945660 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ia.hospede.hpp
 	<string>
 
 1763837918 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ms.hospede.hpp
@@ -1181,19 +1182,22 @@
 
 1763933748 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
 
-1763866104 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.cpp
+1763945840 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.cpp
 	"controladora.reserva.hpp"
 	<iostream>
 	<algorithm>
 
-1763933759 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ma.hospede.cpp
+1763945852 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ma.hospede.cpp
+	"ma.hospede.hpp"
+	<iostream>
+	<stdexcept>
 
 1763431185 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ma.reserva.cpp
 	"ma.reserva.hpp"
 	<iostream>
 	<stdexcept>
 
-1763932463 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ms.hospede.cpp
+1763945959 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ms.hospede.cpp
 	"ms.hospede.hpp"
 	<iostream>
 	<stdexcept>
@@ -1286,6 +1290,6 @@
 	<algorithm>
 	<string>
 
-1763921037 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quarto\ms.quarto.cpp
+1763939448 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\quarto\ms.quarto.cpp
 	"ms.quarto.hpp"
 

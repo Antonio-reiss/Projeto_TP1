@@ -47,7 +47,7 @@ public:
      * @param cartao Numero do cartao do hospede.
      * @return true se todos os campos forem validos, false caso contrario.
      */
-    bool validarCriar(string&, string&, string&, string&) override;
+    bool validarCriar(const string&, const string&, const string&, const string&) override;
 
     /**
      * @brief Valida os dados para edicao de um hospede existente.
@@ -59,9 +59,9 @@ public:
      * @param cartao Novo numero de cartao.
      * @return true se todos os dados forem validos, false caso contrario.
      */
-    bool validarEditar(string& email,
-                       string& endereco,
-                        string& cartao) override ;
+    bool validarEditar(const string& email,
+                       const string& endereco,
+                        const string& cartao) override ;
 
     /**
      * @brief Valida os dados para exclusao de um hospede.
@@ -71,7 +71,7 @@ public:
      * @param email Email do hospede a ser excluido.
      * @return true se o email for valido, false caso contrario.
      */
-    bool validarExcluir(string&) override;
+    bool validarExcluir(const string&) override;
 
     /**
      * @brief Valida apenas o nome do hospede.

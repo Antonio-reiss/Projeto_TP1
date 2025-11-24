@@ -7,12 +7,12 @@ int main(){
     iniciarSistema();
 //    opcoesQuarto();
 
-//    bancoDeDados bd;
-//    bd.apagarTabela("gerente");
-//    bd.apagarTabela("hotel");
-//    bd.apagarTabela("hospede");
-//    bd.apagarTabela("quarto");
-//    bd.apagarTabela("reserva");
+    bancoDeDados bd;
+    bd.apagarTabela("gerente");
+    bd.apagarTabela("hotel");
+    bd.apagarTabela("hospede");
+    bd.apagarTabela("quarto");
+    bd.apagarTabela("reserva");
 
     return 0;
 }

@@ -7,7 +7,7 @@
 #include "controladora.reserva.hpp"
 #include <iostream>
 #include <algorithm>
-/*
+
 using namespace std;
 
 // ---------------- MENU PRINCIPAL RESERVA ---------------- //
@@ -162,7 +162,5 @@ void excluirReserva() {
     else {
         cout << "Cancelado.\n";
     }
-
     esperar(2);
 }
-*/

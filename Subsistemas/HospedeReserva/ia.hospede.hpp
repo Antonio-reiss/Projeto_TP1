@@ -33,7 +33,7 @@ public:
      * @param email String com o email pessoal do hospede.
      * @return true se todos os dados forem validos, false caso contrario.
      */
-    virtual bool validarCriar(string& nome, string& endereco, string& cartao, string& email) = 0;
+    virtual bool validarCriar(const string& nome, const string& endereco, const string& cartao, const string& email) = 0;
 
     /**
      * @brief Valida os dados de edicao de um hospede.
@@ -42,14 +42,14 @@ public:
      * @param email String com o novo email.
      * @return true se os dados forem validos, false caso contrario.
      */
-    virtual bool validarEditar(string& nome, string& endereco, string& email) = 0;
+    virtual bool validarEditar(const string& nome, const string& endereco, const string& email) = 0;
 
     /**
      * @brief Valida a exclusao de um hospede.
      * @param nome String com o nome do hospede a ser excluido (chave primaria).
      * @return true se a exclusao for permitida, false caso contrario.
      */
-    virtual bool validarExcluir(string& nome) = 0;
+    virtual bool validarExcluir(const string& nome) = 0;
 };
 
 #endif // IA_HOSPEDE_HPP_INCLUDED

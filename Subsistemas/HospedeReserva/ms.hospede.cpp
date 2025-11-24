@@ -44,7 +44,14 @@ bool msHospede::listarHospedes()
 bool msHospede::editarHospede(string codigo, string campo, string novoValor)
 {
     try {
+/*<<<<<<< HEAD
+        Hospede hospedeTemporario("nomee", "email", "ender,", "1234123412341234");
+
+        db.montarHospede(hospedeTemporario);
+
+=======
         // valida apenas o campo que está sendo alterado
+>>>>>>> c86f3e3ff28a09c902e478b180b0dc5ec4ae51e7*/
         if (campo == "nome") {
             Nome n(novoValor);             // valida nome
         }
@@ -55,7 +62,7 @@ bool msHospede::editarHospede(string codigo, string campo, string novoValor)
             Endereco end(novoValor);     // valida endereco
         }
         else if (campo == "cartao") {
-            Cartao c(novoValor);         
+            Cartao c(novoValor);
         }
         else {
             throw invalid_argument("Campo invalido para edicao.");
@@ -85,4 +92,5 @@ bool msHospede::excluirHospede(const string& codigo)
         cout << "Erro ao excluir hospede.\n";
         return false;
     }
+    return true;
 }

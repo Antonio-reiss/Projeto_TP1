@@ -3,6 +3,7 @@
 * @brief Implementacao do modulo principal de apresentacao (IU).
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
+#include "../HospedeReserva/controladora.hospede.hpp"
 #include "iu.hpp"
 #include <iostream>
 #include <string>
@@ -92,7 +93,7 @@ void telaGerente(){
                     opcoesGerente();
                     break;
                 case 2:
-                    //opcoesHospede();
+                    opcoesHospede();
                     break;
                 case 3:
                     opcoesHotel();//chama a tela de opcoes de hoteis
@@ -101,7 +102,7 @@ void telaGerente(){
                     opcoesQuarto();//chama a tela de opcoes de quartos
                     break;
                 case 5:
-                    //opcoesReserva();
+                    opcoesReserva();
                     break;
                 case 6:
                     cout << "Retornando ao menu inicial..." << endl;
