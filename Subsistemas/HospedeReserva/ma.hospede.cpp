@@ -21,7 +21,6 @@ bool MAHospede::validarCriar(const string& nome, const string& email, const stri
         cout << "Erro ao validar hospede: " << e.what() << endl;
         return false;
     }
-    cout << "Hospede criado com sucesso!" << endl;
     return true;
 }
 

@@ -52,8 +52,8 @@ void msGerente::listarGerentes(){
 
 bool msGerente::editarGerente(int tipoDado, string novoDado, string& email){
     bancoDeDados bd;
-    Gerente edicaoGerente("Ellen", email, 04, "E5&0l");
-    bd.editarGerente(edicaoGerente, email);
+
+    //bd.editarGerente(edicaoGerente, email);
     esperar(4);
     return true;
 }
@@ -62,10 +62,7 @@ bool msGerente::excluirGerente(const string& chave){
     //passar para o banco de dados "gerente", tipoChave, chave
     bancoDeDados bd;
     try{
-         bd.apagarUm("gerente", "email", chave);
-        cout << "Conta sendo excluida..." << endl;
-        esperar(2);
-        cout << "Conta excluida com sucesso!" << endl;
+        bd.apagarUm("gerente", "email", chave);
         esperar(2);
         return true;
     }catch(const invalid_argument& erro){

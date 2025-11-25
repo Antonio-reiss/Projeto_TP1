@@ -5,6 +5,7 @@
 * Contem a logica concreta que instancia os dominios (Nome, Email, Senha e Ramal) para forcar a validacao.
 * @author Maria Ellen Guedes Montalvao - 232011402
 */
+#include "../funcoes.de.controles.hpp"
 #include "ma.gerente.hpp"
 #include <stdexcept>
 #include <iostream>
@@ -34,7 +35,6 @@ bool maGerente::validarEditar(const string& novoDado, const int& tipoDado){
         }
         else if(tipoDado == 2){
             Email emailValido(novoDado);
-            cout << "Agora aqui\n";
             return true;
         }
         else if(tipoDado == 3){
@@ -48,6 +48,7 @@ bool maGerente::validarEditar(const string& novoDado, const int& tipoDado){
         }
     }catch(const exception& error){
         cout << "Erro: " << error.what() << endl;
+        esperar(3);
         return false;
     }
 }

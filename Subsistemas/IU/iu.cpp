@@ -52,6 +52,7 @@ void iniciarSistema(){
                 cout << "\n==================================" << endl;
                 cout << "Saindo do sistema..." << endl;
                 esperar(2);
+                limparTela();
                 return;
             default:
                 cout << "\n==================================" << endl;

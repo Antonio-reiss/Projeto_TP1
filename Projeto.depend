@@ -75,7 +75,7 @@
 1763387358 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.telefone.hpp
 	<string>
 
-1763936210 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.cpp
+1763948114 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\dominios.nome.cpp
 	"dominios.nome.hpp"
 	<stdexcept>
 
@@ -124,7 +124,7 @@
 
 1763159586 ated upstream
 
-1763946062 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
+1763947158 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\dominios\main.cpp
 	"../Subsistemas/IU/iu.hpp"
 	"../Subsistemas/Quarto/controladora.quarto.hpp"
 
@@ -660,7 +660,12 @@
 
 1763945319 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\autenticacao\is.autenticacao.hpp
 
-1763754539 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+1763948997 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.cpp
+	"../funcoes.de.controles.hpp"
+	"ma.gerente.hpp"
+	<stdexcept>
+	<iostream>
+	<string>
 
 1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ma.gerente.hpp
 	"../../dominios/dominios.nome.hpp"
@@ -677,7 +682,7 @@
 	"../../dominios/dominios.senha.hpp"
 	<string>
 
-1763934877 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
+1763948820 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\ms.gerente.cpp
 	"ms.gerente.hpp"
 	"ma.gerente.hpp"
 	"../BancoDados/bancoDeDados.hpp"
@@ -700,7 +705,7 @@
 
 1763754539 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\is.gerente.hpp
 
-1763934998 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
+1763948810 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\gerente\controladora.gerente.cpp
 	"controladora.gerente.hpp"
 	<iostream>
 	<limits>
@@ -727,7 +732,7 @@
 	"../funcoes.de.controles.hpp"
 	"../BancoDados/bancoDeDados.hpp"
 
-1763946228 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
+1763946888 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\iu\iu.cpp
 	"../HospedeReserva/controladora.hospede.hpp"
 	"iu.hpp"
 	<iostream>
@@ -1180,14 +1185,17 @@
 1763837918 c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\is.reserva.hpp
 	<string>
 
-1763933748 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
+1763946359 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\controladora.hospede.cpp
+	"controladora.hospede.hpp"
+	<iostream>
+	<algorithm>
 
 1763945840 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\controladora.reserva.cpp
 	"controladora.reserva.hpp"
 	<iostream>
 	<algorithm>
 
-1763945852 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ma.hospede.cpp
+1763949390 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ma.hospede.cpp
 	"ma.hospede.hpp"
 	<iostream>
 	<stdexcept>
@@ -1197,7 +1205,7 @@
 	<iostream>
 	<stdexcept>
 
-1763945959 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ms.hospede.cpp
+1763949530 source:c:\users\lucas\documents\projetos\code_blocks\projeto_tp1\subsistemas\hospedereserva\ms.hospede.cpp
 	"ms.hospede.hpp"
 	<iostream>
 	<stdexcept>

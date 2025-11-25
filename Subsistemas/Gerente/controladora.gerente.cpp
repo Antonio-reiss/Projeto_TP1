@@ -107,6 +107,7 @@ void validarEditarGerente(){
     cout << "Digite o e-mail do gerente a ser editado: " << endl;
     getline(cin, email);
     Gerente edicaoGerente("nomee", email, 01, "1!a!A");
+    bd.montarGerente(edicaoGerente);
 
     do{
         limparTela();
@@ -131,21 +132,21 @@ void validarEditarGerente(){
 
         if(tipoDado == 1){
                 cout << "Digite o novo nome: ";
-                cin >> tipoDado;
+                cin >> novoDado;
             if(validarEdicao.validarEditar(novoDado, 1)){
                 edicaoGerente.setNome(novoDado);
             }
         }
         else if(tipoDado == 2){
                 cout << "Digite o novo e-mail: ";
-                cin >> tipoDado;
+                cin >> novoDado;
             if(validarEdicao.validarEditar(novoDado, 2)){
                 edicaoGerente.setEmail(novoDado);
             }
         }
         else if (tipoDado == 3){
             cout << "Digite o novo ramal: ";
-            cin >> tipoDado;
+            cin >> novoDado;
             int ramalInt = stoi(novoDado);
             if(validarEdicao.validarEditar(novoDado, 3)){
                 edicaoGerente.setRamal(ramalInt);
@@ -153,13 +154,13 @@ void validarEditarGerente(){
         }
         else if(tipoDado == 4){
             cout << "Digite a nova senha: ";
-            cin >> tipoDado;
+            cin >> novoDado;
             if(validarEdicao.validarEditar(novoDado, 4)){
                 edicaoGerente.setSenha(novoDado);
             }
         }
         else if(tipoDado == 5){
-            cs_gerente.editarGerente(tipoDado, novoDado, email);
+            bd.editarGerente(edicaoGerente, email);
             return;
         }
 

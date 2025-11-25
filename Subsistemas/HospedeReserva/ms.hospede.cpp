@@ -85,7 +85,7 @@ bool msHospede::editarHospede(string codigo, string campo, string novoValor)
 bool msHospede::excluirHospede(const string& codigo)
 {
     try {
-        db.apagarUm("HOSPEDE", "CODIGO", codigo);
+        db.apagarUm("hospede", "email", codigo);
         return true;
     }
     catch (...) {
